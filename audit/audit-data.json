@@ -1,0 +1,227 @@
+{
+  "summary": {
+    "health_score": 76,
+    "business_type": "Local ecommerce store — motorcycle & bicycle retail + installment (Isfahan)",
+    "audited_at": "2026-10-28",
+    "domain": "https://baradaranebabaei.ir/",
+    "top_findings": [
+      "مشکل Critical/High جدیدی در پروب زنده دیده نشد"
+    ],
+    "quick_wins": [
+      "ادامه ریتم محتوا و مانیتور GSC هفتگی"
+    ],
+    "category_scores": {
+      "technical": 70,
+      "content": 76,
+      "page": 73,
+      "schema": 75,
+      "local": 88
+    },
+    "gsc_baseline": {
+      "exportedAt": "2026-10-28",
+      "dateFilter": "Last 3 months",
+      "clicks": 4312,
+      "impressions": 68620,
+      "ctr": 0.0628,
+      "avgPosition": 7.34
+    }
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 70,
+      "what_works": [
+        "Pretty sitemap کار می‌کند"
+      ],
+      "findings": []
+    },
+    {
+      "name": "Content / E-E-A-T",
+      "score": 76,
+      "what_works": [
+        "کوئری برند بابایی دوچرخه در خانه"
+      ],
+      "findings": []
+    },
+    {
+      "name": "Page SEO",
+      "score": 73,
+      "what_works": [
+        "H1 خانه موجود است",
+        "درباره ما در دسترس"
+      ],
+      "findings": []
+    },
+    {
+      "name": "Schema",
+      "score": 75,
+      "what_works": [
+        "اسکیما سازمان/لوکال روی خانه"
+      ],
+      "findings": []
+    },
+    {
+      "name": "Local SEO",
+      "score": 88,
+      "what_works": [
+        "سیگنال لوکال در LD+JSON",
+        "تلفن NAP در صفحه خانه",
+        "صفحه تماس ۲۰۰",
+        "لندینگ کهندژ زنده است"
+      ],
+      "findings": []
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Phase 1: Critical Fixes",
+        "timeframe": "Week 1",
+        "items": []
+      },
+      {
+        "name": "Phase 2: High-Impact Improvements",
+        "timeframe": "Weeks 2-3",
+        "items": []
+      },
+      {
+        "name": "Phase 3: Content & Authority",
+        "timeframe": "Month 2",
+        "items": [
+          "ادامه صف شکست ردفوکس ۱/روز",
+          "تقویت صفحات فرصت GSC"
+        ]
+      },
+      {
+        "name": "Phase 4: Monitoring & Iteration",
+        "timeframe": "Ongoing",
+        "items": [
+          "Import هفتگی GSC",
+          "مانیتور URLهای پول ردفوکس"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/",
+    "probe": {
+      "home": {
+        "url": "https://baradaranebabaei.ir/",
+        "status": 200,
+        "len": 111835,
+        "h1": 1,
+        "title": "موتورسیکلت و دوچرخه برادران بابایی",
+        "has_local": true,
+        "has_nap_phone": true,
+        "robots_noindex": false,
+        "content_type": "text/html; charset=UTF-8",
+        "title_clean": "موتورسیکلت و دوچرخه برادران بابایی",
+        "babaei_docharkhe": true
+      },
+      "robots": {
+        "url": "https://baradaranebabaei.ir/robots.txt",
+        "status": 200,
+        "len": 325,
+        "h1": 0,
+        "title": "",
+        "has_local": false,
+        "has_nap_phone": false,
+        "robots_noindex": false,
+        "content_type": "text/plain; charset=utf-8",
+        "declares_sitemap": true,
+        "sitemap_line": "Sitemap: https://baradaranebabaei.ir/sitemap_index.xml"
+      },
+      "sitemap": {
+        "url": "https://baradaranebabaei.ir/sitemap_index.xml",
+        "status": 200,
+        "len": 1076,
+        "h1": 0,
+        "title": "",
+        "has_local": false,
+        "has_nap_phone": false,
+        "robots_noindex": false,
+        "content_type": "text/xml; charset=UTF-8",
+        "looks_xml": true
+      },
+      "sitemap_alt": {
+        "url": "https://baradaranebabaei.ir/?sitemap=1",
+        "status": 200,
+        "len": 1076,
+        "h1": 0,
+        "title": "",
+        "has_local": false,
+        "has_nap_phone": false,
+        "robots_noindex": false,
+        "content_type": "text/xml; charset=UTF-8",
+        "looks_xml": true
+      },
+      "motorcycle": {
+        "url": "https://baradaranebabaei.ir/motorcycle/",
+        "status": 200,
+        "len": 64925,
+        "h1": 1,
+        "title": "موتورسیکلت اصفهان | برادران بابایی",
+        "has_local": true,
+        "has_nap_phone": true,
+        "robots_noindex": false,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      "bicycle": {
+        "url": "https://baradaranebabaei.ir/bicycle/",
+        "status": 200,
+        "len": 66102,
+        "h1": 1,
+        "title": "بابایی دوچرخه اصفهان | هاب دوچرخه برادران بابایی",
+        "has_local": true,
+        "has_nap_phone": true,
+        "robots_noindex": false,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      "contact": {
+        "url": "https://baradaranebabaei.ir/contact/",
+        "status": 200,
+        "len": 67279,
+        "h1": 0,
+        "title": "تماس با برادران بابایی کهندژ اصفهان",
+        "has_local": true,
+        "has_nap_phone": true,
+        "robots_noindex": false,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      "about": {
+        "url": "https://baradaranebabaei.ir/about/",
+        "status": 200,
+        "len": 72306,
+        "h1": 0,
+        "title": "درباره بابایی دوچرخه | برادران بابایی کهندژ",
+        "has_local": true,
+        "has_nap_phone": true,
+        "robots_noindex": false,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      "kohandezh": {
+        "url": "https://baradaranebabaei.ir/forushgah-baradaran-babaei-kohandezh/",
+        "status": 200,
+        "len": 62598,
+        "h1": 2,
+        "title": "فروشگاه برادران بابایی کهندژ | اصفهان",
+        "has_local": true,
+        "has_nap_phone": true,
+        "robots_noindex": false,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      "installment": {
+        "url": "https://baradaranebabaei.ir/%d8%ae%d8%b1%db%8c%d8%af-%d8%a7%d9%82%d8%b3%d8%a7%d8%b7%db%8c/",
+        "status": 200,
+        "len": 66746,
+        "h1": 1,
+        "title": "خرید اقساطی دوچرخه و موتورسیکلت | برادران بابایی",
+        "has_local": true,
+        "has_nap_phone": true,
+        "robots_noindex": false,
+        "content_type": "text/html; charset=UTF-8"
+      }
+    }
+  }
+}

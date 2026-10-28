@@ -1,0 +1,3353 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>داشبورد SEO — برادران بابایی</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0c1f2e;
+      --ink-soft: #1a3548;
+      --teal: #0d7377;
+      --teal-deep: #095456;
+      --sand: #e8eef1;
+      --paper: #f4f7f8;
+      --white: #ffffff;
+      --fail: #b42318;
+      --warn: #b54708;
+      --pass: #067647;
+      --muted: #5b6b75;
+      --line: #d3dde3;
+      --accent: #c45c26;
+      --radius: 12px;
+      --shadow: 0 1px 0 rgba(12, 31, 46, 0.06);
+      --font: "Vazirmatn", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .bg-mesh {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(ellipse 80% 50% at 100% 0%, rgba(13, 115, 119, 0.12), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 0% 100%, rgba(196, 92, 38, 0.08), transparent 50%),
+        var(--paper);
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.25rem 3rem;
+    }
+
+    /* —— Hero —— */
+    .hero {
+      position: relative;
+      padding: 2.75rem 0 2rem;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 1.75rem;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset-inline-end: -10%;
+      top: -40%;
+      width: 55%;
+      height: 180%;
+      background:
+        repeating-linear-gradient(
+          -18deg,
+          transparent,
+          transparent 18px,
+          rgba(13, 115, 119, 0.05) 18px,
+          rgba(13, 115, 119, 0.05) 19px
+        );
+      pointer-events: none;
+    }
+    .brand {
+      font-size: clamp(2.4rem, 6vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      margin: 0 0 0.35rem;
+      line-height: 1.15;
+    }
+    .brand span { color: var(--teal); }
+    .hero-lead {
+      max-width: 42rem;
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin: 0 0 0.35rem;
+      line-height: 1.45;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      align-items: center;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .hero-meta a {
+      color: var(--teal-deep);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .hero-meta a:hover { text-decoration: underline; }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+    .chip.active { border-color: var(--teal); color: var(--teal-deep); background: rgba(13,115,119,0.08); }
+
+    /* —— Score ring —— */
+    .score-panel {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.5rem;
+      align-items: center;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+    @media (max-width: 640px) {
+      .score-panel { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+    }
+    .ring {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: conic-gradient(var(--accent) calc(var(--pct) * 1%), var(--sand) 0);
+      position: relative;
+    }
+    .ring::before {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border-radius: 50%;
+      background: var(--white);
+    }
+    .ring-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .ring-num {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--ink);
+    }
+    .ring-sub { font-size: 0.75rem; color: var(--muted); }
+    .score-copy h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1.25rem;
+    }
+    .score-copy p { margin: 0 0 0.85rem; color: var(--muted); font-size: 0.95rem; }
+    .bars { display: grid; gap: 0.45rem; }
+    .bar-row {
+      display: grid;
+      grid-template-columns: 7rem 1fr 2.5rem;
+      gap: 0.5rem;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+    .bar-track {
+      height: 8px;
+      background: var(--sand);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      background: var(--teal);
+      transition: width 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .bar-fill.low { background: var(--fail); }
+    .bar-fill.mid { background: var(--warn); }
+
+    /* —— Nav tabs —— */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 1.25rem;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      padding: 0.65rem 0;
+      background: color-mix(in srgb, var(--paper) 92%, transparent);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .tab {
+      font-family: inherit;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--muted);
+      padding: 0.45rem 0.9rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .tab:hover { color: var(--ink); background: var(--sand); }
+    .tab[aria-selected="true"] {
+      color: var(--white);
+      background: var(--ink);
+      border-color: var(--ink);
+    }
+
+    .panel { display: none; animation: fade 0.25s ease; }
+    .panel.active { display: block; }
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    section.block {
+      margin-bottom: 1.75rem;
+    }
+    section.block > h2 {
+      font-size: 1.15rem;
+      margin: 0 0 0.85rem;
+      font-weight: 700;
+    }
+    .section-lead {
+      margin: -0.4rem 0 1rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 760px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+
+    .status-list { display: grid; gap: 0.5rem; }
+    .status-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem;
+      align-items: start;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-top: 0.45rem;
+      flex-shrink: 0;
+    }
+    .dot.pass { background: var(--pass); }
+    .dot.warn { background: var(--warn); }
+    .dot.fail { background: var(--fail); }
+    .status-item strong { display: block; font-size: 0.95rem; }
+    .status-item span { font-size: 0.82rem; color: var(--muted); }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 800px) {
+      .kpi-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .kpi {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    .kpi .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 0.35rem; }
+    .kpi .val { font-size: 1.45rem; font-weight: 800; line-height: 1.2; }
+    .kpi .target { font-size: 0.78rem; color: var(--teal-deep); margin-top: 0.25rem; }
+
+    table.data {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      font-size: 0.88rem;
+    }
+    table.data th {
+      text-align: right;
+      background: var(--ink);
+      color: var(--white);
+      padding: 0.65rem 0.85rem;
+      font-weight: 600;
+    }
+    table.data td {
+      padding: 0.65rem 0.85rem;
+      border-top: 1px solid var(--line);
+      vertical-align: top;
+    }
+    table.data tr:hover td { background: rgba(13, 115, 119, 0.04); }
+
+    .badge {
+      display: inline-block;
+      padding: 0.12rem 0.5rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+    .badge.ok { background: #e8f6ee; color: var(--pass); }
+    .badge.mapped { background: #e8f6ee; color: var(--pass); }
+    .badge.missing { background: #fdecea; color: var(--fail); }
+    .badge.partial { background: #fff4e5; color: var(--warn); }
+    .badge.critical { background: #fdecea; color: var(--fail); }
+    .badge.high { background: #fff4e5; color: var(--warn); }
+    .badge.medium { background: #e8f0f6; color: var(--ink-soft); }
+    .badge.done { background: #e8f6ee; color: var(--pass); }
+    .badge.todo { background: #eef2f4; color: #4a5560; }
+    .badge.live { background: #e8f6ee; color: var(--pass); }
+
+    .kw-legend { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin: 0 0 0.85rem; font-size: 0.82rem; color: var(--ink-soft); }
+    .kw-legend span { display: inline-flex; align-items: center; gap: 0.35rem; }
+    .kw-swatch { width: 0.85rem; height: 0.85rem; border-radius: 3px; display: inline-block; }
+    .kw-swatch.done { background: #ccefdc; border: 1px solid #8fd4ad; }
+    .kw-swatch.todo { background: #f4f6f8; border: 1px solid #d0d7de; }
+    .kw-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 0.75rem; }
+    .kw-filters button {
+      border: 1px solid var(--line); background: #fff; color: var(--ink);
+      border-radius: 999px; padding: 0.28rem 0.7rem; font: inherit; font-size: 0.78rem; cursor: pointer;
+    }
+    .kw-filters button.active { background: var(--teal-deep); color: #fff; border-color: var(--teal-deep); }
+    tr.kw-done td { background: #eaf7f0; }
+    tr.kw-todo td { background: #fafbfc; color: #4a5560; }
+    tr.kw-done td:first-child { box-shadow: inset 3px 0 0 #2f9e62; }
+    #allKwBody td, #wkBody td { vertical-align: top; }
+    .kw-summary {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.6rem; margin: 0 0 1rem;
+    }
+    @media (max-width: 720px) { .kw-summary { grid-template-columns: 1fr; } }
+    .kw-summary .card {
+      border: 1px solid var(--line); border-radius: 10px; padding: 0.7rem 0.85rem; background: #fff;
+    }
+    .kw-summary .card.done { background: #eaf7f0; border-color: #8fd4ad; }
+    .kw-summary .card .n { font-size: 1.45rem; font-weight: 800; line-height: 1; }
+    .kw-summary .card .l { margin-top: 0.25rem; font-size: 0.8rem; color: var(--ink-soft); }
+
+    .action {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 0.85rem;
+      align-items: start;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 0.65rem;
+      transition: border-color 0.15s;
+    }
+    .action.done {
+      opacity: 0.85;
+      border-style: dashed;
+      border-color: var(--pass);
+      background: color-mix(in srgb, var(--pass) 6%, var(--white));
+    }
+    .action.done .action-title { text-decoration: line-through; color: var(--muted); }
+    .action input[type="checkbox"] {
+      width: 1.15rem;
+      height: 1.15rem;
+      margin-top: 0.2rem;
+      accent-color: var(--teal);
+      cursor: pointer;
+    }
+    .action-title { font-weight: 700; margin: 0 0 0.25rem; }
+    .action-meta { font-size: 0.82rem; color: var(--muted); margin: 0; }
+    .action-why { font-size: 0.85rem; margin: 0.4rem 0 0; color: var(--ink-soft); }
+    .action-status {
+      display: inline-block;
+      margin-top: 0.55rem;
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--pass);
+    }
+    .action-status.pending {
+      color: var(--warn);
+      font-weight: 600;
+    }
+    .action-side {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.35rem;
+    }
+
+    .check-list { display: grid; gap: 0.4rem; }
+    .check-item {
+      display: flex;
+      gap: 0.65rem;
+      align-items: center;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0.65rem 0.85rem;
+      cursor: pointer;
+      user-select: none;
+    }
+    .check-item:hover { border-color: var(--teal); }
+    .check-item.done { opacity: 0.55; }
+    .check-item.done span { text-decoration: line-through; }
+    .check-item input { accent-color: var(--teal); width: 1.1rem; height: 1.1rem; }
+    .check-item .verify {
+      margin-inline-start: auto;
+      font-size: 0.72rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .check-item .verify.ok { color: var(--pass); }
+    .check-item .verify.fail { color: var(--fail); }
+    .check-item .verify.warn { color: var(--warn); }
+    .check-item .verify.pending { color: var(--muted); }
+
+    .compare {
+      display: grid;
+      gap: 0.75rem;
+    }
+    .compare-row {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    .compare-row h3 {
+      margin: 0 0 0.65rem;
+      font-size: 0.95rem;
+    }
+    .now-target {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    @media (max-width: 640px) {
+      .now-target { grid-template-columns: 1fr; }
+    }
+    .box {
+      border-radius: 8px;
+      padding: 0.75rem;
+      font-size: 0.85rem;
+    }
+    .box.now { background: #fdecea; border: 1px solid #f5c2c0; }
+    .box.target { background: #e8f6ee; border: 1px solid #a6e0bf; }
+    .box .lbl {
+      font-size: 0.72rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 700px) {
+      .timeline { grid-template-columns: 1fr 1fr; }
+    }
+    .phase {
+      padding: 0.85rem;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+    }
+    .phase:hover {
+      border-color: var(--teal);
+      box-shadow: 0 2px 10px rgba(13, 115, 119, 0.08);
+    }
+    .phase.active {
+      border-color: var(--teal);
+      background: rgba(13, 115, 119, 0.08);
+    }
+    .phase.done {
+      border-color: #7dbe98;
+      background: #f0faf4;
+    }
+    .phase.selected {
+      outline: 2px solid var(--teal);
+      outline-offset: 2px;
+    }
+    .phase .ph { font-weight: 800; font-size: 1.1rem; }
+    .phase .lb { font-size: 0.82rem; color: var(--muted); }
+    .phase .wk { font-size: 0.75rem; color: var(--teal-deep); margin-top: 0.25rem; }
+    .phase .st {
+      display: inline-block;
+      margin-top: 0.35rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.15rem 0.45rem;
+      border-radius: 999px;
+      background: #eef2f4;
+      color: var(--muted);
+    }
+    .phase.done .st { background: #d8f0e2; color: #1b6b3a; }
+    .phase.active .st { background: rgba(13, 115, 119, 0.15); color: var(--teal-deep); }
+
+    /* فقط نسخهٔ لوکال / اپراتور — روی GitHub Pages مخفی */
+    body.client-view .dev-only {
+      display: none !important;
+    }
+    body:not(.client-view) .client-only {
+      display: none !important;
+    }
+    body.client-view .audit-card-cmd {
+      display: none !important;
+    }
+
+    .phase-panel-head {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+    .phase-panel-head h2 { margin: 0; }
+    .phase-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+    }
+    .phase-badge.done { background: #d8f0e2; color: #1b6b3a; }
+    .phase-badge.active { background: rgba(13, 115, 119, 0.15); color: var(--teal-deep); }
+    .phase-badge.upcoming { background: #eef2f4; color: var(--muted); }
+    .phase-goal {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0 0 1rem;
+    }
+    .phase-subh {
+      font-size: 0.92rem;
+      font-weight: 800;
+      margin: 1rem 0 0.5rem;
+    }
+    .actions-phase-label {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--teal-deep);
+      margin: 1.25rem 0 0.5rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px dashed var(--line);
+    }
+    .actions-phase-label:first-child { margin-top: 0; }
+
+    .bucket-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.65rem;
+      margin-bottom: 1.25rem;
+    }
+    @media (max-width: 700px) {
+      .bucket-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .bucket {
+      background: var(--ink);
+      color: var(--white);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    .bucket.p1 { background: var(--ink-soft); }
+    .bucket.p2 { background: var(--teal-deep); }
+    .bucket.p3 { background: #3d5564; }
+    .bucket .n { font-size: 1.8rem; font-weight: 800; line-height: 1; }
+    .bucket .l { font-size: 0.85rem; opacity: 0.9; margin-top: 0.25rem; }
+    .bucket .a { font-size: 0.72rem; opacity: 0.7; margin-top: 0.4rem; }
+
+    .pages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .pages a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+    .pages a:hover {
+      border-color: var(--teal);
+      color: var(--teal-deep);
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      align-items: center;
+    }
+    .btn {
+      font-family: inherit;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--white);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+    }
+    .btn:hover { background: var(--ink-soft); }
+    .btn.ghost {
+      background: var(--white);
+      color: var(--ink);
+    }
+    .btn.ghost:hover { background: var(--sand); }
+    .btn:disabled { opacity: 0.5; cursor: wait; }
+    .live-note {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .live-note.ok { color: var(--pass); }
+    .live-note.err { color: var(--fail); }
+
+    .callout {
+      background: rgba(196, 92, 38, 0.08);
+      border: 1px solid rgba(196, 92, 38, 0.35);
+      border-radius: 10px;
+      padding: 1rem 1.15rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.92rem;
+    }
+    .callout strong { color: var(--accent); }
+
+    .gsc-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin: 0 0 1rem;
+      line-height: 1.7;
+    }
+    .gsc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1.1rem;
+    }
+    @media (max-width: 800px) {
+      .gsc-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .gsc-stat {
+      background: var(--sand);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+    }
+    .gsc-stat .label { font-size: 0.75rem; color: var(--muted); margin-bottom: 0.25rem; }
+    .gsc-stat .val { font-size: 1.35rem; font-weight: 700; color: var(--ink); }
+    .gsc-insights {
+      margin: 0.75rem 0 0;
+      padding: 0 1.1rem 0 0;
+      color: var(--ink-soft);
+      font-size: 0.88rem;
+      line-height: 1.75;
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .copy-btn {
+      font-family: inherit;
+      font-size: 0.72rem;
+      border: 1px solid var(--line);
+      background: var(--white);
+      border-radius: 6px;
+      padding: 0.2rem 0.5rem;
+      cursor: pointer;
+      color: var(--muted);
+    }
+    .copy-btn:hover { color: var(--ink); border-color: var(--teal); }
+
+    /* —— Audit tab —— */
+    .audit-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .audit-url-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .audit-url-chip code {
+      color: var(--teal-deep);
+      font-weight: 600;
+    }
+    .audit-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.65rem;
+      margin-bottom: 1.25rem;
+    }
+    @media (max-width: 900px) {
+      .audit-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 520px) {
+      .audit-cards { grid-template-columns: 1fr; }
+    }
+    .audit-card {
+      position: relative;
+      font-family: inherit;
+      text-align: right;
+      background: var(--white);
+      border: 2px solid var(--line);
+      border-radius: 12px;
+      padding: 1rem 1rem 0.85rem;
+      cursor: pointer;
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.1s;
+    }
+    .audit-card:hover {
+      border-color: var(--teal);
+      box-shadow: 0 4px 14px rgba(12, 31, 46, 0.08);
+    }
+    .audit-card.active {
+      border-color: var(--ink);
+      background: color-mix(in srgb, var(--ink) 4%, var(--white));
+      box-shadow: 0 2px 0 var(--ink);
+    }
+    .audit-card-icon {
+      font-size: 1.35rem;
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+    .audit-card-label {
+      display: block;
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--ink);
+      margin-bottom: 0.2rem;
+    }
+    .audit-card-cmd {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-family: ui-monospace, "Cascadia Code", monospace;
+      word-break: break-all;
+    }
+    .audit-card-dot {
+      position: absolute;
+      top: 0.65rem;
+      inset-inline-start: 0.65rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    .audit-card-dot.has-data { background: var(--pass); }
+    .audit-card-dot.no-data { background: var(--line); }
+
+    .audit-detail {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .audit-detail-head {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--sand) 50%, var(--white));
+    }
+    .audit-detail-head h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.1rem;
+    }
+    .audit-meta {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.65rem;
+    }
+    @media (max-width: 760px) {
+      .audit-meta { grid-template-columns: 1fr 1fr; }
+    }
+    .audit-meta-item {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0.55rem 0.7rem;
+      font-size: 0.8rem;
+    }
+    .audit-meta-item .k {
+      display: block;
+      color: var(--muted);
+      font-size: 0.72rem;
+      margin-bottom: 0.15rem;
+    }
+    .audit-meta-item .v { font-weight: 700; }
+    .audit-meta-item .v.ok { color: var(--pass); }
+    .audit-meta-item .v.warn { color: var(--warn); }
+    .audit-meta-item .v.score { font-size: 1.2rem; }
+    .audit-meta-item .v.score small { font-size: 0.75rem; color: var(--muted); font-weight: 500; }
+    .audit-cmd-display {
+      font-size: 0.72rem;
+      word-break: break-all;
+      color: var(--teal-deep);
+    }
+
+    .audit-detail-body {
+      padding: 1.25rem;
+      min-height: 200px;
+    }
+    .audit-loading { color: var(--muted); font-size: 0.9rem; }
+    .audit-note {
+      display: block;
+      margin-top: 0.85rem;
+      padding: 0 1.25rem 1rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .audit-note.ok { color: var(--pass); }
+    .audit-note.warn { color: var(--warn); }
+
+    .audit-md h2, .audit-md h3, .audit-md h4 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1rem;
+    }
+    .audit-md h2:first-child { margin-top: 0; }
+    .audit-md p { margin: 0.5rem 0; font-size: 0.9rem; color: var(--ink-soft); }
+    .audit-md ul { margin: 0.5rem 0; padding-inline-start: 1.25rem; }
+    .audit-md li { margin: 0.25rem 0; font-size: 0.88rem; }
+    .audit-md code {
+      background: var(--sand);
+      padding: 0.1rem 0.35rem;
+      border-radius: 4px;
+      font-size: 0.82rem;
+    }
+
+    .audit-pre {
+      background: var(--ink);
+      color: #e8eef1;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.78rem;
+      line-height: 1.55;
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .audit-fallback-lead {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 0 0 1rem;
+    }
+    .audit-fallback-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.65rem;
+      margin-bottom: 1rem;
+    }
+    .audit-stat {
+      text-align: center;
+      background: var(--sand);
+      border-radius: 10px;
+      padding: 0.85rem;
+    }
+    .audit-stat .n {
+      display: block;
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .audit-stat .l { font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem; }
+    .audit-table { margin-top: 0.5rem; }
+
+    /* —— GSC import tab (local only) —— */
+    .gsc-panel {
+      display: grid;
+      gap: 1.25rem;
+      max-width: 42rem;
+    }
+    .gsc-drop {
+      border: 2px dashed rgba(13, 115, 119, 0.35);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      background: rgba(13, 115, 119, 0.04);
+      text-align: center;
+    }
+    .gsc-drop input[type="file"] {
+      margin: 0.75rem 0;
+      max-width: 100%;
+    }
+    .gsc-meta {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .gsc-meta strong { color: var(--ink); }
+    .gsc-log {
+      font-family: ui-monospace, Consolas, monospace;
+      font-size: 0.75rem;
+      background: #0f1419;
+      color: #c9d1d9;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      white-space: pre-wrap;
+      max-height: 12rem;
+      overflow: auto;
+      display: none;
+    }
+    .gsc-log.show { display: block; }
+    .finding-list { padding-inline-start: 1.25rem; }
+    .finding-list li.sev-critical { color: var(--fail); }
+    .finding-list li.sev-ok { color: var(--ok, #1a7f4e); }
+    .finding-list li.sev-high { color: var(--warn); }
+
+    /* —— WP Organic tab —— */
+    .wp-org-kpis {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .wp-org-kpi {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 0.85rem 1rem;
+      text-align: center;
+    }
+    .wp-org-kpi .n {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--teal, #0d7377);
+      line-height: 1.1;
+    }
+    .wp-org-kpi .l { font-size: 0.78rem; color: var(--muted); margin-top: 0.25rem; }
+    .wp-org-day {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      margin-bottom: 0.85rem;
+      overflow: hidden;
+      background: var(--card);
+    }
+    .wp-org-day-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: rgba(13, 115, 119, 0.06);
+      border-bottom: 1px solid var(--line);
+    }
+    .wp-org-day-head strong { font-size: 0.95rem; }
+    .wp-org-day-meta { font-size: 0.82rem; color: var(--muted); }
+    .wp-org-run {
+      padding: 0.65rem 1rem;
+      border-bottom: 1px dashed var(--line);
+    }
+    .wp-org-run:last-child { border-bottom: none; }
+    .wp-org-run-head {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      margin-bottom: 0.45rem;
+      font-size: 0.84rem;
+    }
+    .wp-org-badge {
+      display: inline-block;
+      padding: 0.12rem 0.45rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+    .wp-org-badge.live { background: rgba(26, 127, 78, 0.12); color: #1a7f4e; }
+    .wp-org-badge.preview { background: rgba(120, 120, 120, 0.12); color: var(--muted); }
+    .wp-org-empty {
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="wrap">
+    <header class="hero">
+      <p class="chip active" id="phaseChip">فاز ۰</p>
+      <h1 class="brand">برادران <span>بابایی</span></h1>
+      <p class="hero-lead">
+        داشبورد آنالیز SEO — برنامهٔ <strong>۶ ماهه</strong> از
+        <strong>۱ مهر ۱۴۰۵</strong> تا <strong>۲۵ اسفند ۱۴۰۵</strong> · پوشش <strong>۱۷۱ کیورد</strong>
+      </p>
+      <div class="hero-meta">
+        <a href="https://baradaranebabaei.ir/" target="_blank" rel="noopener">baradaranebabaei.ir</a>
+        <span id="updatedLabel">به‌روزرسانی: —</span>
+        <span id="managerLabel"></span>
+      </div>
+    </header>
+
+    <div class="score-panel" id="scorePanel">
+      <div class="ring" id="scoreRing" style="--pct: 0">
+        <div class="ring-inner">
+          <div class="ring-num" id="scoreNum">0</div>
+          <div class="ring-sub">از ۱۰۰</div>
+        </div>
+      </div>
+      <div class="score-copy">
+        <h2 id="scoreLabel">نیاز به اقدام فوری</h2>
+        <p>امتیاز از ممیزی زنده · قرارداد ۱ مهر تا ۲۵ اسفند ۱۴۰۵ · ۱۷۱ کیورد.</p>
+        <div class="bars" id="scoreBars"></div>
+      </div>
+    </div>
+
+    <div class="callout" id="topCallout">
+      <strong>فاز جاری:</strong>
+      فاز ۱ — P0 پول/کارت + جبران صف. قرارداد تا ۲۵ اسفند ۱۴۰۵.
+    </div>
+
+    <nav class="tabs" role="tablist" aria-label="بخش‌های داشبورد">
+      <button class="tab" role="tab" aria-selected="true" data-tab="overview">نمای کلی</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="actions">اقدام‌ها</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="agents">۲۰ ایجنت</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="keywords">کیوردها</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="onpage">آن‌پیج</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="audit" id="tabAudit">آنالیز</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="wp-organic">بهینه‌سازی مقالات</button>
+      <button class="tab dev-only" role="tab" aria-selected="false" data-tab="gsc">GSC</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="checklist">چک‌لیست فاز</button>
+    </nav>
+
+    <!-- Overview -->
+    <div class="panel active" id="panel-overview" role="tabpanel">
+      <div class="toolbar">
+        <button class="btn dev-only" id="btnLive" type="button">بررسی زنده Sitemap</button>
+        <button class="btn dev-only" id="btnPublish" type="button" title="تیک‌ها را در data.js می‌نویسد و به GitHub Pages پوش می‌کند">انتشار آنلاین</button>
+        <button class="btn ghost dev-only" id="btnReset" type="button">بازنشانی تیک‌ها</button>
+        <span class="live-note" id="liveNote">وضعیت از نسخهٔ منتشرشده خوانده می‌شود</span>
+      </div>
+
+      <div class="timeline" id="timeline" aria-label="فازهای برنامه ۶ماهه تا ۲۵ اسفند ۱۴۰۵"></div>
+      <p class="section-lead" style="margin:-0.75rem 0 1rem">
+        روی هر فاز کلیک کنید تا کارها و چک‌لیست همان فاز نمایش داده شود. بازه قرارداد: ۱ مهر تا ۲۵ اسفند ۱۴۰۵.
+      </p>
+
+      <section class="block" id="competitorBlock">
+        <div class="phase-panel-head">
+          <h2>ردفوکس سخت</h2>
+          <span class="phase-badge active" id="competitorBadge">اولویت شکست</span>
+        </div>
+        <p class="phase-goal" id="competitorGoal"></p>
+        <div class="kpi-grid" id="competitorKpis" style="margin:0.75rem 0 1rem"></div>
+        <p class="phase-subh">شکاف‌ها (ما در برابر ردفوکس)</p>
+        <div id="competitorGaps"></div>
+        <p class="phase-subh">اقدام‌های شکست ردفوکس (تیک بزن و اجرا کن)</p>
+        <div id="competitorActions"></div>
+        <p class="phase-subh">مانیتور ماهانه URLهای پول (موضوع · بدون دامنه رقیب)</p>
+        <div id="competitorWatchUrls"></div>
+        <p class="live-note" id="competitorNote"></p>
+      </section>
+
+      <section class="block" id="seoSummaryBlock">
+        <div class="phase-panel-head">
+          <h2>خلاصه SEO</h2>
+          <span class="phase-badge active" id="seoSummaryBadge">GSC</span>
+        </div>
+        <p class="phase-goal" id="seoSummaryVerdict"></p>
+        <div class="kpi-grid" id="seoSummaryKpis" style="margin:0.75rem 0 1rem"></div>
+        <div id="seoSummaryMeta" class="live-note" style="margin-bottom:0.75rem"></div>
+        <div class="kpi-grid" id="seoSummaryCols" style="grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem">
+          <div>
+            <p class="phase-subh">نقاط قوت</p>
+            <ul class="gsc-insights" id="seoSummaryStrengths"></ul>
+          </div>
+          <div>
+            <p class="phase-subh">ریسک‌ها</p>
+            <ul class="gsc-insights" id="seoSummaryRisks"></ul>
+          </div>
+        </div>
+        <p class="phase-subh">کارهای اولویت‌دار (پیش ببریم)</p>
+        <div id="seoSummaryTasks"></div>
+      </section>
+
+      <section class="block" id="urgentBlock">
+        <div class="phase-panel-head">
+          <h2>اقدام فوری (از ۲۰ ایجنت)</h2>
+          <span class="phase-badge active">الان</span>
+        </div>
+        <p class="phase-goal">کارهای بحرانی/بالا که باید همین هفته جلو بروند — بر اساس ممیزی، GSC و صف محتوا.</p>
+        <div id="urgentActions"></div>
+      </section>
+
+      <section class="block" id="contentBeatBlock">
+        <div class="phase-panel-head">
+          <h2>صف تولید محتوا — شکست ردفوکس</h2>
+          <span class="phase-badge active" id="contentBeatBadge">۱/روز · انتشار مستقیم</span>
+        </div>
+        <p class="phase-goal" id="contentBeatGoal"></p>
+        <div class="kpi-grid" id="contentBeatKpis" style="margin:0.75rem 0 1rem"></div>
+        <p class="phase-subh">۱۴ عنوان بعدی (آماده نوشتن/انتشار)</p>
+        <div style="overflow-x:auto">
+          <table class="data" id="contentBeatTable">
+            <thead>
+              <tr>
+                <th>روز</th>
+                <th>منبع</th>
+                <th>اولویت</th>
+                <th>عنوان</th>
+                <th>وضعیت</th>
+              </tr>
+            </thead>
+            <tbody id="contentBeatBody"></tbody>
+          </table>
+        </div>
+        <p class="phase-subh">استاندارد کیفیت (قوی‌تر از ردفوکس)</p>
+        <ul class="gsc-insights" id="contentBeatQuality"></ul>
+        <p class="live-note" id="contentBeatNote"></p>
+      </section>
+
+      <section class="block" id="phaseWorkBlock">
+        <div class="phase-panel-head">
+          <h2 id="phaseWorkTitle">کارهای فاز</h2>
+          <span class="phase-badge active" id="phaseWorkBadge">جاری</span>
+        </div>
+        <p class="phase-goal" id="phaseWorkGoal"></p>
+        <p class="phase-subh">اقدام‌های این فاز</p>
+        <div id="phaseActions"></div>
+        <p class="phase-subh">چک‌لیست این فاز</p>
+        <div class="check-list" id="phaseChecks"></div>
+      </section>
+
+      <div class="kpi-grid" id="kpis"></div>
+
+      <section class="block" id="wpOrgOverviewBlock">
+        <h2>بهینه‌سازی مقالات</h2>
+        <p class="section-lead" id="wpOrgOverviewLead">
+          پیشرفت روزانه بهینه‌سازی Rank Math روی مقالات سایت
+        </p>
+        <div class="wp-org-kpis" id="wpOrgOverviewKpis"></div>
+        <p style="margin-top:0.75rem">
+          <button type="button" class="btn ghost" id="wpOrgGoTab">تاریخچه و جزئیات ←</button>
+        </p>
+      </section>
+
+      <section class="block">
+        <h2>گزارش Search Console</h2>
+        <p class="gsc-note" id="gscScope"></p>
+        <div class="gsc-grid" id="gscTotals"></div>
+        <p class="phase-subh">پرس‌وجوهای برتر (کلیک)</p>
+        <table class="data">
+          <thead>
+            <tr>
+              <th>کیورد</th>
+              <th>کلیک</th>
+              <th>نمایش</th>
+              <th>رتبه</th>
+            </tr>
+          </thead>
+          <tbody id="gscTopBody"></tbody>
+        </table>
+        <p class="phase-subh">صفحات برتر</p>
+        <table class="data">
+          <thead>
+            <tr>
+              <th>صفحه</th>
+              <th>کلیک</th>
+              <th>نمایش</th>
+              <th>رتبه</th>
+            </tr>
+          </thead>
+          <tbody id="gscPagesBody"></tbody>
+        </table>
+        <p class="phase-subh">فرصت‌ها (نمایش بدون کلیک کافی)</p>
+        <table class="data">
+          <thead>
+            <tr>
+              <th>کیورد</th>
+              <th>نمایش</th>
+              <th>رتبه</th>
+              <th>اقدام</th>
+            </tr>
+          </thead>
+          <tbody id="gscOppBody"></tbody>
+        </table>
+        <ul class="gsc-insights" id="gscInsights"></ul>
+        <p class="phase-subh">مقایسه هفته‌به‌هفته (WoW)</p>
+        <p class="gsc-note" id="gscWowScope"></p>
+        <div class="gsc-grid" id="gscWowTotals"></div>
+        <p class="phase-subh">بیشترین افت صفحات</p>
+        <table class="data">
+          <thead>
+            <tr>
+              <th>صفحه</th>
+              <th>قبل</th>
+              <th>الان</th>
+              <th>تغییر</th>
+            </tr>
+          </thead>
+          <tbody id="gscWowPageLosers"></tbody>
+        </table>
+        <p class="phase-subh">بیشترین افت کیوردها</p>
+        <table class="data">
+          <thead>
+            <tr>
+              <th>کیورد</th>
+              <th>قبل</th>
+              <th>الان</th>
+              <th>تغییر</th>
+            </tr>
+          </thead>
+          <tbody id="gscWowQueryLosers"></tbody>
+        </table>
+        <ul class="gsc-insights" id="gscWowInsights"></ul>
+        <p class="phase-subh">ایندکس / Coverage</p>
+        <p class="gsc-note" id="coverageScope"></p>
+        <div class="gsc-grid" id="coverageTotals"></div>
+        <table class="data">
+          <thead>
+            <tr>
+              <th>مسئله</th>
+              <th>صفحات</th>
+              <th>شدت</th>
+              <th>اقدام</th>
+            </tr>
+          </thead>
+          <tbody id="coverageBody"></tbody>
+        </table>
+        <ul class="gsc-insights" id="coverageInsights"></ul>
+        <p class="phase-subh">ریدایرکت پیشنهادی برای ۴۰۴ها</p>
+        <table class="data">
+          <thead>
+            <tr>
+              <th>از</th>
+              <th>به</th>
+              <th>اولویت</th>
+              <th>وضعیت</th>
+            </tr>
+          </thead>
+          <tbody id="coverage404Redirects"></tbody>
+        </table>
+        <p class="phase-subh">نمونه URLهای ۴۰۴</p>
+        <table class="data">
+          <thead>
+            <tr>
+              <th>مسیر</th>
+              <th>دسته</th>
+              <th>آخرین خزش</th>
+            </tr>
+          </thead>
+          <tbody id="coverage404Samples"></tbody>
+        </table>
+      </section>
+
+      <section class="block">
+        <h2>وضعیت فنی</h2>
+        <p class="section-lead">خلاصهٔ وضعیت فنی سایت</p>
+        <div class="status-list" id="techStatus"></div>
+      </section>
+
+      <section class="block">
+        <h2>صفحات کلیدی موجود</h2>
+        <div class="pages" id="existingPages"></div>
+      </section>
+    </div>
+
+    <!-- Actions -->
+    <div class="panel" id="panel-actions" role="tabpanel">
+      <section class="block">
+        <h2>اقدام‌ها به‌تفکیک فاز</h2>
+        <p class="section-lead">فاز ۰ تیک‌خورده می‌ماند · با کلیک روی فاز در نمای کلی، روی همان فاز فوکوس می‌شود · هر اقدام به یک ایجنت وصل است</p>
+        <div id="actions"></div>
+      </section>
+    </div>
+
+    <!-- 20 Agents playbook -->
+    <div class="panel" id="panel-agents" role="tabpanel">
+      <section class="block">
+        <h2>پلی‌بوک ۲۰ ایجنت SEO</h2>
+        <p class="section-lead">
+          منبع: <code>claude-seo/agents/</code> · برای هر ایجنت کارهای انجام‌شده و باقی‌ماندهٔ سایت
+          <strong>baradaranebabaei.ir</strong> ثبت شده است.
+        </p>
+        <div class="kpi-grid" id="agentKpis" style="margin-bottom:1rem"></div>
+        <div id="agentPlaybook"></div>
+      </section>
+    </div>
+
+    <!-- Keywords -->
+    <div class="panel" id="panel-keywords" role="tabpanel">
+      <div class="bucket-grid" id="buckets"></div>
+
+      <section class="block" id="workKeywordsBlock">
+        <h2>کیوردهای در صف کار (اولویت GSC + P0)</h2>
+        <p class="section-lead" id="wkVerdict">کیوردهایی که باید رویشان کار شود — سبز = انجام‌شده / خاکستری = باقی</p>
+        <div class="kw-summary" id="wkSummary"></div>
+        <div class="kw-legend">
+          <span><i class="kw-swatch done"></i> انجام‌شده / پوشش قوی</span>
+          <span><i class="kw-swatch todo"></i> نیاز کار</span>
+        </div>
+        <p class="phase-subh">اقدام‌های اجرایی</p>
+        <ul class="gsc-insights" id="wkActions" style="margin-bottom:1rem"></ul>
+        <div style="overflow:auto;max-height:26rem;border:1px solid var(--line);border-radius:10px">
+          <table class="data" style="margin:0">
+            <thead>
+              <tr>
+                <th>کیورد</th>
+                <th>اولویت</th>
+                <th>وضعیت</th>
+                <th>GSC</th>
+                <th>صفحه هدف</th>
+                <th>اقدام</th>
+              </tr>
+            </thead>
+            <tbody id="wkBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="block" id="allKeywordsBlock">
+        <h2>همه کیوردهای برنامه (۱۷۱)</h2>
+        <p class="section-lead">لیست کامل قرارداد · سبز = انجام‌شده · خاکستری = باقی‌مانده</p>
+        <div class="kw-summary" id="kwSummary"></div>
+        <div class="kw-legend">
+          <span><i class="kw-swatch done"></i> انجام‌شده (پوشش / انتشار / GSC)</span>
+          <span><i class="kw-swatch todo"></i> باقی‌مانده (جدید / برنامه‌آینده)</span>
+        </div>
+        <div class="kw-filters" id="kwFilters" role="group" aria-label="فیلتر کیوردها">
+          <button type="button" class="active" data-kw-filter="all">همه</button>
+          <button type="button" data-kw-filter="done">انجام‌شده</button>
+          <button type="button" data-kw-filter="todo">باقی‌مانده</button>
+          <button type="button" data-kw-filter="P0">P0</button>
+          <button type="button" data-kw-filter="P1">P1</button>
+          <button type="button" data-kw-filter="P2">P2</button>
+        </div>
+        <div style="overflow:auto;max-height:28rem;border:1px solid var(--line);border-radius:10px">
+          <table class="data" style="margin:0">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>کیورد</th>
+                <th>اولویت</th>
+                <th>صفحه هدف</th>
+                <th>وضعیت</th>
+                <th>ماه</th>
+              </tr>
+            </thead>
+            <tbody id="allKwBody"></tbody>
+          </table>
+        </div>
+        <p class="live-note" id="kwListNote">—</p>
+      </section>
+
+      <section class="block">
+        <h2>پوشش ماهانهٔ ۱۷۱ کیورد</h2>
+        <p class="section-lead">قرارداد ۱ مهر تا ۲۵ اسفند ۱۴۰۵ · هاب مشترک مجاز است، ولی هر کیورد باید URL هدف داشته باشد</p>
+        <table class="data">
+          <thead>
+            <tr>
+              <th>ماه</th>
+              <th>P0</th>
+              <th>P1</th>
+              <th>P2</th>
+              <th>P3</th>
+              <th>جمع ماه</th>
+              <th>یادداشت</th>
+            </tr>
+          </thead>
+          <tbody id="kwCoverBody"></tbody>
+        </table>
+      </section>
+      <section class="block">
+        <h2>۱۰ کلمه طلایی (Focus)</h2>
+        <table class="data">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>کلمه</th>
+              <th>صفحه هدف</th>
+              <th>وضعیت</th>
+              <th>یادداشت</th>
+            </tr>
+          </thead>
+          <tbody id="kwBody"></tbody>
+        </table>
+      </section>
+    </div>
+
+    <!-- On-page -->
+    <div class="panel" id="panel-onpage" role="tabpanel">
+      <section class="block">
+        <h2>صفحه اصلی — الان در برابر هدف</h2>
+        <div class="compare" id="homepageCompare"></div>
+      </section>
+      <section class="block">
+        <h2>Meta آماده برای کپی (فاز ۰)</h2>
+        <p class="section-lead">مستقیم در Rank Math بچسبانید</p>
+        <div id="metaTargets"></div>
+      </section>
+    </div>
+
+    <!-- WP Organic history -->
+    <div class="panel" id="panel-wp-organic" role="tabpanel">
+      <section class="block">
+        <h2>بهینه‌سازی Rank Math — مقالات</h2>
+        <p class="section-lead client-only" id="wpOrgLeadClient">
+          گزارش شفاف از بهینه‌سازی خودکار مقالات سایت (دستهٔ <strong>مقاله</strong>) — Rank Math، لینک‌سازی داخلی و SEO on-page.
+        </p>
+        <p class="section-lead dev-only" id="wpOrgLead">Agent لوکال · دسته <code dir="ltr">blog</code> (مقاله) · تاریخچه روزانه</p>
+        <div class="wp-org-kpis" id="wpOrgKpis"></div>
+        <p class="phase-subh">تاریخچه روزانه</p>
+        <div id="wpOrgDaily"></div>
+        <p class="live-note" id="wpOrgUpdated">—</p>
+      </section>
+    </div>
+
+    <!-- GSC import (local operator) -->
+    <div class="panel dev-only" id="panel-gsc" role="tabpanel">
+      <section class="block">
+        <h2>بروزرسانی GSC + Audit</h2>
+        <p class="section-lead">
+          export اکسل Google Search Console را انتخاب کنید. ingest، audit کامل
+          (page · technical · content · schema · local · audit) و push به GitHub Pages
+          خودکار انجام می‌شود.
+        </p>
+        <div class="gsc-panel">
+          <div class="gsc-drop">
+            <p><strong>فایل Performance-on-Search (.xlsx)</strong></p>
+            <p class="gsc-meta">ترجیحاً <code dir="ltr">Last 3 months</code> · Web · کل سایت</p>
+            <input type="file" id="gscFile" accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+            <div class="toolbar" style="justify-content:center;margin-top:0.5rem">
+              <button class="btn" id="btnGscRun" type="button">بروزرسانی داشبورد</button>
+            </div>
+          </div>
+          <div class="gsc-meta" id="gscStatus">در حال بارگذاری وضعیت inbox…</div>
+          <pre class="gsc-log" id="gscLog" aria-live="polite"></pre>
+        </div>
+      </section>
+    </div>
+
+    <!-- Checklist -->
+    <div class="panel" id="panel-checklist" role="tabpanel">
+      <section class="block">
+        <h2 id="checklistTitle">چک‌لیست فاز انتخاب‌شده</h2>
+        <p class="section-lead" id="checklistLead">وضعیت کارهای فاز انتخاب‌شده</p>
+        <div class="toolbar dev-only" style="margin-bottom:0.85rem">
+          <span class="live-note" id="checkRecheckNote">تیک بزنید تا بررسی زنده شروع شود</span>
+        </div>
+        <div class="check-list" id="weekChecks"></div>
+      </section>
+    </div>
+
+    <!-- Audit -->
+    <div class="panel" id="panel-audit" role="tabpanel">
+      <section class="block">
+        <h2 id="auditPanelTitle">آنالیز SEO</h2>
+        <p class="section-lead client-only" id="auditPanelLead">
+          گزارش‌های آنالیز ذخیره‌شده را ببینید.
+        </p>
+        <p class="section-lead dev-only" id="auditPanelLeadDev">
+          هر بخش را جدا ببینید. دستور را در Cursor اجرا کنید؛ خروجی در
+          <code dir="ltr">claude-seo/baradaranebabaei.ir-audit/</code> ذخیره می‌شود.
+        </p>
+
+        <div class="audit-toolbar">
+          <span class="audit-url-chip">سایت: <code dir="ltr">https://baradaranebabaei.ir</code></span>
+          <button class="btn ghost" id="btnAuditRefresh" type="button" title="بارگذاری مجدد گزارش‌ها">به‌روزرسانی</button>
+          <span class="live-note" id="auditLoadedAt">بارگذاری خودکار</span>
+        </div>
+
+        <div class="audit-cards" id="auditCards" role="group" aria-label="بخش‌های آنالیز"></div>
+
+        <div class="audit-detail">
+          <div class="audit-detail-head">
+            <h2 id="auditTitle">—</h2>
+            <div class="audit-meta" id="auditMeta"></div>
+          </div>
+          <div class="audit-detail-body" id="auditBody">
+            <p class="audit-loading">در حال بارگذاری…</p>
+          </div>
+          <span class="audit-note" id="auditNote"></span>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <span>baradaranebabaei.ir 2026 © All rights reserved</span>
+    </footer>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="audit.js"></script>
+  <script>
+    const D = window.BABAEI_SEO;
+    const STORE_KEY = "babaei-seo-dashboard-v1";
+    const IS_LOCAL =
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "localhost";
+    /** روی GitHub Pages فقط data.js منبع حقیقت است */
+    const USE_BROWSER_TICKS = IS_LOCAL;
+    if (!IS_LOCAL) {
+      document.body.classList.add("client-view");
+      const note = document.getElementById("liveNote");
+      if (note) note.textContent = "نسخهٔ منتشرشده — فقط‌خواندنی";
+    } else {
+      const note = document.getElementById("liveNote");
+      if (note) {
+        note.textContent = "لوکال: تیک‌ها ذخیره می‌شوند · دکمه انتشار = همگام‌سازی با نسخه آنلاین";
+      }
+    }
+
+    function loadState() {
+      try {
+        return JSON.parse(localStorage.getItem(STORE_KEY) || "{}");
+      } catch {
+        return {};
+      }
+    }
+    function saveState(next) {
+      localStorage.setItem(STORE_KEY, JSON.stringify(next));
+      if (IS_LOCAL) {
+        fetch("/api/dashboard-state", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ state: next }),
+        }).catch(() => {});
+      }
+    }
+    let state = loadState();
+    let selectedPhase =
+      state.selectedPhase !== undefined && state.selectedPhase !== null
+        ? Number(state.selectedPhase)
+        : Number(D.meta.phase || 1);
+
+    function itemDone(id, defaultDone) {
+      if (!USE_BROWSER_TICKS) return !!defaultDone;
+      if (state.actions && state.actions[id] !== undefined) return !!state.actions[id];
+      if (state.checks && state.checks[id] !== undefined) return !!state.checks[id];
+      return !!defaultDone;
+    }
+
+    async function hydrateStateFromServer() {
+      if (!IS_LOCAL) return;
+      try {
+        const res = await fetch("/api/dashboard-state?_=" + Date.now(), { cache: "no-store" });
+        if (!res.ok) return;
+        const data = await res.json();
+        const remote = data.state || {};
+        state = {
+          ...state,
+          actions: { ...(state.actions || {}), ...(remote.actions || {}) },
+          checks: { ...(state.checks || {}), ...(remote.checks || {}) },
+          selectedPhase:
+            remote.selectedPhase !== undefined && remote.selectedPhase !== null
+              ? remote.selectedPhase
+              : state.selectedPhase,
+        };
+        localStorage.setItem(STORE_KEY, JSON.stringify(state));
+        if (state.selectedPhase !== undefined && state.selectedPhase !== null) {
+          selectedPhase = Number(state.selectedPhase);
+        }
+      } catch {
+        /* no server */
+      }
+    }
+
+    function statusLabel(s) {
+      return {
+        ok: "پوشش نسبی",
+        mapped: "صفحه آماده",
+        missing: "نیاز به صفحه",
+        partial: "ناقص",
+        pass: "خوب",
+        warn: "هشدار",
+        fail: "بحرانی"
+      }[s] || s;
+    }
+
+    function phaseStatusFa(st) {
+      return { done: "انجام شد", active: "جاری", upcoming: "آینده" }[st] || st;
+    }
+
+    function getPhaseDetail(n) {
+      return (D.phaseDetails && D.phaseDetails[n]) || null;
+    }
+
+    function paintDailyHealthCallout() {
+      const callout = document.getElementById("topCallout");
+      const dh = D.dailyHealth;
+      if (!callout || !dh) return;
+      const icon = dh.status === "ok" ? "✓" : dh.status === "warn" ? "⚠" : "✗";
+      callout.innerHTML =
+        "<strong>Sentinel " +
+        (dh.checkedAtFa || "") +
+        ":</strong> " +
+        icon +
+        " " +
+        (dh.summaryFa || "");
+    }
+
+    function animateScoreTo(target, opts) {
+      const numEl = document.getElementById("scoreNum");
+      const ringEl = document.getElementById("scoreRing");
+      if (!numEl || !ringEl) return;
+      const to = Math.max(0, Math.min(100, Number(target) || 0));
+      const duration = (opts && opts.duration) || 1100;
+      const start = performance.now();
+      const from = 0;
+      // restart from zero each load
+      numEl.textContent = "0";
+      ringEl.style.setProperty("--pct", 0);
+      if (window.__scoreAnim) cancelAnimationFrame(window.__scoreAnim);
+      const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+      const tick = (now) => {
+        const t = Math.min(1, (now - start) / duration);
+        const v = Math.round(from + (to - from) * easeOut(t));
+        numEl.textContent = String(v);
+        ringEl.style.setProperty("--pct", v);
+        if (t < 1) {
+          window.__scoreAnim = requestAnimationFrame(tick);
+        } else {
+          numEl.textContent = String(to);
+          ringEl.style.setProperty("--pct", to);
+          window.__scoreAnim = null;
+        }
+      };
+      window.__scoreAnim = requestAnimationFrame(tick);
+    }
+
+    function fillContentBeat() {
+      const B = D.contentBeat;
+      const blk = document.getElementById("contentBeatBlock");
+      if (!B) {
+        if (blk) blk.style.display = "none";
+        return;
+      }
+      if (blk) blk.style.display = "";
+      const goal = document.getElementById("contentBeatGoal");
+      if (goal) goal.textContent = B.goalFa || "";
+      const note = document.getElementById("contentBeatNote");
+      if (note) note.textContent = B.noteFa || "";
+      const badge = document.getElementById("contentBeatBadge");
+      if (badge) {
+        badge.textContent =
+          (B.publishMode === "publish" ? "انتشار مستقیم" : "پیش‌نویس") +
+          " · " +
+          (B.publishedCount || 0) +
+          "/" +
+          (B.total || 0);
+      }
+      const kpis = document.getElementById("contentBeatKpis");
+      if (kpis) {
+        kpis.innerHTML = [
+          { label: "کل صف", value: B.total ?? "—" },
+          { label: "منتشرشده", value: B.publishedCount ?? 0 },
+          { label: "باقی‌مانده", value: B.pendingCount ?? "—" },
+          { label: "ریتم", value: (B.perDay || 1) + " / روز" },
+        ]
+          .map(
+            (s) =>
+              `<div class="kpi"><div class="label">${s.label}</div><div class="val">${s.value}</div></div>`
+          )
+          .join("");
+      }
+      const body = document.getElementById("contentBeatBody");
+      if (body) {
+        const rows = B.next14 || B.upcoming || [];
+        body.innerHTML = rows
+          .map((r) => {
+            const st = r.status || "pending";
+            const stFa =
+              st === "published"
+                ? "منتشر"
+                : st === "drafted"
+                  ? "پیش‌نویس"
+                  : "در صف";
+            const cls =
+              st === "published" ? "ok" : st === "drafted" ? "warn" : "warn";
+            const link = r.link
+              ? ` <a href="${r.link}" target="_blank" rel="noopener">مشاهده</a>`
+              : "";
+            return `<tr>
+              <td dir="ltr">${r.day || "—"}</td>
+              <td>${r.sourceFa || r.source || "—"}</td>
+              <td><span class="badge ${r.priority === "P0" ? "fail" : "warn"}">${r.priority || "—"}</span></td>
+              <td>${r.title || r.keyword || "—"}${link}</td>
+              <td><span class="badge ${cls}">${stFa}</span></td>
+            </tr>`;
+          })
+          .join("");
+      }
+      const q = document.getElementById("contentBeatQuality");
+      if (q) {
+        q.innerHTML = (B.qualityBar || [])
+          .map((t) => `<li>${t}</li>`)
+          .join("");
+      }
+    }
+
+    function fillCompetitor() {
+      const C = D.competitor;
+      if (!C) {
+        const blk = document.getElementById("competitorBlock");
+        if (blk) blk.style.display = "none";
+        return;
+      }
+      const goal = document.getElementById("competitorGoal");
+      if (goal) goal.textContent = C.goalFa || "";
+      const note = document.getElementById("competitorNote");
+      if (note) note.textContent = C.noteFa || "";
+      const badge = document.getElementById("competitorBadge");
+      if (badge && C.threat) badge.textContent = C.threat;
+
+      const kpis = document.getElementById("competitorKpis");
+      if (kpis && C.stats) {
+        kpis.innerHTML = C.stats
+          .map(
+            (s) => `<div class="kpi"><div class="label">${s.label}</div><div class="val">${s.value}</div></div>`
+          )
+          .join("");
+      }
+
+      const gaps = document.getElementById("competitorGaps");
+      if (gaps && C.gaps) {
+        gaps.innerHTML = C.gaps
+          .map((g) => {
+            const cls = g.severity === "Critical" ? "fail" : g.severity === "High" ? "warn" : "ok";
+            return `<div class="action" style="cursor:default">
+              <div>
+                <div class="action-title"><span class="badge ${cls}">${g.severity}</span> ${g.title}</div>
+                <div class="action-meta">${g.detail || ""}</div>
+              </div>
+            </div>`;
+          })
+          .join("");
+      }
+
+      const acts = document.getElementById("competitorActions");
+      if (acts && C.actions) {
+        acts.innerHTML = C.actions
+          .map((a) => {
+            const done = itemDone(a.id, !!a.done);
+            return `<div class="action ${done ? "done" : ""}" data-id="${a.id}">
+              <label style="display:flex;gap:0.6rem;align-items:flex-start;cursor:pointer;width:100%">
+                <input type="checkbox" ${done ? "checked" : ""} ${USE_BROWSER_TICKS ? "" : "disabled"} />
+                <span>
+                  <div class="action-title">${a.text}</div>
+                  <div class="action-meta">${a.why || ""}</div>
+                  <div class="action-status ${done ? "" : "pending"}">${done ? "✓ انجام شد" : "در انتظار انجام"}</div>
+                </span>
+              </label>
+            </div>`;
+          })
+          .join("");
+        if (USE_BROWSER_TICKS) {
+          acts.querySelectorAll(".action").forEach((row) => {
+            const id = row.dataset.id;
+            const cb = row.querySelector("input");
+            cb.addEventListener("change", () => {
+              state.actions = state.actions || {};
+              state.actions[id] = cb.checked;
+              saveState(state);
+              row.classList.toggle("done", cb.checked);
+              const ost = row.querySelector(".action-status");
+              if (ost) {
+                ost.textContent = cb.checked ? "✓ انجام شد" : "در انتظار انجام";
+                ost.classList.toggle("pending", !cb.checked);
+              }
+            });
+          });
+        }
+      }
+
+      const watch = document.getElementById("competitorWatchUrls");
+      if (watch) {
+        const list = C.watchUrls || [];
+        if (!list.length) {
+          watch.innerHTML = `<div class="action" style="cursor:default"><div class="action-meta">هنوز پروب ماهانه اجرا نشده — py -3 SEO/05-tracking/monitor_competitor_urls.py</div></div>`;
+        } else {
+          watch.innerHTML = list
+            .map((w) => {
+              const rs = w.rivalStatus == null ? "—" : w.rivalStatus;
+              const os = w.ourStatus == null ? "—" : w.ourStatus;
+              const ok = os === 200;
+              return `<div class="action" style="cursor:default">
+                <div>
+                  <div class="action-title"><span class="badge ${ok ? "ok" : "warn"}">${w.topic || w.id}</span></div>
+                  <div class="action-meta">ردفوکس HTTP ${rs} · H1=${w.rivalH1 ?? "—"} · کلمات≈${w.rivalWords ?? "—"}</div>
+                  <div class="action-meta">ما HTTP ${os} · H1=${w.ourH1 ?? "—"} · کلمات≈${w.ourWords ?? "—"}
+                    ${w.ourUrl ? ` · <a href="${w.ourUrl}" target="_blank" rel="noopener">صفحه ما</a>` : ""}</div>
+                </div>
+              </div>`;
+            })
+            .join("");
+        }
+      }
+    }
+
+    function fillHeader() {
+      document.getElementById("phaseChip").textContent = D.meta.phaseLabel;
+      document.getElementById("updatedLabel").textContent =
+        "به‌روزرسانی: " + D.meta.updatedAtFa +
+        " · قرارداد: " + (D.meta.planStartFa || "") + " تا " + (D.meta.planEndFa || "");
+      document.getElementById("managerLabel").textContent =
+        (D.meta.manager || "") +
+        (D.meta.agentsCount ? " · " + D.meta.agentsCount + " ایجنت" : "");
+      document.getElementById("scoreLabel").textContent = D.score.label;
+      animateScoreTo(D.score.overall);
+      paintDailyHealthCallout();
+      if (!D.dailyHealth) {
+        const callout = document.getElementById("topCallout");
+        if (callout) {
+          const urg = (D.urgentActions || []).filter((u) => u.priority === "critical").length;
+          callout.innerHTML =
+            "<strong>فاز جاری:</strong> " +
+            (D.meta.phaseLabel || "") +
+            " · " +
+            urg +
+            " اقدام بحرانی باز · قرارداد تا " +
+            (D.meta.planEndFa || "۲۵ اسفند ۱۴۰۵");
+        }
+      }
+    }
+
+    function fillSeoSummary() {
+      const s = D.seoSummary;
+      if (!s) return;
+      const badge = document.getElementById("seoSummaryBadge");
+      const verdict = document.getElementById("seoSummaryVerdict");
+      const kpis = document.getElementById("seoSummaryKpis");
+      const meta = document.getElementById("seoSummaryMeta");
+      const strengths = document.getElementById("seoSummaryStrengths");
+      const risks = document.getElementById("seoSummaryRisks");
+      const tasks = document.getElementById("seoSummaryTasks");
+      if (badge) badge.textContent = s.status || "GSC";
+      if (verdict) {
+        verdict.textContent =
+          (s.verdict || "") +
+          (s.healthScore != null ? ` · نمره سلامت ${s.healthScore}/100` : "");
+      }
+      if (kpis && s.gsc) {
+        const g = s.gsc;
+        kpis.innerHTML = [
+          { label: "کلیک ۳ماه", value: g.clicks },
+          { label: "نمایش ۳ماه", value: g.impressions },
+          { label: "CTR", value: g.ctr },
+          { label: "رتبه میانگین", value: g.avgPosition },
+          { label: "WoW کلیک ۷روز", value: (g.wow7d && g.wow7d.clicksPct != null ? g.wow7d.clicksPct + "%" : "—") },
+          { label: "موبایل", value: g.mobileShare || "—" },
+        ]
+          .map(
+            (k) =>
+              `<div class="kpi"><div class="kpi-val">${k.value ?? "—"}</div><div class="kpi-label">${k.label}</div></div>`
+          )
+          .join("");
+      }
+      if (meta) {
+        const vs = (s.gsc && s.gsc.vsPrevExport && s.gsc.vsPrevExport.note) || "";
+        meta.textContent = `اکسپورت ${s.gscExport || "—"} · ${s.range || ""} · ${vs}`;
+      }
+      if (strengths) {
+        strengths.innerHTML = (s.strengths || []).map((t) => `<li>${t}</li>`).join("") || "<li>—</li>";
+      }
+      if (risks) {
+        risks.innerHTML = (s.risks || []).map((t) => `<li>${t}</li>`).join("") || "<li>—</li>";
+      }
+      if (tasks) {
+        const list = s.tasks || [];
+        if (!list.length) {
+          tasks.innerHTML = '<p class="live-note">کاری ثبت نشده.</p>';
+        } else {
+          tasks.innerHTML = list
+            .map((t) => {
+              const pri =
+                t.priority === "critical" ? "بحرانی" : t.priority === "high" ? "بالا" : "متوسط";
+              const auto = t.canAuto
+                ? '<span class="badge ok" style="margin-right:0.35rem">قابل اجرا از پلاگین</span>'
+                : '<span class="badge warn" style="margin-right:0.35rem">دستی/تم</span>';
+              return `<div class="action" style="cursor:default">
+                <div>
+                  <p class="action-title">${t.text || ""}</p>
+                  <p class="action-meta">${auto} ${t.area || ""} · ایجنت <code>${t.agent || "—"}</code></p>
+                </div>
+                <div class="action-side"><span class="badge ${t.priority || "medium"}">${pri}</span></div>
+              </div>`;
+            })
+            .join("");
+        }
+      }
+    }
+
+    function fillUrgent() {
+      const mount = document.getElementById("urgentActions");
+      if (!mount) return;
+      const list = D.urgentActions || [];
+      if (!list.length) {
+        mount.innerHTML = '<p class="live-note">اقدام فوری ثبت نشده.</p>';
+        return;
+      }
+      mount.innerHTML = list
+        .map((u) => {
+          const pri = u.priority === "critical" ? "بحرانی" : u.priority === "high" ? "بالا" : "متوسط";
+          return `<div class="action" style="cursor:default">
+            <div>
+              <p class="action-title">${u.text || ""}</p>
+              <p class="action-meta">ایجنت <code>${u.agent || "—"}</code></p>
+            </div>
+            <div class="action-side"><span class="badge ${u.priority || "medium"}">${pri}</span></div>
+          </div>`;
+        })
+        .join("");
+    }
+
+    function fillAgentPlaybook() {
+      const mount = document.getElementById("agentPlaybook");
+      const kpis = document.getElementById("agentKpis");
+      const list = D.agentPlaybook || [];
+      if (kpis) {
+        const active = list.filter((a) => a.status === "active").length;
+        const done = list.filter((a) => a.status === "done").length;
+        const pending = list.filter((a) => a.status === "pending").length;
+        kpis.innerHTML = [
+          { label: "ایجنت‌ها", value: list.length || 20 },
+          { label: "فعال", value: active },
+          { label: "انجام‌شده", value: done },
+          { label: "در انتظار", value: pending },
+        ]
+          .map(
+            (k) =>
+              `<div class="kpi"><div class="kpi-val">${k.value}</div><div class="kpi-label">${k.label}</div></div>`
+          )
+          .join("");
+      }
+      if (!mount) return;
+      if (!list.length) {
+        mount.innerHTML = '<p class="live-note">پلی‌بوک ایجنت خالی است — rebuild_dashboard_workplan.py را اجرا کنید.</p>';
+        return;
+      }
+      mount.innerHTML = list
+        .map((a) => {
+          const st =
+            a.status === "done" ? "انجام شد" : a.status === "active" ? "فعال" : "در انتظار";
+          const badge = a.status === "done" ? "ok" : a.status === "active" ? "high" : "warn";
+          const todos = (a.todo || [])
+            .map((t) => `<li>${t}</li>`)
+            .join("");
+          const dones = (a.done || [])
+            .map((t) => `<li style="opacity:.75">✓ ${t}</li>`)
+            .join("");
+          return `<div class="block" style="margin:0 0 0.85rem;padding:1rem 1.1rem">
+            <div class="phase-panel-head" style="margin:0 0 0.5rem">
+              <h3 style="margin:0;font-size:1.05rem"><code>${a.id}</code> — ${a.label || ""}</h3>
+              <span class="badge ${badge}">${st}</span>
+            </div>
+            ${dones ? `<ul class="gsc-insights" style="margin:0.35rem 0">${dones}</ul>` : ""}
+            ${todos ? `<p class="phase-subh" style="margin:0.5rem 0 0.25rem">باید انجام شود</p><ul class="gsc-insights" style="margin:0">${todos}</ul>` : ""}
+          </div>`;
+        })
+        .join("");
+    }
+
+    function fillBars() {
+      const el = document.getElementById("scoreBars");
+      const nameFa = {
+        technical: "فنی",
+        content: "محتوا / E-E-A-T",
+        page: "صفحه",
+        schema: "اسکیما",
+        local: "لوکال SEO",
+      };
+      el.innerHTML = D.score.breakdown
+        .map((b) => {
+          const score = Number(b.score ?? b.value ?? 0);
+          const name = b.name || nameFa[b.id] || b.label || b.id || "—";
+          const cls = score < 35 ? "low" : score < 55 ? "mid" : "";
+          return `<div class="bar-row">
+            <span>${name}</span>
+            <div class="bar-track"><div class="bar-fill ${cls}" style="width:0%" data-width="${score}"></div></div>
+            <span>${score}</span>
+          </div>`;
+        })
+        .join("");
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          el.querySelectorAll(".bar-fill").forEach((fill) => {
+            fill.style.width = (fill.getAttribute("data-width") || "0") + "%";
+          });
+        });
+      });
+    }
+
+    function selectPhase(n, opts) {
+      selectedPhase = Number(n);
+      state.selectedPhase = selectedPhase;
+      saveState(state);
+      fillTimeline();
+      fillPhaseWork();
+      fillChecklist();
+      if (opts && opts.scroll) {
+        document.getElementById("phaseWorkBlock")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    function fillTimeline() {
+      document.getElementById("timeline").innerHTML = D.timeline
+        .map((t) => {
+          const selected = Number(t.phase) === selectedPhase ? "selected" : "";
+          const stClass = t.status === "done" ? "done" : t.status === "active" ? "active" : "";
+          return `<div class="phase ${stClass} ${selected}" role="button" tabindex="0" data-phase="${t.phase}" aria-pressed="${selected ? "true" : "false"}">
+            <div class="ph">فاز ${t.phase}</div>
+            <div class="lb">${t.label}</div>
+            <div class="wk">${t.spanLabel || (t.months ? "ماه " + t.months : "هفته " + (t.weeks || ""))} · ${t.dateRange || ""}</div>
+            <span class="st">${phaseStatusFa(t.status)}</span>
+          </div>`;
+        })
+        .join("");
+
+      document.querySelectorAll("#timeline .phase").forEach((el) => {
+        const go = () => selectPhase(el.dataset.phase, { scroll: true });
+        el.addEventListener("click", go);
+        el.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            go();
+          }
+        });
+      });
+    }
+
+    function renderActionRows(list, mountId) {
+      const mount = document.getElementById(mountId);
+      if (!mount) return;
+      mount.innerHTML = list
+        .map((a) => {
+          const done = itemDone(a.id, a.done);
+          const label = a.text || a.title || a.id || "اقدام";
+          const priKey = a.priority || "medium";
+          const pri =
+            priKey === "critical" ? "بحرانی" : priKey === "high" ? "بالا" : "متوسط";
+          return `<div class="action ${done ? "done" : ""}" data-id="${a.id}">
+            <input type="checkbox" ${done ? "checked" : ""} ${USE_BROWSER_TICKS ? "" : "disabled"} aria-label="انجام شد" />
+            <div>
+              <p class="action-title">${label}</p>
+              <p class="action-meta">${a.where || a.summary || ""}</p>
+              <p class="action-why">${a.why || ""}</p>
+              <span class="action-status ${done ? "" : "pending"}">${done ? "✓ انجام شد" : "در انتظار انجام"}</span>
+            </div>
+            <div class="action-side">
+              <span class="badge ${priKey}">${pri}</span>
+            </div>
+          </div>`;
+        })
+        .join("");
+
+      if (!USE_BROWSER_TICKS) return;
+
+      mount.querySelectorAll(".action").forEach((row) => {
+        const id = row.dataset.id;
+        const cb = row.querySelector("input");
+        const status = row.querySelector(".action-status");
+        cb.addEventListener("change", () => {
+          state.actions = state.actions || {};
+          state.actions[id] = cb.checked;
+          saveState(state);
+          document.querySelectorAll(`.action[data-id="${id}"]`).forEach((other) => {
+            other.classList.toggle("done", cb.checked);
+            const ocb = other.querySelector("input");
+            const ost = other.querySelector(".action-status");
+            if (ocb) ocb.checked = cb.checked;
+            if (ost) {
+              ost.textContent = cb.checked ? "✓ انجام شد" : "در انتظار انجام";
+              ost.classList.toggle("pending", !cb.checked);
+            }
+          });
+        });
+      });
+    }
+
+    function fillPhaseWork() {
+      const det = getPhaseDetail(selectedPhase);
+      const title = document.getElementById("phaseWorkTitle");
+      const badge = document.getElementById("phaseWorkBadge");
+      const goal = document.getElementById("phaseWorkGoal");
+      if (!det) {
+        if (title) title.textContent = "فاز یافت نشد";
+        return;
+      }
+      if (title) title.textContent = det.title;
+      if (goal) {
+        const kw = det.kwTarget;
+        const kwLine =
+          kw && kw.total
+            ? ` · کیورد این ماه: ${kw.total} (P0:${kw.p0 || 0} P1:${kw.p1 || 0} P2:${kw.p2 || 0} P3:${kw.p3 || 0})`
+            : "";
+        const period = det.period || "";
+        const aim = det.goal || det.summary || "";
+        goal.textContent = (period ? period + " — " : "") + (aim ? "هدف: " + aim : "") + kwLine;
+      }
+      if (badge) {
+        badge.textContent = phaseStatusFa(det.status);
+        badge.className = "phase-badge " + (det.status || "upcoming");
+      }
+      renderActionRows(det.actions || [], "phaseActions");
+
+      const checksEl = document.getElementById("phaseChecks");
+      if (checksEl) {
+        const checks = det.checklist || det.checks || [];
+        checksEl.innerHTML = checks
+          .map((c) => {
+            const done = itemDone(c.id, c.done);
+            const label = c.label || c.text || c.id || "";
+            return `<label class="check-item ${done ? "done" : ""}">
+              <input type="checkbox" data-phase-check="${c.id}" ${done ? "checked" : ""} ${USE_BROWSER_TICKS ? "" : "disabled"} />
+              <span>${label}</span>
+            </label>`;
+          })
+          .join("");
+        if (USE_BROWSER_TICKS) {
+          checksEl.querySelectorAll("[data-phase-check]").forEach((cb) => {
+            cb.addEventListener("change", () => {
+              state.checks = state.checks || {};
+              state.checks[cb.dataset.phaseCheck] = cb.checked;
+              saveState(state);
+              cb.closest(".check-item").classList.toggle("done", cb.checked);
+              const other = document.querySelector(`[data-check="${cb.dataset.phaseCheck}"]`);
+              if (other) {
+                other.checked = cb.checked;
+                other.closest(".check-item")?.classList.toggle("done", cb.checked);
+              }
+            });
+          });
+        }
+      }
+    }
+
+    function fillKpis() {
+      const el = document.getElementById("kpis");
+      if (!el) return;
+      const k = D.kpis;
+      const rows = Array.isArray(k)
+        ? k
+        : k && typeof k === "object"
+          ? [
+              { label: "کلیک ۳ماه", current: k.clicks ?? "—", target: "—" },
+              { label: "نمایش ۳ماه", current: k.impressions ?? "—", target: "—" },
+              { label: "CTR", current: k.ctr ?? "—", target: "—" },
+              { label: "رتبه میانگین", current: k.avgPosition ?? "—", target: "—" },
+            ]
+          : [];
+      if (!rows.length) {
+        el.innerHTML = "";
+        return;
+      }
+      el.innerHTML = rows
+        .map(
+          (row) => `<div class="kpi">
+            <div class="label">${row.label}</div>
+            <div class="val">${row.current}</div>
+            <div class="target">هدف: ${row.target}</div>
+          </div>`
+        )
+        .join("");
+    }
+
+    function fillGsc() {
+      const g = D.gsc;
+      const scope = document.getElementById("gscScope");
+      const totals = document.getElementById("gscTotals");
+      const topBody = document.getElementById("gscTopBody");
+      const oppBody = document.getElementById("gscOppBody");
+      const insights = document.getElementById("gscInsights");
+      if (!g || !scope || !totals || !topBody || !oppBody || !insights) return;
+
+      scope.innerHTML = `${g.scopeNote}<br>بازه: <strong>${g.rangeLabel}</strong>` +
+        (g.scope === "site"
+          ? ` · دامنه: <a href="${g.pageUrl}" target="_blank" rel="noopener">${g.pageUrl}</a>`
+          : ` · صفحه: <a href="${g.pageUrl}" target="_blank" rel="noopener">${g.page}</a>`) +
+        ` · اکسپورت ${g.exportedAtFa || g.exportedAt}`;
+
+      const t = g.totals || {};
+      const totalCards = [
+        { label: "کلیک", val: t.clicks },
+        { label: "نمایش", val: t.impressions },
+        { label: "CTR", val: t.ctr },
+        { label: "میانگین رتبه", val: t.position },
+      ];
+      if (t.pages) totalCards.push({ label: "صفحات در گزارش", val: t.pages });
+      if (t.queries) totalCards.push({ label: "کیورد (سقف)", val: t.queries });
+      totals.innerHTML = totalCards
+        .map(
+          (x) => `<div class="gsc-stat"><div class="label">${x.label}</div><div class="val">${x.val ?? "—"}</div></div>`
+        )
+        .join("");
+
+      topBody.innerHTML = (g.topQueries || [])
+        .map(
+          (q) => `<tr>
+            <td>${q.kw}</td>
+            <td>${q.clicks}</td>
+            <td>${q.impressions}</td>
+            <td>${q.position}</td>
+          </tr>`
+        )
+        .join("");
+
+      const pagesBody = document.getElementById("gscPagesBody");
+      if (pagesBody) {
+        pagesBody.innerHTML = (g.topPages || [])
+          .map(
+            (q) => `<tr>
+              <td>${q.page}</td>
+              <td>${q.clicks}</td>
+              <td>${q.impressions}</td>
+              <td>${q.position}</td>
+            </tr>`
+          )
+          .join("");
+      }
+
+      oppBody.innerHTML = (g.opportunities || [])
+        .map(
+          (q) => `<tr>
+            <td>${q.kw}</td>
+            <td>${q.impressions}</td>
+            <td>${q.position}</td>
+            <td>${q.note || ""}</td>
+          </tr>`
+        )
+        .join("");
+
+      insights.innerHTML = (g.insights || []).map((s) => `<li>${s}</li>`).join("");
+    }
+
+    function fillGscWow() {
+      const w = D.gscWow;
+      const scope = document.getElementById("gscWowScope");
+      const totals = document.getElementById("gscWowTotals");
+      const pageLosers = document.getElementById("gscWowPageLosers");
+      const queryLosers = document.getElementById("gscWowQueryLosers");
+      const insights = document.getElementById("gscWowInsights");
+      if (!w || !scope || !totals || !pageLosers || !queryLosers || !insights) return;
+
+      scope.innerHTML = `${w.scopeNote || ""}<br>جاری: <strong>${w.currentRange || ""}</strong> · قبل: <strong>${w.previousRange || ""}</strong> · اکسپورت ${w.exportedAtFa || w.exportedAt || ""}`;
+
+      const t = w.totals || {};
+      const clickLabel = t.clicksPct == null ? "—" : `${t.clicksPct}%`;
+      const impLabel = t.impsPct == null ? "—" : `${t.impsPct}%`;
+      totals.innerHTML = [
+        { label: "کلیک این هفته", val: t.clicksCur },
+        { label: "کلیک هفته قبل", val: t.clicksPrev },
+        { label: "تغییر کلیک", val: `${t.clicksDelta} (${clickLabel})` },
+        { label: "نمایش این هفته", val: t.impsCur },
+        { label: "نمایش هفته قبل", val: t.impsPrev },
+        { label: "تغییر نمایش", val: `${t.impsDelta} (${impLabel})` },
+      ]
+        .map(
+          (x) => `<div class="gsc-stat"><div class="label">${x.label}</div><div class="val">${x.val ?? "—"}</div></div>`
+        )
+        .join("");
+
+      pageLosers.innerHTML = (w.pageLosers || [])
+        .map(
+          (p) => `<tr>
+            <td><code>${p.page}</code></td>
+            <td>${p.clicksPrev}</td>
+            <td>${p.clicks}</td>
+            <td>${p.delta} (${p.pct ?? "—"}%)</td>
+          </tr>`
+        )
+        .join("");
+
+      queryLosers.innerHTML = (w.queryLosers || [])
+        .map(
+          (q) => `<tr>
+            <td>${q.kw}</td>
+            <td>${q.clicksPrev}</td>
+            <td>${q.clicks}</td>
+            <td>${q.delta} (${q.pct ?? "—"}%)</td>
+          </tr>`
+        )
+        .join("");
+
+      insights.innerHTML = (w.insights || []).map((s) => `<li>${s}</li>`).join("");
+    }
+
+    function severityFa(s) {
+      return { critical: "بحرانی", high: "بالا", medium: "متوسط", ok: "خوب", warn: "هشدار" }[s] || s;
+    }
+
+    function fillCoverage() {
+      const c = D.coverage;
+      const scope = document.getElementById("coverageScope");
+      const totals = document.getElementById("coverageTotals");
+      const body = document.getElementById("coverageBody");
+      const insights = document.getElementById("coverageInsights");
+      if (!c || !scope || !totals || !body || !insights) return;
+
+      const latest = c.latest || {};
+      scope.innerHTML = `${c.scopeNote || ""}<br>آخرین نقطه: <strong>${latest.date || "—"}</strong> · اکسپورت ${c.exportedAtFa || c.exportedAt || ""}`;
+
+      totals.innerHTML = [
+        { label: "ایندکس‌شده", val: latest.indexed },
+        { label: "غیرایندکس", val: latest.notIndexed },
+        { label: "۴۰۴", val: c.totals?.critical404 },
+        { label: "noindex", val: c.totals?.noindex },
+        { label: "خزش‌شده، ایندکس‌نشده", val: c.totals?.crawledNotIndexed },
+        { label: "کشف‌شده، ایندکس‌نشده", val: c.totals?.discoveredNotIndexed },
+      ]
+        .map(
+          (x) => `<div class="gsc-stat"><div class="label">${x.label}</div><div class="val">${x.val ?? "—"}</div></div>`
+        )
+        .join("");
+
+      body.innerHTML = (c.issues || [])
+        .map(
+          (i) => `<tr>
+            <td>${i.reasonFa || i.reason || ""}</td>
+            <td>${i.pages ?? 0}</td>
+            <td><span class="badge ${i.severity === "ok" ? "ok" : i.severity === "critical" ? "critical" : i.severity === "high" ? "high" : "medium"}">${severityFa(i.severity)}</span></td>
+            <td>${i.note || ""}</td>
+          </tr>`
+        )
+        .join("");
+
+      insights.innerHTML = (c.insights || []).map((s) => `<li>${s}</li>`).join("");
+
+      const d404 = c.drilldown404 || {};
+      const redirBody = document.getElementById("coverage404Redirects");
+      if (redirBody) {
+        redirBody.innerHTML = (d404.redirectPlan || [])
+          .map(
+            (r) => `<tr>
+              <td><code>${r.from}</code></td>
+              <td>${r.to}</td>
+              <td><span class="badge ${r.priority}">${severityFa(r.priority)}</span></td>
+              <td><span class="badge ${r.done ? "ok" : "missing"}">${r.done ? "انجام شد" : "باقی مانده"}</span></td>
+            </tr>`
+          )
+          .join("");
+      }
+      const sampleBody = document.getElementById("coverage404Samples");
+      if (sampleBody) {
+        sampleBody.innerHTML = (d404.sampleUrls || [])
+          .map(
+            (u) => `<tr>
+              <td><code>${u.path}</code></td>
+              <td>${u.category || ""}</td>
+              <td>${u.lastCrawled || ""}</td>
+            </tr>`
+          )
+          .join("");
+      }
+    }
+
+    function fillTech() {
+      document.getElementById("techStatus").innerHTML = D.techStatus
+        .map(
+          (t) => `<div class="status-item">
+            <div class="dot ${t.status}"></div>
+            <div>
+              <strong>${t.name}</strong>
+              <span>${t.detail}</span>
+            </div>
+          </div>`
+        )
+        .join("");
+    }
+
+    function fillPages() {
+      document.getElementById("existingPages").innerHTML = D.existingPages
+        .map(
+          (p) =>
+            `<a href="https://baradaranebabaei.ir${p.url}" target="_blank" rel="noopener">${p.title}</a>`
+        )
+        .join("");
+    }
+
+    function fillActions() {
+      const mount = document.getElementById("actions");
+      if (!mount) return;
+      const groups = Object.keys(D.phaseDetails || {})
+        .map(Number)
+        .sort((a, b) => a - b)
+        .map((p) => {
+          const det = getPhaseDetail(p);
+          if (!det) return "";
+          const items = det.actions || [];
+          const rows = items
+            .map((a) => {
+              const done = itemDone(a.id, a.done);
+              const label = a.text || a.title || a.id || "اقدام";
+              const priKey = a.priority || "medium";
+              const pri =
+                priKey === "critical" ? "بحرانی" : priKey === "high" ? "بالا" : "متوسط";
+              const agent = a.agent ? `<code>${a.agent}</code>` : "";
+              return `<div class="action ${done ? "done" : ""}" data-id="${a.id}">
+                <input type="checkbox" ${done ? "checked" : ""} ${USE_BROWSER_TICKS ? "" : "disabled"} aria-label="انجام شد" />
+                <div>
+                  <p class="action-title">${label}</p>
+                  <p class="action-meta">${a.where || a.summary || ""} ${agent}</p>
+                  <p class="action-why">${a.why || ""}</p>
+                  <span class="action-status ${done ? "" : "pending"}">${done ? "✓ انجام شد" : "در انتظار انجام"}</span>
+                </div>
+                <div class="action-side">
+                  <span class="badge ${priKey}">${pri}</span>
+                </div>
+              </div>`;
+            })
+            .join("");
+          return `<div class="actions-phase-label">فاز ${p} — ${det.title.replace(/^فاز \d+ — /, "")} · ${phaseStatusFa(det.status)}</div>${rows}`;
+        })
+        .join("");
+      mount.innerHTML = groups;
+
+      if (!USE_BROWSER_TICKS) return;
+
+      mount.querySelectorAll(".action").forEach((row) => {
+        const id = row.dataset.id;
+        const cb = row.querySelector("input");
+        cb.addEventListener("change", () => {
+          state.actions = state.actions || {};
+          state.actions[id] = cb.checked;
+          saveState(state);
+          document.querySelectorAll(`.action[data-id="${id}"]`).forEach((other) => {
+            other.classList.toggle("done", cb.checked);
+            const ocb = other.querySelector("input");
+            const ost = other.querySelector(".action-status");
+            if (ocb) ocb.checked = cb.checked;
+            if (ost) {
+              ost.textContent = cb.checked ? "✓ انجام شد" : "در انتظار انجام";
+              ost.classList.toggle("pending", !cb.checked);
+            }
+          });
+        });
+      });
+    }
+
+    let kwFilter = "all";
+
+    function pctFa(x) {
+      if (x == null || x === "") return "—";
+      const n = Number(x);
+      if (Number.isNaN(n)) return String(x);
+      return n <= 1 ? (n * 100).toFixed(1) + "%" : n.toFixed(1) + "%";
+    }
+
+    function fillWorkKeywords() {
+      const c = D.workKeywordsCluster;
+      if (!c) return;
+      const v = document.getElementById("wkVerdict");
+      if (v) v.textContent = `${c.updatedAtFa || ""} · ${c.verdict || ""}`;
+      const s = c.summary || {};
+      const sum = document.getElementById("wkSummary");
+      if (sum) {
+        sum.innerHTML = `
+          <div class="card done"><div class="n">${s.strong || 0}</div><div class="l">انجام‌شده / قوی</div></div>
+          <div class="card"><div class="n">${s.todo || 0}</div><div class="l">نیاز کار</div></div>
+          <div class="card"><div class="n">${s.total || 0}</div><div class="l">کل صف کار</div></div>`;
+      }
+      const acts = document.getElementById("wkActions");
+      if (acts) {
+        acts.innerHTML = (c.actions || [])
+          .map(
+            (a, i) =>
+              `<li><strong>${i + 1}. ${a.title || ""}</strong> — <span style="opacity:.8">${a.where || ""}</span></li>`
+          )
+          .join("");
+      }
+      const body = document.getElementById("wkBody");
+      if (body) {
+        body.innerHTML = (c.items || [])
+          .map((k) => {
+            const done = !!k.done || k.coverage === "strong";
+            const cls = done ? "kw-done" : "kw-todo";
+            const badge = done ? "done" : "todo";
+            const label = k.coverageFa || (done ? "انجام‌شده" : "نیاز کار");
+            const gsc = [
+              k.clicks != null ? `کلیک ${k.clicks}` : null,
+              k.impressions != null ? `نمایش ${k.impressions}` : null,
+              k.ctr != null ? `CTR ${pctFa(k.ctr)}` : null,
+              k.position != null ? `رتبه ${k.position}` : null,
+            ]
+              .filter(Boolean)
+              .join(" · ");
+            const steps = (k.actions || [])
+              .slice(0, 3)
+              .map((x) => `• ${x}`)
+              .join("<br>");
+            return `<tr class="${cls}">
+              <td><strong>${k.kw}</strong><div style="font-size:.72rem;opacity:.75;margin-top:.15rem">${k.rankBucket || ""}</div></td>
+              <td>${k.priority || "—"}</td>
+              <td><span class="badge ${badge}">${label}</span></td>
+              <td style="font-size:.75rem;line-height:1.45">${gsc || "—"}</td>
+              <td dir="ltr" style="text-align:left;font-size:.78rem">${k.page || "—"}</td>
+              <td style="font-size:.78rem;line-height:1.55">${steps}</td>
+            </tr>`;
+          })
+          .join("");
+      }
+    }
+
+    function renderAllKeywords() {
+      const items = D.allKeywords || [];
+      const meta = D.allKeywordsMeta || {
+        total: items.length,
+        done: items.filter((x) => x.done).length,
+        pending: items.filter((x) => !x.done).length,
+      };
+      const sum = document.getElementById("kwSummary");
+      if (sum) {
+        sum.innerHTML = `
+          <div class="card"><div class="n">${meta.total}</div><div class="l">کل کیورد برنامه</div></div>
+          <div class="card done"><div class="n">${meta.done}</div><div class="l">انجام‌شده</div></div>
+          <div class="card"><div class="n">${meta.pending}</div><div class="l">باقی‌مانده</div></div>`;
+      }
+      const filtered = items.filter((k) => {
+        if (kwFilter === "done") return !!k.done;
+        if (kwFilter === "todo") return !k.done;
+        if (kwFilter === "P0" || kwFilter === "P1" || kwFilter === "P2" || kwFilter === "P3") {
+          return k.pri === kwFilter;
+        }
+        return true;
+      });
+      const body = document.getElementById("allKwBody");
+      if (body) {
+        body.innerHTML = filtered
+          .map((k) => {
+            const cls = k.done ? "kw-done" : "kw-todo";
+            const badge = k.done ? "done" : "todo";
+            const label = k.done ? "انجام‌شده" : "باقی‌مانده";
+            const st = k.status || "—";
+            const month = k.month ? `ماه ${k.month}` : "—";
+            const gscBit =
+              k.gscClicks || k.gscImpressions
+                ? `<div style="font-size:.7rem;margin-top:.2rem;opacity:.75">GSC: ${k.gscClicks || 0} کلیک · ${k.gscImpressions || 0} نمایش</div>`
+                : "";
+            return `<tr class="${cls}">
+              <td>${k.id}</td>
+              <td><strong>${k.kw}</strong><div style="font-size:.72rem;opacity:.75;margin-top:.15rem">${k.cat || ""} · ${k.type || ""}</div>${gscBit}</td>
+              <td>${k.pri || "—"}</td>
+              <td dir="ltr" style="text-align:left;font-size:.78rem">${k.page || "—"}</td>
+              <td><span class="badge ${badge}">${label}</span><div style="font-size:.7rem;margin-top:.2rem;opacity:.8">${st}</div></td>
+              <td>${month}</td>
+            </tr>`;
+          })
+          .join("");
+      }
+      const note = document.getElementById("kwListNote");
+      if (note) {
+        note.textContent = `نمایش ${filtered.length} از ${items.length} کیورد · فیلتر: ${kwFilter}`;
+      }
+    }
+
+    function fillKeywords() {
+      fillWorkKeywords();
+      const meta = D.allKeywordsMeta || {};
+      const byPri = meta.byPriority || {};
+      document.getElementById("buckets").innerHTML = (D.keywordBuckets || [])
+        .map((b, i) => {
+          const stats = byPri[b.id] || {};
+          const done = stats.done != null ? stats.done : "—";
+          const total = stats.total != null ? stats.total : b.count;
+          return `<div class="bucket p${i}">
+            <div class="n">${done}/${total}</div>
+            <div class="l">${b.id} — ${b.label}</div>
+            <div class="a">${b.action}</div>
+          </div>`;
+        })
+        .join("");
+
+      renderAllKeywords();
+
+      const coverEl = document.getElementById("kwCoverBody");
+      if (coverEl) {
+        const plan = D.keywordCoveragePlan || [];
+        coverEl.innerHTML =
+          plan
+            .map(
+              (r) => `<tr>
+              <td>ماه ${r.month}</td>
+              <td>${r.p0}</td>
+              <td>${r.p1}</td>
+              <td>${r.p2}</td>
+              <td>${r.p3}</td>
+              <td><strong>${r.p0 + r.p1 + r.p2 + r.p3}</strong></td>
+              <td>${r.note || ""}</td>
+            </tr>`
+            )
+            .join("") +
+          `<tr>
+            <td><strong>جمع</strong></td>
+            <td><strong>${plan.reduce((s, r) => s + r.p0, 0)}</strong></td>
+            <td><strong>${plan.reduce((s, r) => s + r.p1, 0)}</strong></td>
+            <td><strong>${plan.reduce((s, r) => s + r.p2, 0)}</strong></td>
+            <td><strong>${plan.reduce((s, r) => s + r.p3, 0)}</strong></td>
+            <td><strong>${plan.reduce((s, r) => s + r.p0 + r.p1 + r.p2 + r.p3, 0)}</strong></td>
+            <td>هدف قرارداد: ${(D.meta && D.meta.keywordsTotal) || 171}/${(D.meta && D.meta.keywordsTotal) || 171} · انجام‌شده الان: ${(D.allKeywordsMeta && D.allKeywordsMeta.done) || "—"}</td>
+          </tr>`;
+      }
+
+      const goldEl = document.getElementById("kwBody");
+      if (goldEl) {
+        goldEl.innerHTML = (D.goldenKeywords || [])
+          .map((k, i) => {
+            const done = k.status === "ok" || k.status === "live";
+            const cls = done ? "kw-done" : "kw-todo";
+            return `<tr class="${cls}">
+            <td>${i + 1}</td>
+            <td><strong>${k.kw}</strong></td>
+            <td dir="ltr" style="text-align:left">${k.page}</td>
+            <td><span class="badge ${k.status}">${statusLabel(k.status)}</span></td>
+            <td>${k.note}</td>
+          </tr>`;
+          })
+          .join("");
+      }
+
+      const filters = document.getElementById("kwFilters");
+      if (filters && !filters.dataset.bound) {
+        filters.dataset.bound = "1";
+        filters.addEventListener("click", (e) => {
+          const btn = e.target.closest("[data-kw-filter]");
+          if (!btn) return;
+          kwFilter = btn.getAttribute("data-kw-filter") || "all";
+          filters.querySelectorAll("button").forEach((b) => b.classList.toggle("active", b === btn));
+          renderAllKeywords();
+        });
+      }
+    }
+
+    function fillOnpage() {
+      const h = D.homepage;
+      document.getElementById("homepageCompare").innerHTML = `
+        <div class="compare-row">
+          <h3>Title</h3>
+          <div class="now-target">
+            <div class="box now"><div class="lbl">الان</div>${h.titleNow}</div>
+            <div class="box target"><div class="lbl">هدف</div>${h.titleTarget}</div>
+          </div>
+        </div>
+        <div class="compare-row">
+          <h3>Meta Description</h3>
+          <div class="now-target">
+            <div class="box now"><div class="lbl">الان</div>${h.descNow}</div>
+            <div class="box target"><div class="lbl">هدف</div>${h.descTarget}</div>
+          </div>
+        </div>
+        <div class="compare-row">
+          <h3>H1 و Schema</h3>
+          <div class="now-target">
+            <div class="box now"><div class="lbl">الان</div>بدون H1 · Schema: ${h.schemas.join(", ")}</div>
+            <div class="box target"><div class="lbl">هدف</div>${h.h1Target} · + EducationalOrganization / LocalBusiness</div>
+          </div>
+        </div>`;
+
+      document.getElementById("metaTargets").innerHTML = D.metaTargets
+        .map(
+          (m, idx) => `<div class="compare-row" style="margin-bottom:0.65rem">
+            <h3>${m.page} <code dir="ltr">${m.url}</code>
+              <button class="copy-btn" type="button" data-copy="${idx}">کپی Meta</button>
+            </h3>
+            <p style="margin:0 0 0.35rem;font-size:0.85rem"><strong>Title:</strong> ${m.title}</p>
+            <p style="margin:0 0 0.35rem;font-size:0.85rem"><strong>Description:</strong> ${m.description}</p>
+            <p style="margin:0;font-size:0.85rem"><strong>H1:</strong> ${m.h1}</p>
+          </div>`
+        )
+        .join("");
+
+      document.querySelectorAll("[data-copy]").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const m = D.metaTargets[Number(btn.dataset.copy)];
+          const text = `Title: ${m.title}\nDescription: ${m.description}\nH1: ${m.h1}`;
+          await navigator.clipboard.writeText(text);
+          btn.textContent = "کپی شد";
+          setTimeout(() => (btn.textContent = "کپی Meta"), 1200);
+        });
+      });
+    }
+
+    function setTechStatus(id, status, detail) {
+      const item = D.techStatus.find((t) => t.id === id);
+      if (!item) return;
+      item.status = status;
+      item.detail = detail;
+    }
+
+    function applyProbeToDashboard(probe) {
+      if (!probe || !probe.ok) return;
+      const h = probe.homepage || {};
+      const sm = probe.sitemap || {};
+      const rb = probe.robots || {};
+
+      setTechStatus("ssl", h.ssl ? "pass" : "fail", h.ssl ? "فعال" : "مشکل SSL");
+      setTechStatus(
+        "robots",
+        rb.ok ? (rb.mentions_sitemap && !sm.ok ? "warn" : "pass") : "fail",
+        rb.ok
+          ? rb.mentions_sitemap
+            ? sm.ok
+              ? "موجود؛ به sitemap اشاره می‌کند"
+              : "موجود؛ به sitemap مرده اشاره می‌کند"
+            : "موجود"
+          : "در دسترس نیست"
+      );
+      setTechStatus(
+        "sitemap",
+        sm.ok ? "pass" : "fail",
+        sm.ok ? "فعال (200)" : "هنوز " + (sm.status ?? "خطا") + " — اولویت بحرانی"
+      );
+      setTechStatus(
+        "rankmath",
+        h.has_rankmath ? "pass" : "warn",
+        h.has_rankmath ? "در HTML دیده شد" : "نشانه Rank Math در HTML نیست"
+      );
+      setTechStatus(
+        "analytics",
+        h.has_ga ? "pass" : "fail",
+        h.has_ga ? "GA/GTM در HTML دیده شد" : "Analytics در HTML دیده نشد"
+      );
+      setTechStatus(
+        "litespeed",
+        h.has_litespeed ? "pass" : "warn",
+        h.has_litespeed ? "فعال" : "نشانه LiteSpeed نیست"
+      );
+      setTechStatus(
+        "h1",
+        h.has_h1 ? "pass" : "fail",
+        h.has_h1 ? h.h1_count + " عدد H1" : "وجود ندارد"
+      );
+      setTechStatus(
+        "meta",
+        h.meta_description && h.meta_description.length > 40 && !h.meta_description.includes("مصاحبه/")
+          ? "pass"
+          : "fail",
+        h.meta_description
+          ? h.meta_description.slice(0, 80) + (h.meta_description.length > 80 ? "…" : "")
+          : "ندارد"
+      );
+      setTechStatus(
+        "schema",
+        h.has_local_business ? "pass" : h.has_educational_org ? "warn" : "fail",
+        h.has_local_business
+          ? "EducationalOrganization + LocalBusiness"
+          : h.has_educational_org
+            ? "EducationalOrganization هست؛ LocalBusiness نیست"
+            : "Schema محلی/سازمانی ضعیف"
+      );
+
+      if (h.title) D.homepage.titleNow = h.title;
+      if (h.meta_description) D.homepage.descNow = h.meta_description;
+
+      const note = document.getElementById("liveNote");
+      if (note) {
+        if (sm.ok) {
+          note.textContent = "Sitemap زنده است (200)";
+          note.className = "live-note ok";
+        } else {
+          note.textContent = "Sitemap هنوز " + (sm.status ?? "خطا") + " می‌دهد";
+          note.className = "live-note err";
+        }
+      }
+
+      const callout = document.getElementById("topCallout");
+      if (callout) {
+        if (h.noindex) {
+          callout.innerHTML =
+            "<strong>قدم بعدی:</strong> صفحه اصلی <code>noindex</code> است — اول Index را در Rank Math روشن کنید، بعد Sitemap.";
+        } else if (!sm.ok) {
+          callout.innerHTML =
+            "<strong>قدم بعدی:</strong> اول Sitemap را در Rank Math درست کنید — بدون آن ۳۳۲ مقاله عملاً برای گوگل گم می‌مانند.";
+        } else if (!h.has_h1) {
+          callout.innerHTML =
+            "<strong>قدم بعدی:</strong> H1 صفحه اصلی را اضافه کنید و Meta Description را اختصاصی بنویسید.";
+        } else {
+          callout.innerHTML =
+            "<strong>آدیت 2026-08-27:</strong> امتیاز 73/۱۰۰ · GSC 3m 13٬142 · WoW +12.8٪ · P0~261 · page/technical/content/schema/local/audit.";
+        }
+      }
+
+      fillTech();
+      fillOnpage();
+    }
+
+    function verifyLabel(hint, checked) {
+      if (hint === true) return { cls: "ok", text: "تأیید زنده ✓" };
+      if (hint === false) return { cls: "fail", text: checked ? "هنوز تأیید نشد" : "منفی در سایت" };
+      return { cls: "warn", text: "دستی / غیرقابل‌چک" };
+    }
+
+    function paintChecklistVerify(hints) {
+      if (!hints) return;
+      document.querySelectorAll("[data-check]").forEach((cb) => {
+        const id = cb.dataset.check;
+        const wrap = cb.closest(".check-item");
+        if (!wrap) return;
+        let badge = wrap.querySelector(".verify");
+        if (!badge) {
+          badge = document.createElement("span");
+          badge.className = "verify";
+          wrap.appendChild(badge);
+        }
+        const v = verifyLabel(hints[id], cb.checked);
+        badge.className = "verify " + v.cls;
+        badge.textContent = v.text;
+      });
+    }
+
+    async function recheckSiteAndRefresh(triggerId) {
+      const note = document.getElementById("checkRecheckNote");
+      if (note) {
+        note.textContent = "در حال بررسی مجدد سایت…";
+        note.className = "live-note";
+      }
+      try {
+        const res = await fetch("/api/site/probe?_=" + Date.now(), { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const probe = await res.json();
+        applyProbeToDashboard(probe);
+        paintChecklistVerify(probe.checklist_hints);
+
+        // اگر تیک زده شده ولی سایت هنوز تأیید نمی‌کند، هشدار بده
+        if (triggerId && probe.checklist_hints) {
+          const hint = probe.checklist_hints[triggerId];
+          if (state.checks?.[triggerId] && hint === false && note) {
+            note.textContent = "تیک ذخیره شد، ولی بررسی زنده هنوز این مورد را تأیید نکرد.";
+            note.className = "live-note err";
+          } else if (note) {
+            const when = new Date(probe.checked_at || Date.now()).toLocaleTimeString("fa-IR");
+            note.textContent = "بررسی زنده انجام شد · " + when;
+            note.className = "live-note ok";
+          }
+        } else if (note) {
+          note.textContent = "داده‌ها تازه شدند";
+          note.className = "live-note ok";
+        }
+
+        if (window.BabaeiAudit?.refresh) {
+          await window.BabaeiAudit.refresh();
+        }
+        return probe;
+      } catch {
+        if (note) {
+          note.textContent = "سرور محلی نیست — python serve.py را اجرا کنید";
+          note.className = "live-note err";
+        }
+        return null;
+      }
+    }
+
+    function fillChecklist() {
+      const det = getPhaseDetail(selectedPhase);
+      const title = document.getElementById("checklistTitle");
+      const lead = document.getElementById("checklistLead");
+      const list = (det && det.checklist) || D.week1Checklist || [];
+      if (title && det) title.textContent = "چک‌لیست — " + det.title;
+      if (lead && det) {
+        lead.textContent =
+          (det.period || "") +
+          (det.status === "done"
+            ? " — این فاز بسته شده و در تاریخچه باقی می‌ماند"
+            : USE_BROWSER_TICKS
+              ? " — تیک بزنید؛ برای نسخه آنلاین دکمه «انتشار آنلاین» را بزنید"
+              : " — نسخه آنلاین (فقط خواندنی از data.js)");
+      }
+
+      document.getElementById("weekChecks").innerHTML = list
+        .map((c) => {
+          const done = itemDone(c.id, c.done);
+          return `<label class="check-item ${done ? "done" : ""}">
+            <input type="checkbox" data-check="${c.id}" ${done ? "checked" : ""} ${USE_BROWSER_TICKS ? "" : "disabled"} />
+            <span>${c.label}</span>
+            <span class="verify pending">—</span>
+          </label>`;
+        })
+        .join("");
+
+      if (!USE_BROWSER_TICKS) return;
+
+      document.querySelectorAll("[data-check]").forEach((cb) => {
+        cb.addEventListener("change", async () => {
+          state.checks = state.checks || {};
+          state.checks[cb.dataset.check] = cb.checked;
+          saveState(state);
+          cb.closest(".check-item").classList.toggle("done", cb.checked);
+          const twin = document.querySelector(`[data-phase-check="${cb.dataset.check}"]`);
+          if (twin) {
+            twin.checked = cb.checked;
+            twin.closest(".check-item")?.classList.toggle("done", cb.checked);
+          }
+          cb.disabled = true;
+          await recheckSiteAndRefresh(cb.dataset.check);
+          cb.disabled = false;
+        });
+      });
+    }
+
+    /* Tabs + بازیابی تب آخر با رفرش */
+    function switchTab(tab) {
+      document.querySelectorAll(".tab").forEach((t) => t.setAttribute("aria-selected", "false"));
+      document.querySelectorAll(".panel").forEach((p) => p.classList.remove("active"));
+      tab.setAttribute("aria-selected", "true");
+      document.getElementById("panel-" + tab.dataset.tab).classList.add("active");
+      sessionStorage.setItem("babaei-audit-tab", tab.dataset.tab);
+      location.hash = tab.dataset.tab;
+      if (tab.dataset.tab === "audit" && window.BabaeiAudit) {
+        window.BabaeiAudit.refresh();
+      }
+      if (tab.dataset.tab === "gsc") {
+        loadGscStatus();
+      }
+      if (tab.dataset.tab === "wp-organic") {
+        fillWpOrganic(true);
+      }
+    }
+
+    document.querySelectorAll(".tab").forEach((tab) => {
+      tab.addEventListener("click", () => switchTab(tab));
+    });
+
+    const savedTabId =
+      location.hash.replace("#", "") || sessionStorage.getItem("babaei-audit-tab");
+    if (savedTabId) {
+      const savedTab = document.querySelector(`.tab[data-tab="${savedTabId}"]`);
+      if (savedTab) switchTab(savedTab);
+    }
+
+    document.getElementById("btnLive")?.addEventListener("click", () => recheckSiteAndRefresh());
+
+    function formatFaDateTime(isoOrDate) {
+      if (!isoOrDate) return "";
+      try {
+        const d = isoOrDate instanceof Date ? isoOrDate : new Date(isoOrDate);
+        if (Number.isNaN(d.getTime())) return String(isoOrDate);
+        return d.toLocaleString("fa-IR-u-ca-persian", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+      } catch {
+        return String(isoOrDate);
+      }
+    }
+
+    function formatFaDate(isoOrDate) {
+      if (!isoOrDate) return "";
+      try {
+        const d =
+          isoOrDate instanceof Date
+            ? isoOrDate
+            : /^\d{4}-\d{2}-\d{2}$/.test(isoOrDate)
+              ? new Date(isoOrDate + "T12:00:00")
+              : new Date(isoOrDate);
+        if (Number.isNaN(d.getTime())) return String(isoOrDate);
+        return d.toLocaleDateString("fa-IR-u-ca-persian", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        });
+      } catch {
+        return String(isoOrDate);
+      }
+    }
+
+    async function fillWpOrganic(refresh) {
+      const lead = document.getElementById("wpOrgLead");
+      const leadClient = document.getElementById("wpOrgLeadClient");
+      const leadOverview = document.getElementById("wpOrgOverviewLead");
+      const kpis = document.getElementById("wpOrgKpis");
+      const kpisOverview = document.getElementById("wpOrgOverviewKpis");
+      const daily = document.getElementById("wpOrgDaily");
+      const updated = document.getElementById("wpOrgUpdated");
+      if (!kpis || !daily) return;
+
+      let data = D.wpOrganic || null;
+      if (IS_LOCAL && refresh) {
+        try {
+          const res = await fetch("/api/wp-organic/history?_=" + Date.now(), { cache: "no-store" });
+          const json = await res.json();
+          if (json.ok) data = json;
+        } catch {
+          /* fallback to data.js */
+        }
+      }
+      if (!data || !data.ok) {
+        const emptyMsg = "هنوز اجرایی ثبت نشده.";
+        if (lead) lead.textContent = emptyMsg;
+        if (leadClient) leadClient.textContent = emptyMsg;
+        if (leadOverview) leadOverview.textContent = emptyMsg;
+        kpis.innerHTML = "";
+        if (kpisOverview) kpisOverview.innerHTML = "";
+        daily.innerHTML = '<p class="wp-org-empty">تاریخچه‌ای موجود نیست.</p>';
+        return;
+      }
+
+      const cat = data.category || {};
+      const t = data.totals || {};
+      const summaryText =
+        "دسته «" +
+        (cat.name || "مقاله") +
+        "» · " +
+        (cat.total || "—") +
+        " مقاله";
+      if (lead) lead.textContent = summaryText;
+      if (leadClient) leadClient.textContent = summaryText;
+      if (leadOverview) {
+        leadOverview.textContent =
+          "امروز " +
+          (t.optimizedToday ?? 0) +
+          " · کل " +
+          (t.optimizedAllTime ?? 0) +
+          " · باقی‌مانده " +
+          (t.remaining ?? "—") +
+          (data.updatedAt
+            ? " · به‌روز: " + formatFaDateTime(data.updatedAt)
+            : data.updatedAtFa
+              ? " · به‌روز: " + data.updatedAtFa
+              : "");
+      }
+
+      const kpiHtml = [
+        { n: t.optimizedToday ?? 0, l: "امروز" },
+        { n: t.optimizedAllTime ?? 0, l: "کل بهینه‌شده" },
+        { n: t.remaining ?? "—", l: "باقی‌مانده" },
+        { n: t.runsToday ?? 0, l: "اجرای امروز" },
+      ]
+        .map(
+          (k) =>
+            '<div class="wp-org-kpi"><span class="n">' +
+            k.n +
+            '</span><span class="l">' +
+            k.l +
+            "</span></div>"
+        )
+        .join("");
+      kpis.innerHTML = kpiHtml;
+      if (kpisOverview) kpisOverview.innerHTML = kpiHtml;
+
+      const days = data.daily || [];
+      if (!days.length) {
+        daily.innerHTML = '<p class="wp-org-empty">هنوز روزی ثبت نشده.</p>';
+      } else {
+        daily.innerHTML = days
+          .map((day) => {
+            const entries = (day.entries || [])
+              .map((run) => {
+                const badge = run.dryRun
+                  ? '<span class="wp-org-badge preview">پیش‌نمایش</span>'
+                  : '<span class="wp-org-badge live">اعمال شد</span>';
+                const rows = (run.results || [])
+                  .map((r) => {
+                    const status = r.skipped
+                      ? "رد شد"
+                      : r.dryRun
+                        ? "پیش‌نمایش"
+                        : r.ok
+                          ? "✓"
+                          : "✗";
+                    const changed = (r.changedFa || r.changed || []).join(" · ") || "—";
+                    const issues = (r.issuesBeforeFa || r.issuesBefore || []).join(" · ") || "—";
+                    return (
+                      "<tr><td>" +
+                      status +
+                      '</td><td><a href="' +
+                      (r.link || "#") +
+                      '" target="_blank" rel="noopener">' +
+                      (r.title || "—") +
+                      "</a></td><td>" +
+                      issues +
+                      "</td><td>" +
+                      changed +
+                      "</td></tr>"
+                    );
+                  })
+                  .join("");
+                return (
+                  '<div class="wp-org-run">' +
+                  '<div class="wp-org-run-head">' +
+                  badge +
+                  "<span>" +
+                  (run.at ? formatFaDateTime(run.at) : run.atFa || "") +
+                  "</span>" +
+                  "<span>" +
+                  (run.dryRun ? run.processed + " پیش‌نمایش" : run.optimized + " اعمال") +
+                  "</span></div>" +
+                  '<table class="data wp-org-table"><thead><tr><th>وضعیت</th><th>مقاله</th><th>مشکلات قبل</th><th>تغییرات</th></tr></thead><tbody>' +
+                  rows +
+                  "</tbody></table></div>"
+                );
+              })
+              .join("");
+            return (
+              '<div class="wp-org-day">' +
+              '<div class="wp-org-day-head"><strong>' +
+              (day.date ? formatFaDate(day.date) : day.dateFa || day.date) +
+              "</strong>" +
+              '<span class="wp-org-day-meta">' +
+              (day.postsOptimized || 0) +
+              " اعمال · " +
+              (day.runsLive || 0) +
+              " اجرا" +
+              (day.postsPreviewed ? " · " + day.postsPreviewed + " پیش‌نمایش" : "") +
+              "</span></div>" +
+              entries +
+              "</div>"
+            );
+          })
+          .join("");
+      }
+
+      if (updated) {
+        updated.textContent = data.updatedAt
+          ? "آخرین به‌روزرسانی: " + formatFaDateTime(data.updatedAt)
+          : data.updatedAtFa
+            ? "آخرین به‌روزرسانی: " + data.updatedAtFa
+            : "";
+      }
+    }
+
+    document.getElementById("wpOrgGoTab")?.addEventListener("click", () => {
+      const tab = document.querySelector('.tab[data-tab="wp-organic"]');
+      if (tab) switchTab(tab);
+    });
+
+    async function loadGscStatus() {
+      const el = document.getElementById("gscStatus");
+      if (!el || !IS_LOCAL) return;
+      try {
+        const res = await fetch("/api/gsc/status?_=" + Date.now(), { cache: "no-store" });
+        const data = await res.json();
+        if (!data.ok) throw new Error("status_failed");
+        const latest = data.latest;
+        const files = (data.files || []).slice(0, 3);
+        let html = "<strong>inbox:</strong> <code dir=\"ltr\">" + (data.inbox || "") + "</code><br>";
+        if (latest) {
+          html +=
+            "<strong>آخرین GSC:</strong> " +
+            (latest.dateFilter || "—") +
+            " · " +
+            (latest.clicks != null ? latest.clicks.toLocaleString("fa-IR") + " کلیک" : "—") +
+            (latest.wowPct != null ? " · WoW " + (latest.wowPct > 0 ? "+" : "") + latest.wowPct + "٪" : "") +
+            "<br><span dir=\"ltr\">" +
+            (latest.rangeLabel || "") +
+            "</span>";
+        } else {
+          html += "هنوز export پردازش‌شده‌ای نیست.";
+        }
+        if (files.length) {
+          html += "<br><strong>فایل‌های inbox:</strong> " + files.map((f) => f.name).join(" · ");
+        }
+        el.innerHTML = html;
+      } catch {
+        el.textContent = "برای این تب سرور محلی لازم است: py -3 serve.py";
+      }
+    }
+
+    const btnGscRun = document.getElementById("btnGscRun");
+    if (btnGscRun && IS_LOCAL) {
+      btnGscRun.addEventListener("click", async () => {
+        const input = document.getElementById("gscFile");
+        const log = document.getElementById("gscLog");
+        const file = input?.files?.[0];
+        if (!file) {
+          alert("اول فایل xlsx را انتخاب کنید.");
+          return;
+        }
+        if (!confirm("GSC ingest + audit کامل + push انجام شود؟ (۱–۳ دقیقه طول می‌کشد)")) return;
+        btnGscRun.disabled = true;
+        if (log) {
+          log.classList.add("show");
+          log.textContent = "در حال اجرا… لطفاً این پنجره را نبندید.\n";
+        }
+        try {
+          const fd = new FormData();
+          fd.append("file", file);
+          const res = await fetch("/api/gsc/import-audit", { method: "POST", body: fd });
+          const data = await res.json();
+          if (log) {
+            const steps = (data.steps || [])
+              .map((s, i) => "Step " + (i + 1) + " exit " + s.returncode + "\n" + (s.stdout || s.stderr || ""))
+              .join("\n---\n");
+            log.textContent = steps || JSON.stringify(data, null, 2);
+          }
+          if (!res.ok || !data.ok) {
+            alert("خطا: " + (data.error || "pipeline_failed"));
+            return;
+          }
+          alert(
+            "انجام شد ✓\nامتیاز: " +
+              (data.score ?? "—") +
+              "/100\nGSC: " +
+              (data.gsc?.clicks ?? "—") +
+              " کلیک\n" +
+              (data.pages_url || "")
+          );
+          location.reload();
+        } catch (err) {
+          if (log) log.textContent += "\nError: " + (err.message || err);
+          alert("درخواست ناموفق — serve.py روشن است؟");
+        } finally {
+          btnGscRun.disabled = false;
+          loadGscStatus();
+        }
+      });
+      loadGscStatus();
+    }
+
+    const btnPublish = document.getElementById("btnPublish");
+    if (btnPublish) {
+      if (!IS_LOCAL) {
+        btnPublish.style.display = "none";
+      } else {
+        btnPublish.addEventListener("click", async () => {
+          if (!confirm("وضعیت فعلی تیک‌ها روی GitHub Pages منتشر شود؟")) return;
+          const note = document.getElementById("liveNote");
+          btnPublish.disabled = true;
+          if (note) {
+            note.textContent = "در حال انتشار به GitHub…";
+            note.className = "live-note";
+          }
+          try {
+            const res = await fetch("/api/publish", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ state, push: true }),
+            });
+            const data = await res.json();
+            if (!res.ok || !data.ok) {
+              throw new Error(data.error || data.stderr || "publish_failed");
+            }
+            if (note) {
+              const extra = data.unchanged
+                ? "بدون تغییر فایل — از قبل به‌روز بود"
+                : data.pushed
+                  ? "پوش شد ✓"
+                  : "ذخیره شد";
+              note.textContent =
+                extra +
+                " · " +
+                (data.pages_url || "https://fishprogrammer.github.io/babaei-seo-dashboard/");
+              note.className = "live-note ok";
+            }
+            // reload data.js semantics after server rewrote file
+            setTimeout(() => location.reload(), 800);
+          } catch (err) {
+            if (note) {
+              note.textContent = "انتشار ناموفق: " + (err.message || err);
+              note.className = "live-note err";
+            }
+          } finally {
+            btnPublish.disabled = false;
+          }
+        });
+      }
+    }
+
+    document.getElementById("btnReset")?.addEventListener("click", () => {
+      if (!IS_LOCAL) return;
+      if (!confirm("همه تیک‌های ذخیره‌شده پاک شوند؟ (وضعیت پیش‌فرض فاز ۰ انجام‌شده می‌ماند)")) return;
+      localStorage.removeItem(STORE_KEY);
+      state = {};
+      selectedPhase = Number(D.meta.phase || 1);
+      saveState(state);
+      fillTimeline();
+      fillPhaseWork();
+      fillActions();
+      fillChecklist();
+      recheckSiteAndRefresh();
+    });
+
+    (async function boot() {
+      await hydrateStateFromServer();
+      const steps = [
+        fillHeader,
+        fillBars,
+        fillTimeline,
+        fillCompetitor,
+        fillSeoSummary,
+        fillUrgent,
+        fillKeywords,
+        fillContentBeat,
+        fillPhaseWork,
+        fillKpis,
+        fillGsc,
+        fillGscWow,
+        fillCoverage,
+        fillTech,
+        fillPages,
+        fillActions,
+        fillAgentPlaybook,
+        fillOnpage,
+        fillChecklist,
+        () => fillWpOrganic(IS_LOCAL),
+        recheckSiteAndRefresh,
+      ];
+      for (const fn of steps) {
+        try {
+          fn();
+        } catch (err) {
+          console.error("dashboard boot step failed", fn && fn.name, err);
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

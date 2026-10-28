@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+.serve-cache/
+dashboard-state.json
+
+# local operator tools — not part of client GitHub Pages panel
+serve.py
+sync-from-workspace.ps1
+apply_dashboard_state.py

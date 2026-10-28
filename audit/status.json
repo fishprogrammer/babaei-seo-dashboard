@@ -1,0 +1,32 @@
+{
+  "ok": true,
+  "mode": "static",
+  "generated_at": "2026-10-28T14:19:05+03:30",
+  "findings": [
+    "ACTION-PLAN.md",
+    "audit-data.json",
+    "FULL-AUDIT-REPORT.md",
+    "status.json",
+    "findings/competitor-babaeibike-deep.json",
+    "findings/competitor-babaeibike-raw.json",
+    "findings/competitor-babaeibike-urls.json",
+    "findings/competitor-babaeibike.md",
+    "findings/competitor-redfox-deep.json",
+    "findings/competitor-redfox-raw.json",
+    "findings/competitor-redfox-urls.json",
+    "findings/competitor-redfox.md",
+    "findings/content.md",
+    "findings/gsc-2026-10-28-seo-summary.md",
+    "findings/local.md",
+    "findings/page.md",
+    "findings/performance.md",
+    "findings/schema.md",
+    "findings/sitemap.md",
+    "findings/technical-keyurls-probe.json",
+    "findings/technical-live-probe.json",
+    "findings/technical.md"
+  ],
+  "summary": {
+    "health_score": 76
+  }
+}
