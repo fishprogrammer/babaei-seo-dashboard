@@ -15,11 +15,11 @@ window.BABAEI_SEO = {
     "keywordsTotal": 171,
     "manager": "تیم SEO",
     "phase": 1,
-    "phaseLabel": "فاز ۲ — آبان: تکمیل P0 ارگانی + هاب اقساط + مانیتور ردفوکس",
-    "updatedAtFa": "2026/10/28",
-    "updatedAt": "2026-10-28T17:30:21+03:30",
+    "phaseLabel": "فاز ۱ — مهر: P0 پول/کارت + جبران صف + فرصت GSC",
+    "updatedAtFa": "2026/10/31",
+    "updatedAt": "2026-10-31T13:36:58+03:30",
     "agentsCount": 20,
-    "workplanNote": "P0 org CSV 28/28 live · short-slug pages"
+    "workplanNote": "پلی‌بوک ۲۰ ایجنت + صف محتوا + GSC 2026-10-28"
   },
   "score": {
     "overall": 76,
@@ -223,7 +223,7 @@ window.BABAEI_SEO = {
     },
     "1": {
       "title": "فاز ۱ — مهر · P0 پول/کارت + جبران صف",
-      "status": "done",
+      "status": "active",
       "summary": "لندینگ کارت/ارگان P0، فرصت GSC، جبران صف محتوا، کاور برند",
       "actions": [
         {
@@ -255,11 +255,11 @@ window.BABAEI_SEO = {
         },
         {
           "id": "p1-beat-catchup",
-          "text": "جبران صف شکست ردفوکس — باقی 45 از 121",
+          "text": "جبران صف شکست ردفوکس — باقی 44 از 121",
           "agent": "seo-content",
           "done": false,
           "priority": "critical",
-          "why": "منتشر 76 · هدف حداقل ۱/روز live با publish_content_beat.py",
+          "why": "منتشر 77 · هدف حداقل ۱/روز live با publish_content_beat.py",
           "where": "ایجنت `seo-content`"
         },
         {
@@ -351,7 +351,7 @@ window.BABAEI_SEO = {
     },
     "2": {
       "title": "فاز ۲ — آبان · تکمیل P0 ارگانی",
-      "status": "active",
+      "status": "upcoming",
       "summary": "تکمیل URLهای ارگانی P0 + هاب اقساط + مانیتور ردفوکس",
       "actions": [
         {
@@ -360,7 +360,7 @@ window.BABAEI_SEO = {
           "agent": "seo-cluster",
           "done": true,
           "priority": "critical",
-          "why": "۲۸/۲۸ مسیر CSV زنده (۲۰۲۶-۱۰-۲۸): صفحات short-slug + کالا-کارت-مهر-ایران/تأمین-اجتماعی؛ پست‌های تکراری noindex+canonical",
+          "why": "۲۸/۲۸ مسیر CSV زنده · short-slug pages + کالا/تأمین",
           "where": "ایجنت `seo-cluster`"
         },
         {
@@ -376,9 +376,9 @@ window.BABAEI_SEO = {
           "id": "p2-monitor",
           "text": "مانیتور ماهانه ۱۵ URL پول ردفوکس",
           "agent": "seo-competitor",
-          "done": true,
+          "done": false,
           "priority": "high",
-          "why": "baseline اکتبر ۲۰۲۶: ۱۵ URL ours در logs/competitor-monitor-2026-10.json (rival با COMPETITOR_BASE)",
+          "why": "",
           "where": "ایجنت `seo-competitor`"
         },
         {
@@ -1744,14 +1744,13 @@ window.BABAEI_SEO = {
     ]
   },
   "notes": [
-    "Audit sync 2026-10-28 13:32 — 16 files",
-    "Workplan sync 2026-10-17 13:09 — ۲۰ ایجنت + فاز ۱",
-    "صف محتوا: 76/121 منتشر · 45 باقی",
-    "GSC 2026-10-17 · 2939 کلیک · 46466 نمایش · CTR 6.33%",
-    "ممیزی سلامت: 73/۱۰۰ · فاز جاری: ۱",
+    "Workplan sync 2026-10-31 13:36 — ۲۰ ایجنت + فاز ۱",
+    "صف محتوا: 77/121 منتشر · 44 باقی",
+    "GSC 2026-10-28 · 4312 کلیک · 68620 نمایش · CTR 6.28%",
+    "ممیزی سلامت: 76/۱۰۰ · فاز جاری: ۱",
     "قرارداد: ۱ مهر تا ۲۵ اسفند ۱۴۰۵ · ۱۷۱ کیورد"
   ],
-  "updatedAt": "2026-10-28T17:32:34+03:30",
+  "updatedAt": "2026-10-31T13:36:58+03:30",
   "keywordBuckets": [
     {
       "id": "P0",
@@ -1895,7 +1894,7 @@ window.BABAEI_SEO = {
     "url": "",
     "threat": "ردفوکس سخت",
     "goalFa": "هدف: جلو زدن baradaranebabaei.ir از ردفوکس روی کوئری‌های اقساطی/کارتی/ارگانی اصفهان تا ۲۵ اسفند ۱۴۰۵.",
-    "noteFa": "به‌روز 28 اکتبر 2026 · مانیتور ماهانه ردفوکس 0/15 · ما 15/15",
+    "noteFa": "صف 121 عنوان · منتشر 77 · باقی 44 · انتشار مستقیم فعال",
     "stats": [
       {
         "label": "مقالات ردفوکس",
@@ -2031,7 +2030,7 @@ window.BABAEI_SEO = {
       {
         "id": "beat-content-cadence",
         "text": "ریتم ۱ مطلب/روز از صف شکست ردفوکس (انتشار مستقیم)",
-        "why": "فعال: publish · صف 121 · منتشر 76 · باقی 45",
+        "why": "فعال: publish · صف 121 · منتشر 77 · باقی 44",
         "done": false,
         "agent": "seo-competitor",
         "priority": "critical"
@@ -2288,22 +2287,9 @@ window.BABAEI_SEO = {
     "rivalPostsApprox": 114,
     "rivalCatsApprox": 109,
     "total": 121,
-    "publishedCount": 76,
-    "pendingCount": 45,
+    "publishedCount": 77,
+    "pendingCount": 44,
     "next14": [
-      {
-        "day": "2026-11-01",
-        "priority": "P1",
-        "source": "our_keyword",
-        "sourceFa": "کیورد ما",
-        "keyword": "دوچرخه جاینت ۲۷.۵",
-        "title": "دوچرخه جاینت ۲۷.۵ | راهنمای خرید برادران بابایی اصفهان",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "انتخاب سایز دوچرخه",
-        "queue_id": "82"
-      },
       {
         "day": "2026-11-05",
         "priority": "P1",
@@ -2472,22 +2458,22 @@ window.BABAEI_SEO = {
         "link": "",
         "rival_title": "مزایای دوچرخه سواری برای سلامتی",
         "queue_id": ""
-      }
-    ],
-    "upcoming": [
+      },
       {
-        "day": "2026-11-01",
+        "day": "2026-11-12",
         "priority": "P1",
-        "source": "our_keyword",
-        "sourceFa": "کیورد ما",
-        "keyword": "دوچرخه جاینت ۲۷.۵",
-        "title": "دوچرخه جاینت ۲۷.۵ | راهنمای خرید برادران بابایی اصفهان",
+        "source": "rival_gap",
+        "sourceFa": "شکاف ردفوکس",
+        "keyword": "بهترین برند دوچرخه در ایران چیه؟",
+        "title": "بهترین برند دوچرخه در ایران چیه؟ | برادران بابایی کهندژ",
         "status": "pending",
         "wp_id": "",
         "link": "",
-        "rival_title": "انتخاب سایز دوچرخه",
-        "queue_id": "82"
-      },
+        "rival_title": "بهترین برند دوچرخه در ایران چیه؟",
+        "queue_id": ""
+      }
+    ],
+    "upcoming": [
       {
         "day": "2026-11-05",
         "priority": "P1",
@@ -2864,6 +2850,19 @@ window.BABAEI_SEO = {
         "link": "",
         "rival_title": "بهترین موتور سیکلت برای بانوان در ۱۴۰۵؛ سبک، اتومات و کم‌ارتفاع",
         "queue_id": ""
+      },
+      {
+        "day": "2026-11-30",
+        "priority": "P1",
+        "source": "rival_gap",
+        "sourceFa": "شکاف ردفوکس",
+        "keyword": "خرید موتورسیکلت دست دوم",
+        "title": "خرید موتورسیکلت دست دوم | برادران بابایی کهندژ",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "خرید موتورسیکلت دست دوم",
+        "queue_id": ""
       }
     ],
     "qualityBar": [
@@ -2872,8 +2871,8 @@ window.BABAEI_SEO = {
       "FAQ · NAP کهندژ · لینک داخلی",
       "Rank Math ≥ ۹۰"
     ],
-    "updatedAt": "2026-10-17T13:03:33+03:30",
-    "noteFa": "آخرین همگام‌سازی پلی‌بوک 2026-10-17T13:09:13+03:30 · باقی 45"
+    "updatedAt": "2026-10-31T13:36:42+03:30",
+    "noteFa": "آخرین همگام‌سازی پلی‌بوک 2026-10-31T13:36:58+03:30 · باقی 44"
   },
   "gscWow": {
     "exportedAt": "2026-10-28",
@@ -2978,12 +2977,12 @@ window.BABAEI_SEO = {
       "label": "کیفیت محتوا / E-E-A-T / آن‌پیج",
       "status": "active",
       "done": [
-        "صف شکست ردفوکس: 76 منتشر",
+        "صف شکست ردفوکس: 77 منتشر",
         "H1 خانه",
         "title برند بابایی دوچرخه"
       ],
       "todo": [
-        "انتشار باقی صف: 45 عنوان",
+        "انتشار باقی صف: 44 عنوان",
         "عمق E-E-A-T روی لندینگ‌های کارت",
         "استاندارد RM≥۹۰ روی مقالات جدید",
         "بهینه‌سازی روزانه ۱ مقاله قدیمی Rank Math"
@@ -3135,91 +3134,184 @@ window.BABAEI_SEO = {
       ],
       "todo": [
         "مانیتور ماهانه",
-        "بستن 45 عنوان باقی صف"
+        "بستن 44 عنوان باقی صف"
       ]
     }
   ],
   "urgentActions": [
     {
-      "id": "u-ctr-damghest",
-      "priority": "critical",
-      "agent": "seo-google",
-      "text": "CTR دم‌قسط بدون پیش‌پرداخت: ۱۴۶۸ ایمپرشن · ۳.۳٪ — فیکس title/desc Rank Math"
-    },
-    {
-      "id": "u-ctr-shoka",
-      "priority": "critical",
-      "agent": "seo-ecommerce",
-      "text": "CTR شوکا ۱۳۰ / موتور شوکا: ایمپرشن بالا · CTR ۱.۸–۳.۸٪ — اسنیپت + تصویر شاخص"
-    },
-    {
-      "id": "u-ctr-lifan",
-      "priority": "critical",
-      "agent": "seo-ecommerce",
-      "text": "لیفان ۲۵۰ CTR خیلی پایین با رتبه خوب — Product schema + اسنیپت"
-    },
-    {
-      "id": "u-home-pos",
-      "priority": "high",
-      "agent": "seo-page",
-      "text": "خانه پوز ~۱۲ با ۸۲۰۰+ نمایش — هم‌ترازی title/H1 با اقساط اصفهان"
-    },
-    {
-      "id": "u-loan",
-      "priority": "high",
-      "agent": "seo-content",
-      "text": "لندینگ/تقویت «وام خرید موتور» (رفاه + مهر ایران تا ۳۰۰م)"
-    },
-    {
-      "id": "u-farhang",
-      "priority": "high",
-      "agent": "seo-content",
-      "text": "اسنیپت فرهنگ کارت / فرهنگیان + جدول شرایط"
-    },
-    {
       "id": "u-speed-hero",
+      "priority": "critical",
+      "agent": "seo-performance",
+      "text": "هیرو موبایل خانه را WebP کوچک کن و preload کن (FCP 2.3s، فایل ۱۶۰۰px)"
+    },
+    {
+      "id": "u-speed-css",
+      "priority": "critical",
+      "agent": "seo-performance",
+      "text": "CSS بلاک‌کننده خانه و پیلار را کم کن (۲۱–۲۲ فایل، FCP حدود 2.4s)"
+    },
+    {
+      "id": "u-speed-js",
       "priority": "high",
       "agent": "seo-performance",
-      "text": "هیرو موبایل WebP کوچک + preload (۹۴٪ ترافیک موبایل)"
+      "text": "lazy تصویر بالای پیلار را بردار و JS اسلایدر را با LiteSpeed عقب بینداز (۲۶ اسکریپت)"
     },
     {
       "id": "u-beat",
       "priority": "high",
       "agent": "seo-content",
-      "text": "ریتم ۱ مطلب/روز صف ردفوکس + استاندارد RM≥۹۰"
+      "text": "انتشار امروز انجام شد: دوچرخه جاینت ۲۷.۵ · 44 باقی"
     },
     {
-      "id": "u-wow",
+      "id": "u-cover",
+      "priority": "high",
+      "agent": "seo-image-gen",
+      "text": "کاور برند برای مقالات اکتبر که با fallback منتشر شدند"
+    },
+    {
+      "id": "u-product",
+      "priority": "high",
+      "agent": "seo-ecommerce",
+      "text": "Product schema + تصویر شاخص واقعی شوکا/لیفان"
+    },
+    {
+      "id": "u-gsc-monitor",
       "priority": "medium",
       "agent": "seo-google",
-      "text": "مانیتور WoW: کلیک ۷روز −۹.۱٪ با نمایش +۲.۱٪"
+      "text": "مانیتور CTR شوکا/لیفان/دم‌قسط/فرهنگ‌کارت بعد از ۷–۱۴ روز (snippet اعمال شد)"
+    },
+    {
+      "id": "u-rm",
+      "priority": "high",
+      "agent": "seo-content",
+      "text": "ریتم ۱ بهینه‌سازی Rank Math/روز روی مقالات قدیمی"
+    },
+    {
+      "id": "u-audit",
+      "priority": "medium",
+      "agent": "seo-audit",
+      "text": "بعد از هر بچ بزرگ محتوا: seo audit + sync-audit-to-dashboard"
+    },
+    {
+      "id": "u-links",
+      "priority": "high",
+      "agent": "seo-cluster",
+      "text": "لینک داخلی هاب‌ها به دسته مقالات GSC اکتبر"
+    },
+    {
+      "id": "u-sentinel",
+      "priority": "medium",
+      "agent": "seo-drift",
+      "text": "روشن کردن dailyHealth/Sentinel داشبورد بابایی"
     }
   ],
   "lastWorkplanSync": {
-    "at": "2026-10-17T13:09:13+03:30",
+    "at": "2026-10-31T13:36:58+03:30",
     "agents": 20,
     "phase": 1,
-    "beatPublished": 76,
-    "beatPending": 45,
+    "beatPublished": 77,
+    "beatPending": 44,
     "source": "rebuild_dashboard_workplan.py"
   },
   "actionPlanFa": {
     "critical": [
-      "اسنیپت دم‌قسط بدون پیش‌پرداخت (۱۴۶۸ ایمپرشن · CTR ۳.۳٪ · پوز ۸.۷) — title/desc + FAQ روی لندینگ هدف",
-      "شوکا ۱۳۰ + «موتور شوکا» (۱۹۹۴ ایمپرشن جمع) — title محصول/مقاله + قیمت در desc + تصویر شاخص",
-      "لیفان ۲۵۰ / KPS (CTR ~۱–۲.۵٪ با رتبه خوب) — بازنویسی اسنیپت + Product schema واقعی"
+      "هیرو موبایل خانه را WebP کوچک کن و preload کن (FCP 2.3s، فایل ۱۶۰۰px)",
+      "CSS بلاک‌کننده خانه و پیلار را کم کن (۲۱–۲۲ فایل، FCP حدود 2.4s)"
     ],
     "high": [
-      "خانه: تقویت intent اقساط/اصفهان در title+H1 بدون از دست دادن برند — هدف پوزیشن زیر ۱۰",
-      "کوئری «وام خرید موتور» (۷۱۰ ایمپرشن · پوز ~۱۱) — تقویت/لندینگ وام رفاه+مهر ایران",
-      "فرهنگ کارت / فرهنگیان CTR زیر ۱.۵٪ — title لندینگ + جدول شرایط + لینک داخلی از هاب اقساط",
-      "هیرو موبایل WebP+preload و کاهش CSS بلاک‌کننده (۹۴٪ ترافیک موبایل)",
-      "ادامه ریتم ۱ مطلب/روز از صف شکست ردفوکس + RM≥۹۰"
+      "lazy تصویر بالای پیلار را بردار و JS اسلایدر را با LiteSpeed عقب بینداز (۲۶ اسکریپت)",
+      "انتشار امروز انجام شد: دوچرخه جاینت ۲۷.۵ · 44 باقی",
+      "کاور برند برای مقالات اکتبر که با fallback منتشر شدند",
+      "Product schema + تصویر شاخص واقعی شوکا/لیفان",
+      "ریتم ۱ بهینه‌سازی Rank Math/روز روی مقالات قدیمی",
+      "لینک داخلی هاب‌ها به دسته مقالات GSC اکتبر"
     ],
-    "medium": [
-      "هاب motorcycle/bicycle/اقساط → صفحات محصول و فرصت‌های GSC اکتبر",
-      "بررسی افت WoW کلیک ۷روز (−۹٪) روی صفحات پول بعد از ۷ روز از فیکس اسنیپت"
-    ]
+    "byAgent": {
+      "seo-technical": [
+        "مانیتور پایداری API بعد از بچ انتشار (جلوگیری ۵۰۲)",
+        "اختیاری: GitHub Pages برای داشبورد بابایی"
+      ],
+      "seo-performance": [
+        "هیرو خانه: WebP عرض موبایل + preload (الان منبع ۱۶۰۰px)",
+        "کم کردن CSS بلاک‌کننده (۲۱–۲۲ فایل) روی خانه و پیلار",
+        "برداشتن lazy از تصویر بالای پیلار + تأخیر JS اسلایدر (۲۶ اسکریپت)"
+      ],
+      "seo-sitemap": [
+        "پس از هر ۲۰ پست: تأیید sitemap آخرین modified"
+      ],
+      "seo-schema": [
+        "FAQPage روی مقالات فرصت GSC",
+        "BreadcrumbList روی لندینگ کارت/ارگان"
+      ],
+      "seo-local": [
+        "citation محلی اصفهان",
+        "هم‌ترازی ساعات کار سایت/GBP"
+      ],
+      "seo-maps": [
+        "ممیزی GBP",
+        "geo-grid رتبه «موتورسیکلت اصفهان»"
+      ],
+      "seo-content": [
+        "انتشار باقی صف: 44 عنوان",
+        "عمق E-E-A-T روی لندینگ‌های کارت",
+        "استاندارد RM≥۹۰ روی مقالات جدید",
+        "بهینه‌سازی روزانه ۱ مقاله قدیمی Rank Math"
+      ],
+      "seo-cluster": [
+        "لینک داخلی مقالات اکتبر به هاب‌ها",
+        "تکمیل P0 ارگان CSV"
+      ],
+      "seo-ecommerce": [
+        "Product schema کامل + تصویر محصول",
+        "خوشه پرواز ۲۰۰ / هدی / برمودا"
+      ],
+      "seo-backlinks": [
+        "پروفایل بک‌لینک پایه",
+        "۳ فرصت لینک محلی/صنفی اصفهان"
+      ],
+      "seo-google": [
+        "مانیتور CTR همان خوشه بعد از ۷–۱۴ روز",
+        "WoW هفتگی در داشبورد",
+        "Coverage/۴۰۴ اگر ظاهر شد"
+      ],
+      "seo-dataforseo": [
+        "SERP gap ماهانه کیوردهای P0 (با سقف هزینه)",
+        "حجم جستجوی ۱۰ طلایی"
+      ],
+      "seo-geo": [
+        "llms.txt",
+        "بررسی blocking AI bots",
+        "پاسخ‌های قابل نقل‌قول در پیلار اقساط"
+      ],
+      "seo-flow": [
+        "نقشه قیف: کوئری اقساط → لندینگ → تماس ۰۹۱۳۷۱۲۲۴۰۰",
+        "حذف اصطکاک CTA موبایل"
+      ],
+      "seo-sxo": [
+        "تست CTA تماس در مقالات جدید"
+      ],
+      "seo-drift": [
+        "dailyHealth زنده",
+        "هشدار تغییر title خانه/پیلار"
+      ],
+      "seo-visual": [
+        "اسکرین موبایل خانه و ۳ لندینگ کارت",
+        "بررسی above-fold بدون شلوغی"
+      ],
+      "seo-image-gen": [
+        "جبران کاور ۱۵ مقاله با media ۳۳۷۸",
+        "OG overlap روی محصولات پول"
+      ],
+      "seo-audit": [
+        "اجرای دوره‌ای /seo audit + sync داشبورد",
+        "به‌روز نگه داشتن ACTION-PLAN از یافته‌های زنده"
+      ],
+      "seo-competitor": [
+        "مانیتور ماهانه",
+        "بستن 44 عنوان باقی صف"
+      ]
+    }
   },
   "seoSummary": {
     "title": "خلاصه SEO",
