@@ -15,11 +15,11 @@ window.BABAEI_SEO = {
     "keywordsTotal": 171,
     "manager": "تیم SEO",
     "phase": 1,
-    "phaseLabel": "فاز ۱ — مهر: P0 پول/کارت + جبران صف + فرصت GSC",
+    "phaseLabel": "فاز ۲ — آبان: تکمیل P0 ارگانی + هاب اقساط + مانیتور ردفوکس",
     "updatedAtFa": "2026/10/28",
-    "updatedAt": "2026-10-28T13:50:59+03:30",
+    "updatedAt": "2026-10-28T17:30:21+03:30",
     "agentsCount": 20,
-    "workplanNote": "GSC 2026-10-28 + کارت خلاصه SEO"
+    "workplanNote": "P0 org CSV 28/28 live · short-slug pages"
   },
   "score": {
     "overall": 76,
@@ -223,7 +223,7 @@ window.BABAEI_SEO = {
     },
     "1": {
       "title": "فاز ۱ — مهر · P0 پول/کارت + جبران صف",
-      "status": "active",
+      "status": "done",
       "summary": "لندینگ کارت/ارگان P0، فرصت GSC، جبران صف محتوا، کاور برند",
       "actions": [
         {
@@ -351,16 +351,16 @@ window.BABAEI_SEO = {
     },
     "2": {
       "title": "فاز ۲ — آبان · تکمیل P0 ارگانی",
-      "status": "upcoming",
+      "status": "active",
       "summary": "تکمیل URLهای ارگانی P0 + هاب اقساط + مانیتور ردفوکس",
       "actions": [
         {
           "id": "p2-orgs",
           "text": "تکمیل لندینگ‌های P0 ارگانی باقی‌مانده از CSV",
           "agent": "seo-cluster",
-          "done": false,
+          "done": true,
           "priority": "critical",
-          "why": "",
+          "why": "۲۸/۲۸ مسیر CSV زنده (۲۰۲۶-۱۰-۲۸): صفحات short-slug + کالا-کارت-مهر-ایران/تأمین-اجتماعی؛ پست‌های تکراری noindex+canonical",
           "where": "ایجنت `seo-cluster`"
         },
         {
@@ -376,9 +376,9 @@ window.BABAEI_SEO = {
           "id": "p2-monitor",
           "text": "مانیتور ماهانه ۱۵ URL پول ردفوکس",
           "agent": "seo-competitor",
-          "done": false,
+          "done": true,
           "priority": "high",
-          "why": "",
+          "why": "baseline اکتبر ۲۰۲۶: ۱۵ URL ours در logs/competitor-monitor-2026-10.json (rival با COMPETITOR_BASE)",
           "where": "ایجنت `seo-competitor`"
         },
         {
@@ -413,7 +413,7 @@ window.BABAEI_SEO = {
         {
           "id": "c2-orgs",
           "text": "همه P0 ارگان URL زنده دارند",
-          "done": false
+          "done": true
         },
         {
           "id": "c2-wow",
@@ -1751,7 +1751,7 @@ window.BABAEI_SEO = {
     "ممیزی سلامت: 73/۱۰۰ · فاز جاری: ۱",
     "قرارداد: ۱ مهر تا ۲۵ اسفند ۱۴۰۵ · ۱۷۱ کیورد"
   ],
-  "updatedAt": "2026-10-28T13:50:59+03:30",
+  "updatedAt": "2026-10-28T17:32:34+03:30",
   "keywordBuckets": [
     {
       "id": "P0",
@@ -1895,7 +1895,7 @@ window.BABAEI_SEO = {
     "url": "",
     "threat": "ردفوکس سخت",
     "goalFa": "هدف: جلو زدن baradaranebabaei.ir از ردفوکس روی کوئری‌های اقساطی/کارتی/ارگانی اصفهان تا ۲۵ اسفند ۱۴۰۵.",
-    "noteFa": "صف 121 عنوان · منتشر 76 · باقی 45 · انتشار مستقیم فعال",
+    "noteFa": "به‌روز 28 اکتبر 2026 · مانیتور ماهانه ردفوکس 0/15 · ما 15/15",
     "stats": [
       {
         "label": "مقالات ردفوکس",
@@ -2039,7 +2039,7 @@ window.BABAEI_SEO = {
       {
         "id": "beat-monitor-urls",
         "text": "مانیتور ماهانه URLهای پول ردفوکس (اقساط دوچرخه/موتور اصفهان)",
-        "why": "فعال: watchlist ۱۵ URL · گزارش logs/competitor-monitor-2026-09.json · اجرای ماهانه monitor_competitor_urls.py",
+        "why": "فعال: watchlist ۱۵ URL · گزارش logs/competitor-monitor-2026-10.json · اجرای ماهانه monitor_competitor_urls.py",
         "done": true
       },
       {
@@ -2065,194 +2065,194 @@ window.BABAEI_SEO = {
         "topic": "خانه ردفوکس",
         "ourUrl": "https://baradaranebabaei.ir/",
         "rivalLabel": "ردفوکس · خانه ردفوکس",
-        "lastCheck": "2026-09-28T13:07:08+03:30",
-        "rivalStatus": 200,
+        "lastCheck": "2026-10-28T17:32:34+03:30",
+        "rivalStatus": null,
         "ourStatus": 200,
-        "rivalH1": 0,
+        "rivalH1": null,
         "ourH1": 1,
-        "rivalWords": 1611,
-        "ourWords": 1226
+        "rivalWords": null,
+        "ourWords": 851
       },
       {
         "id": "motor-installment-isfahan",
         "topic": "موتورسیکلت اقساطی اصفهان",
         "ourUrl": "https://baradaranebabaei.ir/%d9%85%d9%88%d8%aa%d9%88%d8%b1%d8%b3%db%8c%da%a9%d9%84%d8%aa-%d8%a7%d9%82%d8%b3%d8%a7%d8%b7%db%8c-%d8%a7%d8%b5%d9%81%d9%87%d8%a7%d9%86-%d8%ae%d8%b1%db%8c%d8%af-%d9%85%d9%88%d8%aa%d9%88%d8%b1/",
         "rivalLabel": "ردفوکس · موتورسیکلت اقساطی اصفهان",
-        "lastCheck": "2026-09-28T13:07:08+03:30",
-        "rivalStatus": 200,
+        "lastCheck": "2026-10-28T17:32:34+03:30",
+        "rivalStatus": null,
         "ourStatus": 200,
-        "rivalH1": 1,
+        "rivalH1": null,
         "ourH1": 1,
-        "rivalWords": 2551,
-        "ourWords": 780
+        "rivalWords": null,
+        "ourWords": 1399
       },
       {
         "id": "bike-installment-isfahan",
         "topic": "فروش اقساطی دوچرخه در اصفهان",
         "ourUrl": "https://baradaranebabaei.ir/%d8%af%d9%88%da%86%d8%b1%d8%ae%d9%87-%d8%a7%d9%82%d8%b3%d8%a7%d8%b7%db%8c-%d8%a7%d8%b5%d9%81%d9%87%d8%a7%d9%86/",
         "rivalLabel": "ردفوکس · فروش اقساطی دوچرخه در اصفهان",
-        "lastCheck": "2026-09-28T13:07:08+03:30",
-        "rivalStatus": 200,
+        "lastCheck": "2026-10-28T17:32:34+03:30",
+        "rivalStatus": null,
         "ourStatus": 200,
-        "rivalH1": 1,
+        "rivalH1": null,
         "ourH1": 1,
-        "rivalWords": 2047,
-        "ourWords": 939
+        "rivalWords": null,
+        "ourWords": 836
       },
       {
         "id": "hub-motorcycle",
         "topic": "هاب /motorcycle/",
         "ourUrl": "https://baradaranebabaei.ir/motorcycle/",
         "rivalLabel": "ردفوکس · هاب /motorcycle/",
-        "lastCheck": "2026-09-28T13:07:08+03:30",
-        "rivalStatus": 200,
+        "lastCheck": "2026-10-28T17:32:34+03:30",
+        "rivalStatus": null,
         "ourStatus": 200,
-        "rivalH1": 1,
+        "rivalH1": null,
         "ourH1": 1,
-        "rivalWords": 696,
-        "ourWords": 695
+        "rivalWords": null,
+        "ourWords": 627
       },
       {
         "id": "hub-bicycle",
         "topic": "هاب /bicycle/",
         "ourUrl": "https://baradaranebabaei.ir/bicycle/",
         "rivalLabel": "ردفوکس · هاب /bicycle/",
-        "lastCheck": "2026-09-28T13:07:08+03:30",
-        "rivalStatus": 200,
+        "lastCheck": "2026-10-28T17:32:34+03:30",
+        "rivalStatus": null,
         "ourStatus": 200,
-        "rivalH1": 1,
+        "rivalH1": null,
         "ourH1": 1,
-        "rivalWords": 698,
-        "ourWords": 705
+        "rivalWords": null,
+        "ourWords": 668
       },
       {
         "id": "shop",
         "topic": "فروشگاه /shop/",
         "ourUrl": "https://baradaranebabaei.ir/shop/",
         "rivalLabel": "ردفوکس · فروشگاه /shop/",
-        "lastCheck": "2026-09-28T13:07:08+03:30",
-        "rivalStatus": 200,
+        "lastCheck": "2026-10-28T17:32:34+03:30",
+        "rivalStatus": null,
         "ourStatus": 200,
-        "rivalH1": 0,
+        "rivalH1": null,
         "ourH1": 1,
-        "rivalWords": 1365,
-        "ourWords": 434
+        "rivalWords": null,
+        "ourWords": 331
       },
       {
         "id": "card-farhang",
         "topic": "خرید با فرهنگ کارت",
         "ourUrl": "https://baradaranebabaei.ir/%d9%81%d8%b1%d9%87%d9%86%da%af-%da%a9%d8%a7%d8%b1%d8%aa/",
         "rivalLabel": "ردفوکس · خرید با فرهنگ کارت",
-        "lastCheck": "2026-09-28T13:07:08+03:30",
-        "rivalStatus": 200,
+        "lastCheck": "2026-10-28T17:32:34+03:30",
+        "rivalStatus": null,
         "ourStatus": 200,
-        "rivalH1": 1,
+        "rivalH1": null,
         "ourH1": 1,
-        "rivalWords": 1270,
-        "ourWords": 763
+        "rivalWords": null,
+        "ourWords": 663
       },
       {
         "id": "card-esfahan",
         "topic": "خرید با اصفهان کارت",
         "ourUrl": "https://baradaranebabaei.ir/%d8%a7%d8%b5%d9%81%d9%87%d8%a7%d9%86-%da%a9%d8%a7%d8%b1%d8%aa/",
         "rivalLabel": "ردفوکس · خرید با اصفهان کارت",
-        "lastCheck": "2026-09-28T13:07:08+03:30",
-        "rivalStatus": 200,
+        "lastCheck": "2026-10-28T17:32:34+03:30",
+        "rivalStatus": null,
         "ourStatus": 200,
-        "rivalH1": 1,
+        "rivalH1": null,
         "ourH1": 1,
-        "rivalWords": 1519,
-        "ourWords": 765
+        "rivalWords": null,
+        "ourWords": 662
       },
       {
         "id": "card-refah",
         "topic": "رفاه کارت / کارت رفاهی",
         "ourUrl": "https://baradaranebabaei.ir/%d8%b1%d9%81%d8%a7%d9%87-%da%a9%d8%a7%d8%b1%d8%aa/",
         "rivalLabel": "ردفوکس · رفاه کارت / کارت رفاهی",
-        "lastCheck": "2026-09-28T13:07:08+03:30",
-        "rivalStatus": 200,
+        "lastCheck": "2026-10-28T17:32:34+03:30",
+        "rivalStatus": null,
         "ourStatus": 200,
-        "rivalH1": 0,
+        "rivalH1": null,
         "ourH1": 1,
-        "rivalWords": 2131,
-        "ourWords": 932
+        "rivalWords": null,
+        "ourWords": 829
       },
       {
         "id": "org-retirees",
         "topic": "بازنشستگان تأمین اجتماعی",
         "ourUrl": "https://baradaranebabaei.ir/%d8%a8%d8%a7%d8%b2%d9%86%d8%b4%d8%b3%d8%aa%da%af%d8%a7%d9%86-%d8%aa%d8%a3%d9%85%db%8c%d9%86-%d8%a7%d8%ac%d8%aa%d9%85%d8%a7%d8%b9%db%8c/",
         "rivalLabel": "ردفوکس · بازنشستگان تأمین اجتماعی",
-        "lastCheck": "2026-09-28T13:07:08+03:30",
-        "rivalStatus": 200,
+        "lastCheck": "2026-10-28T17:32:34+03:30",
+        "rivalStatus": null,
         "ourStatus": 200,
-        "rivalH1": 0,
+        "rivalH1": null,
         "ourH1": 1,
-        "rivalWords": 2392,
-        "ourWords": 928
+        "rivalWords": null,
+        "ourWords": 829
       },
       {
         "id": "org-khane-kargar",
         "topic": "خانه کارگر",
         "ourUrl": "https://baradaranebabaei.ir/%d8%ae%d8%a7%d9%86%d9%87-%da%a9%d8%a7%d8%b1%da%af%d8%b1/",
         "rivalLabel": "ردفوکس · خانه کارگر",
-        "lastCheck": "2026-09-28T13:07:08+03:30",
-        "rivalStatus": 200,
+        "lastCheck": "2026-10-28T17:32:34+03:30",
+        "rivalStatus": null,
         "ourStatus": 200,
-        "rivalH1": 2,
+        "rivalH1": null,
         "ourH1": 1,
-        "rivalWords": 1204,
-        "ourWords": 931
+        "rivalWords": null,
+        "ourWords": 828
       },
       {
         "id": "org-farhangian",
         "topic": "تسهیلات فرهنگیان",
         "ourUrl": "https://baradaranebabaei.ir/%d9%81%d8%b1%d9%87%d9%86%da%af%db%8c%d8%a7%d9%86/",
         "rivalLabel": "ردفوکس · تسهیلات فرهنگیان",
-        "lastCheck": "2026-09-28T13:07:08+03:30",
-        "rivalStatus": 200,
+        "lastCheck": "2026-10-28T17:32:34+03:30",
+        "rivalStatus": null,
         "ourStatus": 200,
-        "rivalH1": 0,
+        "rivalH1": null,
         "ourH1": 1,
-        "rivalWords": 2039,
-        "ourWords": 910
+        "rivalWords": null,
+        "ourWords": 807
       },
       {
         "id": "best-bike-shop-isfahan",
         "topic": "بهترین فروشگاه دوچرخه در اصفهان",
         "ourUrl": "https://baradaranebabaei.ir/forushgah-baradaran-babaei-kohandezh/",
         "rivalLabel": "ردفوکس · بهترین فروشگاه دوچرخه در اصفهان",
-        "lastCheck": "2026-09-28T13:07:08+03:30",
-        "rivalStatus": 200,
+        "lastCheck": "2026-10-28T17:32:34+03:30",
+        "rivalStatus": null,
         "ourStatus": 200,
-        "rivalH1": 0,
+        "rivalH1": null,
         "ourH1": 2,
-        "rivalWords": 1772,
-        "ourWords": 428
+        "rivalWords": null,
+        "ourWords": 325
       },
       {
         "id": "motor-dam-ghest",
         "topic": "خرید موتور از دم قسط",
         "ourUrl": "https://baradaranebabaei.ir/%D8%AE%D8%B1%DB%8C%D8%AF-%D8%A7%D9%82%D8%B3%D8%A7%D8%B7%DB%8C/",
         "rivalLabel": "ردفوکس · خرید موتور از دم قسط",
-        "lastCheck": "2026-09-28T13:07:08+03:30",
-        "rivalStatus": 200,
+        "lastCheck": "2026-10-28T17:32:34+03:30",
+        "rivalStatus": null,
         "ourStatus": 200,
-        "rivalH1": 0,
+        "rivalH1": null,
         "ourH1": 1,
-        "rivalWords": 1606,
-        "ourWords": 918
+        "rivalWords": null,
+        "ourWords": 511
       },
       {
         "id": "sitemap",
         "topic": "sitemap_index.xml",
         "ourUrl": "https://baradaranebabaei.ir/sitemap_index.xml",
         "rivalLabel": "ردفوکس · sitemap_index.xml",
-        "lastCheck": "2026-09-28T13:07:08+03:30",
-        "rivalStatus": 200,
+        "lastCheck": "2026-10-28T17:32:34+03:30",
+        "rivalStatus": null,
         "ourStatus": 200,
-        "rivalH1": 0,
+        "rivalH1": null,
         "ourH1": 0,
-        "rivalWords": 20,
+        "rivalWords": null,
         "ourWords": 12
       }
     ]
