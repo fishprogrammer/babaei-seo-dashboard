@@ -17,7 +17,7 @@ window.BABAEI_SEO = {
     "phase": 1,
     "phaseLabel": "فاز ۱ — مهر: P0 پول/کارت + جبران صف + فرصت GSC",
     "updatedAtFa": "2026/10/31",
-    "updatedAt": "2026-10-31T13:36:58+03:30",
+    "updatedAt": "2026-10-31T14:26:42+03:30",
     "agentsCount": 20,
     "workplanNote": "پلی‌بوک ۲۰ ایجنت + صف محتوا + GSC 2026-10-28"
   },
@@ -257,9 +257,9 @@ window.BABAEI_SEO = {
           "id": "p1-beat-catchup",
           "text": "جبران صف شکست ردفوکس — باقی 44 از 121",
           "agent": "seo-content",
-          "done": false,
-          "priority": "critical",
-          "why": "منتشر 77 · هدف حداقل ۱/روز live با publish_content_beat.py",
+          "done": true,
+          "priority": "high",
+          "why": "امروز live: دوچرخه جاینت ۲۷.۵ · منتشر 77 · باقی 44",
           "where": "ایجنت `seo-content`"
         },
         {
@@ -284,9 +284,9 @@ window.BABAEI_SEO = {
           "id": "p1-product-schema",
           "text": "اعتبارسنجی Product schema شوکا ۱۳۰ و لیفان ۲۵۰ + قیمت/موجودی",
           "agent": "seo-ecommerce",
-          "done": false,
+          "done": true,
           "priority": "high",
-          "why": "",
+          "why": "2026-10-31: brand/sku/InStock روی شوکا ۳۲۵۱ و لیفان ۲۵۸۴ زنده شد · Woo قیمت=۰ پس Offer.price ساخته نشد",
           "where": "ایجنت `seo-ecommerce`"
         },
         {
@@ -330,7 +330,7 @@ window.BABAEI_SEO = {
         {
           "id": "c1-beat",
           "text": "صف محتوا روزانه ≥۱ انتشار live",
-          "done": false
+          "done": true
         },
         {
           "id": "c1-gsc",
@@ -345,7 +345,7 @@ window.BABAEI_SEO = {
         {
           "id": "c1-product",
           "text": "Product schema شوکا/لیفان OK",
-          "done": false
+          "done": true
         }
       ]
     },
@@ -1744,13 +1744,13 @@ window.BABAEI_SEO = {
     ]
   },
   "notes": [
-    "Workplan sync 2026-10-31 13:36 — ۲۰ ایجنت + فاز ۱",
+    "Workplan sync 2026-10-31 14:26 — ۲۰ ایجنت + فاز ۱",
     "صف محتوا: 77/121 منتشر · 44 باقی",
     "GSC 2026-10-28 · 4312 کلیک · 68620 نمایش · CTR 6.28%",
     "ممیزی سلامت: 76/۱۰۰ · فاز جاری: ۱",
     "قرارداد: ۱ مهر تا ۲۵ اسفند ۱۴۰۵ · ۱۷۱ کیورد"
   ],
-  "updatedAt": "2026-10-31T13:36:58+03:30",
+  "updatedAt": "2026-10-31T14:26:42+03:30",
   "keywordBuckets": [
     {
       "id": "P0",
@@ -2031,7 +2031,7 @@ window.BABAEI_SEO = {
         "id": "beat-content-cadence",
         "text": "ریتم ۱ مطلب/روز از صف شکست ردفوکس (انتشار مستقیم)",
         "why": "فعال: publish · صف 121 · منتشر 77 · باقی 44",
-        "done": false,
+        "done": true,
         "agent": "seo-competitor",
         "priority": "critical"
       },
@@ -2872,7 +2872,7 @@ window.BABAEI_SEO = {
       "Rank Math ≥ ۹۰"
     ],
     "updatedAt": "2026-10-31T13:36:42+03:30",
-    "noteFa": "آخرین همگام‌سازی پلی‌بوک 2026-10-31T13:36:58+03:30 · باقی 44"
+    "noteFa": "آخرین همگام‌سازی پلی‌بوک 2026-10-31T14:26:42+03:30 · باقی 44"
   },
   "gscWow": {
     "exportedAt": "2026-10-28",
@@ -3006,10 +3006,12 @@ window.BABAEI_SEO = {
       "label": "ووکامرس / محصول / شاپینگ",
       "status": "active",
       "done": [
-        "تقویت Rank Math شوکا/لیفان"
+        "تقویت Rank Math شوکا/لیفان",
+        "Product schema شوکا/لیفان: brand+sku+InStock"
       ],
       "todo": [
-        "Product schema کامل + تصویر محصول",
+        "قیمت واقعی ووکامرس (الان ۰) برای Offer.price",
+        "تصویر محصول واقعی غیر از کاور برند",
         "خوشه پرواز ۲۰۰ / هدی / برمودا"
       ]
     },
@@ -3207,7 +3209,7 @@ window.BABAEI_SEO = {
     }
   ],
   "lastWorkplanSync": {
-    "at": "2026-10-31T13:36:58+03:30",
+    "at": "2026-10-31T14:26:42+03:30",
     "agents": 20,
     "phase": 1,
     "beatPublished": 77,
@@ -3263,7 +3265,8 @@ window.BABAEI_SEO = {
         "تکمیل P0 ارگان CSV"
       ],
       "seo-ecommerce": [
-        "Product schema کامل + تصویر محصول",
+        "قیمت واقعی ووکامرس (الان ۰) برای Offer.price",
+        "تصویر محصول واقعی غیر از کاور برند",
         "خوشه پرواز ۲۰۰ / هدی / برمودا"
       ],
       "seo-backlinks": [
