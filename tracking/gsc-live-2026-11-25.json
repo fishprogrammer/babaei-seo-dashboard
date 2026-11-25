@@ -1,0 +1,81 @@
+{
+  "checked_at": "2026-11-25T12:50:00+03:30",
+  "source": "Google Search Console UI (live browser)",
+  "range": "Last 3 months · Web",
+  "property": "https://baradaranebabaei.ir/",
+  "performance": {
+    "clicks": 6990,
+    "clicks_label": "6.99K",
+    "impressions": 120000,
+    "impressions_label": "120K",
+    "ctr": 0.058,
+    "ctr_label": "5.8%",
+    "position": 7.8
+  },
+  "indexing": {
+    "indexed": 167,
+    "not_indexed": 86,
+    "last_update": "2026-11-16",
+    "reasons": {
+      "redirect": 6,
+      "noindex": 3,
+      "404": 8,
+      "4xx": 1,
+      "robots": 1,
+      "discovered_not_indexed": 51,
+      "crawled_not_indexed": 16
+    }
+  },
+  "top_queries": [
+    {
+      "kw": "موتور با اقساط 36 ماهه اصفهان",
+      "clicks": 271,
+      "impressions": 870
+    },
+    {
+      "kw": "فروش اقساطی موتور سیکلت به بازنشستگان تامین اجتماعی اصفهان",
+      "clicks": 230,
+      "impressions": 665
+    },
+    {
+      "kw": "خرید موتور از دم قسط با سفته بدون پیش پرداخت",
+      "clicks": 103,
+      "impressions": 3427
+    },
+    {
+      "kw": "خرید موتور از دم قسط با سفته بدون پیش پرداخت اصفهان",
+      "clicks": 85,
+      "impressions": 1625
+    },
+    {
+      "kw": "فروش اقساطی موتور سیکلت فروشگاه اتکا اصفهان",
+      "clicks": 56,
+      "impressions": 135
+    },
+    {
+      "kw": "لیست فروشگاه های طرف قرارداد فرهنگ کارت اصفهان",
+      "clicks": 49,
+      "impressions": 681
+    },
+    {
+      "kw": "فروش اقساطی موتور سیکلت به بازنشستگان تامین اجتماعی",
+      "clicks": 43,
+      "impressions": 643
+    },
+    {
+      "kw": "شوکا ۱۳۰",
+      "clicks": 42,
+      "impressions": 1323
+    },
+    {
+      "kw": "موتور اقساطی اصفهان",
+      "clicks": 42,
+      "impressions": 243
+    },
+    {
+      "kw": "فروش اقساطی موتور سیکلت به بازنشستگان",
+      "clicks": 40,
+      "impressions": 1035
+    }
+  ]
+}

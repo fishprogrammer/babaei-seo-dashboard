@@ -14,16 +14,16 @@ window.BABAEI_SEO = {
     "monthsLabel": "۶ ماه (مهر تا ۲۵ اسفند ۱۴۰۵)",
     "keywordsTotal": 171,
     "manager": "تیم SEO",
-    "phase": 1,
-    "phaseLabel": "فاز ۲ — آبان: تکمیل P0 ارگانی + هاب اقساط + مانیتور ردفوکس",
-    "updatedAtFa": "2026/10/28",
-    "updatedAt": "2026-10-28T17:30:21+03:30",
+    "phase": 3,
+    "phaseLabel": "فاز ۳ — آذر: خوشه محصول + P1",
+    "updatedAtFa": "2026/11/25",
+    "updatedAt": "2026-11-25T12:50:00+03:30",
     "agentsCount": 20,
-    "workplanNote": "P0 org CSV 28/28 live · short-slug pages"
+    "workplanNote": "GSC live ۲۵/۱۱ · 6.99K کلیک · 120K نمایش · Indexed 167 · CTR gap دم‌قسط/شوکا"
   },
   "score": {
     "overall": 76,
-    "label": "نمره سلامت SEO — ممیزی 2026-10-28",
+    "label": "نمره سلامت SEO — ممیزی 2026-11-22",
     "breakdown": [
       {
         "id": "technical",
@@ -259,7 +259,7 @@ window.BABAEI_SEO = {
           "agent": "seo-content",
           "done": false,
           "priority": "critical",
-          "why": "منتشر 76 · هدف حداقل ۱/روز live با publish_content_beat.py",
+          "why": "منتشر 91 · باقی 30 از 121 · بچ‌های ۲۲ نوامبر (دم‌قسط، خانه کارگر، برند دوچرخه، …)",
           "where": "ایجنت `seo-content`"
         },
         {
@@ -351,7 +351,7 @@ window.BABAEI_SEO = {
     },
     "2": {
       "title": "فاز ۲ — آبان · تکمیل P0 ارگانی",
-      "status": "active",
+      "status": "done",
       "summary": "تکمیل URLهای ارگانی P0 + هاب اقساط + مانیتور ردفوکس",
       "actions": [
         {
@@ -367,9 +367,9 @@ window.BABAEI_SEO = {
           "id": "p2-hub-aghsati",
           "text": "تقویت هاب /خرید-اقساطی/ با جدول کارت‌ها و ارگان‌ها",
           "agent": "seo-flow",
-          "done": false,
+          "done": true,
           "priority": "high",
-          "why": "",
+          "why": "۲۰۲۶-۱۱-۲۲: جدول ۷ کارت + ۱۵ ارگان روی هاب /خرید-اقساطی/ (post 3466) + IndexNow",
           "where": "ایجنت `seo-flow`"
         },
         {
@@ -385,27 +385,27 @@ window.BABAEI_SEO = {
           "id": "p2-gsc-wow",
           "text": "گزارش WoW GSC (افت صفحه/کیورد) در داشبورد",
           "agent": "seo-google",
-          "done": false,
+          "done": true,
           "priority": "high",
-          "why": "",
+          "why": "۲۰۲۶-۱۱-۲۲: WoW ۷روز کلیک +37.8% · نمایش +31.2% · losers صفحه=0 کیورد=0",
           "where": "ایجنت `seo-google`"
         },
         {
           "id": "p2-citations",
           "text": "بررسی citation/NAP دایرکتوری‌های اصفهان",
           "agent": "seo-local",
-          "done": false,
+          "done": true,
           "priority": "medium",
-          "why": "",
+          "why": "۲۰۲۶-۱۱-۲۲: NAP onsite 8/8 OK · GBP Maps: «دوچرخه و موتورسیکلت برادران بابایی» ۴.۸/۸۰ · تلفن 09137122400 هم‌خوان · هشدار: لیستینگ جدا «موبایل برادران بابایی» با تلفن متفاوت",
           "where": "ایجنت `seo-local`"
         },
         {
           "id": "p2-maps-grid",
           "text": "شبکه رتبه Maps برای کهندژ (موتورسیکلت اصفهان)",
           "agent": "seo-maps",
-          "done": false,
+          "done": true,
           "priority": "medium",
-          "why": "",
+          "why": "۲۰۲۶-۱۱-۲۲: baseline Maps کهندژ ثبت شد (۴.۸★، آدرس کوچه ۸۶/رهنان، +98 913 712 2400). شبکه رتبه چندنقطه‌ای کامل نیاز DataForSEO/ابزار grid دارد — فعلاً baseline GBP.",
           "where": "ایجنت `seo-maps`"
         }
       ],
@@ -418,58 +418,58 @@ window.BABAEI_SEO = {
         {
           "id": "c2-wow",
           "text": "WoW GSC ماه آبان ثبت شد",
-          "done": false
+          "done": true
         }
       ]
     },
     "3": {
       "title": "فاز ۳ — آذر · محصول + P1",
-      "status": "upcoming",
+      "status": "active",
       "summary": "خوشه محصول موتور/دوچرخه + شروع ارگان P1",
       "actions": [
         {
           "id": "p3-products",
           "text": "خوشه محصول: پرواز ۲۰۰، هدی آیروکس، برمودا، تریل فلات",
           "agent": "seo-ecommerce",
-          "done": false,
+          "done": true,
           "priority": "critical",
-          "why": "",
+          "why": "۲۰۲۶-۱۱-۲۲: اسنیپت CTR + خوشه لینک داخلی برای پرواز۲۰۰/هدی/برمودا/فلات(+شوکا) و ۳ مقاله پشتیبان · IndexNow 200",
           "where": "ایجنت `seo-ecommerce`"
         },
         {
           "id": "p3-bike-cluster",
           "text": "سیلو دوچرخه سایز/برند با لینک هاب /bicycle/",
           "agent": "seo-cluster",
-          "done": false,
+          "done": true,
           "priority": "high",
-          "why": "",
+          "why": "۲۰۲۶-۱۱-۲۲: جدول برند+سایز روی /bicycle/ (3547) + لینک برگشتی فروشگاه/جاینت/محصولات نمونه",
           "where": "ایجنت `seo-cluster`"
         },
         {
           "id": "p3-org-p1",
           "text": "شروع صف ارگان P1 از article-queue",
           "agent": "seo-content",
-          "done": false,
+          "done": true,
           "priority": "high",
-          "why": "",
+          "why": "P1 article-queue کامل (۴۱/۴۱ published) · شروع موج P2: اداره دخانیات + ثبت احوال (صفحات ۴۰۷۰/۴۰۷۱)",
           "where": "ایجنت `seo-content`"
         },
         {
           "id": "p3-merchant",
           "text": "بررسی قابلیت Google Merchant / قیمت‌گذاری",
           "agent": "seo-ecommerce",
-          "done": false,
+          "done": true,
           "priority": "medium",
-          "why": "",
+          "why": "۲۰۲۶-۱۱-۲۲: ۷ SKU پول price=0 در ووکامرس → Product schema عمداً بدون Offer (Bridge 2.2.6). Merchant تا وارد شدن قیمت واقعی ممکن نیست.",
           "where": "ایجنت `seo-ecommerce`"
         },
         {
           "id": "p3-dfs",
           "text": "SERP gap کیوردهای P1 با DataForSEO (با سقف هزینه)",
           "agent": "seo-dataforseo",
-          "done": false,
+          "done": true,
           "priority": "medium",
-          "why": "",
+          "why": "۲۰۲۶-۱۱-۲۲: SERP gap از GSC (بدون DataForSEO) · moneyGaps=13 · فایل serp-gap-gsc-2026-11-22.json",
           "where": "ایجنت `seo-dataforseo`"
         }
       ],
@@ -477,7 +477,7 @@ window.BABAEI_SEO = {
         {
           "id": "c3-sku",
           "text": "۴ خوشه محصول پول پوشش داده شد",
-          "done": false
+          "done": true
         }
       ]
     },
@@ -658,368 +658,368 @@ window.BABAEI_SEO = {
     "scopeNote": "گزارش Search Console — کل دامنه baradaranebabaei.ir",
     "pageUrl": "https://baradaranebabaei.ir/",
     "page": "/",
-    "exportedAt": "2026-10-28",
-    "exportedAtFa": "2026/10/28",
+    "exportedAt": "2026-11-22",
+    "exportedAtFa": "2026/11/22",
     "dateFilter": "Last 3 months",
     "rangeLabel": "Last 3 months",
     "totals": {
-      "clicks": 4312,
-      "impressions": 68620,
-      "ctr": "6.28%",
-      "position": 7.34,
-      "pages": 153,
+      "clicks": 6990,
+      "impressions": 120000,
+      "ctr": "5.83%",
+      "position": 7.78,
+      "pages": 168,
       "queries": 1000
     },
-    "clicks": 4312,
-    "impressions": 68620,
-    "ctr": 0.0628,
-    "avgPosition": 7.34,
+    "clicks": 6990,
+    "impressions": 120000,
+    "ctr": 0.058,
+    "avgPosition": 7.8,
     "queries": 1000,
-    "pages": 153,
+    "pages": 168,
     "topQueries": [
       {
         "kw": "موتور با اقساط 36 ماهه اصفهان",
-        "clicks": 204,
-        "impressions": 647,
-        "ctr": 0.3153,
-        "position": 1.63
+        "clicks": 267,
+        "impressions": 851,
+        "ctr": 0.31370000000000003,
+        "position": 1.71
       },
       {
         "kw": "فروش اقساطی موتور سیکلت به بازنشستگان تامین اجتماعی اصفهان",
-        "clicks": 165,
-        "impressions": 445,
-        "ctr": 0.37079999999999996,
-        "position": 1.35
-      },
-      {
-        "kw": "خرید موتور از دم قسط با سفته بدون پیش پرداخت اصفهان",
-        "clicks": 56,
-        "impressions": 1057,
-        "ctr": 0.053,
-        "position": 4.26
+        "clicks": 223,
+        "impressions": 643,
+        "ctr": 0.3468,
+        "position": 2.35
       },
       {
         "kw": "خرید موتور از دم قسط با سفته بدون پیش پرداخت",
-        "clicks": 49,
-        "impressions": 1468,
-        "ctr": 0.0334,
-        "position": 8.68
+        "clicks": 97,
+        "impressions": 3132,
+        "ctr": 0.031,
+        "position": 8.66
+      },
+      {
+        "kw": "خرید موتور از دم قسط با سفته بدون پیش پرداخت اصفهان",
+        "clicks": 83,
+        "impressions": 1551,
+        "ctr": 0.0535,
+        "position": 3.92
       },
       {
         "kw": "فروش اقساطی موتور سیکلت فروشگاه اتکا اصفهان",
-        "clicks": 42,
-        "impressions": 101,
-        "ctr": 0.4158,
-        "position": 1.02
+        "clicks": 56,
+        "impressions": 132,
+        "ctr": 0.4242,
+        "position": 1.1
+      },
+      {
+        "kw": "لیست فروشگاه های طرف قرارداد فرهنگ کارت اصفهان",
+        "clicks": 43,
+        "impressions": 635,
+        "ctr": 0.0677,
+        "position": 5.89
       },
       {
         "kw": "شوکا ۱۳۰",
-        "clicks": 36,
-        "impressions": 946,
-        "ctr": 0.0381,
-        "position": 5.43
-      },
-      {
-        "kw": "موتور قسطی اصفهان",
-        "clicks": 31,
-        "impressions": 121,
-        "ctr": 0.2562,
-        "position": 3.75
-      },
-      {
-        "kw": "فروش اقساطی موتور سیکلت فروشگاه اتکا",
-        "clicks": 26,
-        "impressions": 393,
-        "ctr": 0.0662,
-        "position": 6.66
-      },
-      {
-        "kw": "خرید موتور سیکلت با حکمت کارت در تهران",
-        "clicks": 26,
-        "impressions": 265,
-        "ctr": 0.0981,
-        "position": 4.14
-      },
-      {
-        "kw": "موتور شوکا ۱۳۰",
-        "clicks": 25,
-        "impressions": 457,
-        "ctr": 0.0547,
-        "position": 4.17
-      },
-      {
-        "kw": "موتور اقساطی بدون پیش پرداخت",
-        "clicks": 25,
-        "impressions": 360,
-        "ctr": 0.0694,
-        "position": 8.64
+        "clicks": 42,
+        "impressions": 1307,
+        "ctr": 0.0321,
+        "position": 6.01
       },
       {
         "kw": "موتور اقساطی اصفهان",
-        "clicks": 25,
-        "impressions": 150,
-        "ctr": 0.16670000000000001,
-        "position": 3.77
+        "clicks": 40,
+        "impressions": 231,
+        "ctr": 0.1732,
+        "position": 3.85
       },
       {
         "kw": "فروش اقساطی موتور سیکلت به بازنشستگان تامین اجتماعی",
-        "clicks": 21,
-        "impressions": 446,
-        "ctr": 0.0471,
-        "position": 6.98
+        "clicks": 39,
+        "impressions": 609,
+        "ctr": 0.064,
+        "position": 6.68
       },
       {
-        "kw": "موتور قسطی بدون پیش پرداخت",
-        "clicks": 21,
-        "impressions": 331,
-        "ctr": 0.0634,
-        "position": 10.37
+        "kw": "موتور قسطی اصفهان",
+        "clicks": 39,
+        "impressions": 193,
+        "ctr": 0.2021,
+        "position": 3.65
       },
       {
-        "kw": "موتور شوکا",
-        "clicks": 19,
-        "impressions": 1048,
-        "ctr": 0.0181,
-        "position": 3.25
+        "kw": "فروش اقساطی موتور سیکلت دست دوم در اصفهان",
+        "clicks": 38,
+        "impressions": 603,
+        "ctr": 0.063,
+        "position": 4.83
+      },
+      {
+        "kw": "موتور شوکا ۱۳۰",
+        "clicks": 35,
+        "impressions": 686,
+        "ctr": 0.051,
+        "position": 4.92
+      },
+      {
+        "kw": "فروش اقساطی موتور سیکلت فروشگاه اتکا",
+        "clicks": 35,
+        "impressions": 566,
+        "ctr": 0.061799999999999994,
+        "position": 6.77
+      },
+      {
+        "kw": "موتور اقساطی بدون پیش پرداخت",
+        "clicks": 35,
+        "impressions": 542,
+        "ctr": 0.0646,
+        "position": 10.03
+      },
+      {
+        "kw": "خرید موتور با حکمت کارت",
+        "clicks": 33,
+        "impressions": 155,
+        "ctr": 0.21289999999999998,
+        "position": 3.48
       }
     ],
     "topPages": [
       {
         "page": "/",
-        "clicks": 921,
-        "impressions": 8239,
-        "ctr": 0.1118,
-        "position": 12.26
+        "clicks": 1303,
+        "impressions": 13256,
+        "ctr": 0.0983,
+        "position": 13.64
       },
       {
         "page": "/موتورسیکلت-اقساطی-اصفهان-خرید-موتور/",
-        "clicks": 843,
-        "impressions": 13336,
-        "ctr": 0.0632,
-        "position": 7.63
+        "clicks": 1179,
+        "impressions": 20317,
+        "ctr": 0.057999999999999996,
+        "position": 9.62
       },
       {
         "page": "/خرید-دوچرخه-و-موتور-سیکلت-با-حکمت-کارت/",
-        "clicks": 408,
-        "impressions": 5558,
-        "ctr": 0.07339999999999999,
-        "position": 6.5
+        "clicks": 568,
+        "impressions": 7830,
+        "ctr": 0.0725,
+        "position": 6.69
       },
       {
         "page": "/product/موتور-سیکلت-شوکا-130/",
-        "clicks": 342,
-        "impressions": 7791,
-        "ctr": 0.043899999999999995,
-        "position": 5.08
+        "clicks": 465,
+        "impressions": 11133,
+        "ctr": 0.0418,
+        "position": 5.59
       },
       {
         "page": "/product/موتور-سیکلت-پرواز-200-اصفهان/",
-        "clicks": 267,
-        "impressions": 5548,
-        "ctr": 0.0481,
-        "position": 6.78
+        "clicks": 346,
+        "impressions": 7173,
+        "ctr": 0.0482,
+        "position": 6.7
       },
       {
         "page": "/product/موتورسیکلت-هدی-طرح-آیروکس-155/",
-        "clicks": 166,
-        "impressions": 1135,
-        "ctr": 0.1463,
-        "position": 4.59
-      },
-      {
-        "page": "/about/",
-        "clicks": 158,
-        "impressions": 2315,
-        "ctr": 0.0683,
-        "position": 6.02
-      },
-      {
-        "page": "/product/موتورسیکلت-لیفان-250-kps/",
-        "clicks": 128,
-        "impressions": 5061,
-        "ctr": 0.0253,
-        "position": 6.14
+        "clicks": 238,
+        "impressions": 1716,
+        "ctr": 0.1387,
+        "position": 4.73
       },
       {
         "page": "/خرید-دوچرخه-و-موتور-سیکلت-با-کالا-کارت/",
-        "clicks": 119,
-        "impressions": 2348,
-        "ctr": 0.0507,
-        "position": 9.31
+        "clicks": 210,
+        "impressions": 4075,
+        "ctr": 0.051500000000000004,
+        "position": 9.44
+      },
+      {
+        "page": "/product/موتورسیکلت-لیفان-250-kps/",
+        "clicks": 200,
+        "impressions": 8071,
+        "ctr": 0.0248,
+        "position": 6.53
+      },
+      {
+        "page": "/about/",
+        "clicks": 181,
+        "impressions": 3786,
+        "ctr": 0.0478,
+        "position": 6.49
       },
       {
         "page": "/product/موتور-سیکلت-کلیک-آپ-مدل-170-طرح-واریو/",
-        "clicks": 100,
-        "impressions": 2865,
-        "ctr": 0.0349,
-        "position": 7.27
+        "clicks": 150,
+        "impressions": 5022,
+        "ctr": 0.029900000000000003,
+        "position": 7.11
       },
       {
         "page": "/product/موتورسیکلت-طرح-کلیک-برمودا-150-رادیاتورد/",
-        "clicks": 93,
-        "impressions": 1201,
-        "ctr": 0.0774,
-        "position": 5.22
+        "clicks": 128,
+        "impressions": 1910,
+        "ctr": 0.067,
+        "position": 5.18
       },
       {
-        "page": "/product/موتور-پرواز-۱۲۵-اصفهان/",
-        "clicks": 66,
-        "impressions": 2104,
-        "ctr": 0.031400000000000004,
-        "position": 7.13
+        "page": "/فروشگاه-طرف-قرارداد-فرهنگ-کارت-اصفهان/",
+        "clicks": 127,
+        "impressions": 1089,
+        "ctr": 0.1166,
+        "position": 5.14
       }
     ],
     "opportunities": [
       {
         "kw": "خرید موتور از دم قسط با سفته بدون پیش پرداخت",
-        "clicks": 49,
-        "impressions": 1468,
-        "ctr": 0.0334,
-        "position": 8.68,
+        "clicks": 97,
+        "impressions": 3132,
+        "ctr": 0.031,
+        "position": 8.66,
         "note": "CTR پایین"
       },
       {
-        "kw": "موتور شوکا",
-        "clicks": 19,
-        "impressions": 1048,
-        "ctr": 0.0181,
-        "position": 3.25,
+        "kw": "فلات",
+        "clicks": 1,
+        "impressions": 2086,
+        "ctr": 0.0005,
+        "position": 5.36,
         "note": "CTR پایین"
       },
       {
         "kw": "شوکا ۱۳۰",
-        "clicks": 36,
-        "impressions": 946,
-        "ctr": 0.0381,
-        "position": 5.43,
+        "clicks": 42,
+        "impressions": 1307,
+        "ctr": 0.0321,
+        "position": 6.01,
+        "note": "CTR پایین"
+      },
+      {
+        "kw": "موتور شوکا",
+        "clicks": 20,
+        "impressions": 1287,
+        "ctr": 0.0155,
+        "position": 4.02,
         "note": "CTR پایین"
       },
       {
         "kw": "وام خرید موتور",
-        "clicks": 13,
-        "impressions": 710,
-        "ctr": 0.0183,
-        "position": 10.93,
+        "clicks": 25,
+        "impressions": 1257,
+        "ctr": 0.0199,
+        "position": 11.04,
         "note": "CTR پایین"
       },
       {
         "kw": "فروش اقساطی موتور سیکلت به بازنشستگان",
-        "clicks": 18,
-        "impressions": 668,
-        "ctr": 0.0269,
-        "position": 12.91,
+        "clicks": 32,
+        "impressions": 933,
+        "ctr": 0.034300000000000004,
+        "position": 13.8,
+        "note": "CTR پایین"
+      },
+      {
+        "kw": "موتور فلات",
+        "clicks": 6,
+        "impressions": 782,
+        "ctr": 0.0077,
+        "position": 1.59,
         "note": "CTR پایین"
       },
       {
         "kw": "موتور لیفان ۲۵۰",
-        "clicks": 6,
-        "impressions": 502,
-        "ctr": 0.012,
-        "position": 2.81,
+        "clicks": 8,
+        "impressions": 722,
+        "ctr": 0.0111,
+        "position": 4.31,
         "note": "CTR پایین"
       },
       {
-        "kw": "فروش اقساطی موتور سیکلت به بازنشستگان تامین اجتماعی",
-        "clicks": 21,
-        "impressions": 446,
-        "ctr": 0.0471,
-        "position": 6.98,
-        "note": "CTR پایین"
-      },
-      {
-        "kw": "خرید موتور اقساطی بدون پیش پرداخت",
-        "clicks": 17,
-        "impressions": 438,
-        "ctr": 0.0388,
-        "position": 9.33,
+        "kw": "وام خرید موتور سیکلت",
+        "clicks": 12,
+        "impressions": 714,
+        "ctr": 0.0168,
+        "position": 14.63,
         "note": "CTR پایین"
       },
       {
         "kw": "فرهنگ کارت",
-        "clicks": 5,
-        "impressions": 396,
-        "ctr": 0.0126,
-        "position": 8.05,
+        "clicks": 11,
+        "impressions": 594,
+        "ctr": 0.018500000000000003,
+        "position": 7.34,
         "note": "CTR پایین"
       },
       {
-        "kw": "فروش اقساطی موتور سیکلت نیروهای مسلح در تهران",
-        "clicks": 10,
-        "impressions": 388,
-        "ctr": 0.0258,
-        "position": 6.74,
-        "note": "CTR پایین"
-      },
-      {
-        "kw": "موتور تریل فلات",
-        "clicks": 4,
-        "impressions": 385,
-        "ctr": 0.0104,
-        "position": 2.37,
+        "kw": "خرید موتور اقساطی بدون پیش پرداخت",
+        "clicks": 21,
+        "impressions": 581,
+        "ctr": 0.0361,
+        "position": 11.17,
         "note": "CTR پایین"
       },
       {
         "kw": "فرهنگ کارت فرهنگیان",
-        "clicks": 2,
-        "impressions": 384,
-        "ctr": 0.0052,
-        "position": 8.26,
+        "clicks": 5,
+        "impressions": 579,
+        "ctr": 0.0086,
+        "position": 7.41,
         "note": "CTR پایین"
       },
       {
-        "kw": "شوکا موتور",
-        "clicks": 12,
-        "impressions": 373,
-        "ctr": 0.0322,
-        "position": 2.67,
-        "note": "CTR پایین"
-      },
-      {
-        "kw": "فروش اقساطی موتور سیکلت دست دوم در اصفهان",
-        "clicks": 15,
-        "impressions": 369,
-        "ctr": 0.0407,
-        "position": 6.37,
+        "kw": "موتور تریل فلات",
+        "clicks": 6,
+        "impressions": 565,
+        "ctr": 0.0106,
+        "position": 2.48,
         "note": "CTR پایین"
       },
       {
         "kw": "موتور اقساطی بدون پیش پرداخت",
-        "clicks": 25,
-        "impressions": 360,
-        "ctr": 0.0694,
-        "position": 8.64,
+        "clicks": 35,
+        "impressions": 542,
+        "ctr": 0.0646,
+        "position": 10.03,
         "note": "رتبه ۸–۲۰"
+      },
+      {
+        "kw": "شوکا موتور",
+        "clicks": 14,
+        "impressions": 526,
+        "ctr": 0.026600000000000002,
+        "position": 4.04,
+        "note": "CTR پایین"
       }
     ],
     "insights": [
-      "بازهٔ گزارش: Last 3 months · اکسپورت 2026-10-28",
-      "جمع کلیک ۴,۳۱۲ · نمایش ۶۸,۶۲۰ · CTR 6.28% · رتبه میانگین 7.34",
-      "موبایل غالب است (4074 کلیک)",
-      "کلیک برند «بابایی» در Top queries ≈ 111",
-      "تعداد کوئری در شیت: 1000 · صفحات: 153",
+      "بازهٔ گزارش: Last 3 months · اکسپورت 2026-11-22",
+      "جمع کلیک ۶,۵۷۲ · نمایش ۱۱۲,۷۵۵ · CTR 5.83% · رتبه میانگین 7.78",
+      "موبایل غالب است (6215 کلیک)",
+      "کلیک برند «بابایی» در Top queries ≈ 180",
+      "تعداد کوئری در شیت: 1000 · صفحات: 168",
       "15 فرصت CTR/رتبه در پنل فرصت‌ها"
     ],
     "devices": [
       {
         "device": "Mobile",
-        "clicks": 4074,
-        "impressions": 63343,
-        "ctr": 0.0643,
-        "position": 6.81
+        "clicks": 6215,
+        "impressions": 103958,
+        "ctr": 0.059800000000000006,
+        "position": 7.09
       },
       {
         "device": "Desktop",
-        "clicks": 223,
-        "impressions": 5115,
-        "ctr": 0.0436,
-        "position": 13.91
+        "clicks": 337,
+        "impressions": 8545,
+        "ctr": 0.0394,
+        "position": 16.22
       },
       {
         "device": "Tablet",
-        "clicks": 15,
-        "impressions": 162,
-        "ctr": 0.0926,
-        "position": 6.1
+        "clicks": 20,
+        "impressions": 252,
+        "ctr": 0.0794,
+        "position": 6.15
       }
     ]
   },
@@ -1744,14 +1744,15 @@ window.BABAEI_SEO = {
     ]
   },
   "notes": [
-    "Audit sync 2026-10-28 13:32 — 16 files",
+    "GSC live 2026-11-25 — 6.99K کلیک · 120K نمایش · CTR 5.8% · pos 7.8 · Indexed 167 / Not 86",
+    "Audit sync 2026-11-22 16:34 — 17 files",
     "Workplan sync 2026-10-17 13:09 — ۲۰ ایجنت + فاز ۱",
     "صف محتوا: 76/121 منتشر · 45 باقی",
     "GSC 2026-10-17 · 2939 کلیک · 46466 نمایش · CTR 6.33%",
     "ممیزی سلامت: 73/۱۰۰ · فاز جاری: ۱",
     "قرارداد: ۱ مهر تا ۲۵ اسفند ۱۴۰۵ · ۱۷۱ کیورد"
   ],
-  "updatedAt": "2026-10-28T17:32:34+03:30",
+  "updatedAt": "2026-11-22T16:48:56+03:30",
   "keywordBuckets": [
     {
       "id": "P0",
@@ -1895,7 +1896,7 @@ window.BABAEI_SEO = {
     "url": "",
     "threat": "ردفوکس سخت",
     "goalFa": "هدف: جلو زدن baradaranebabaei.ir از ردفوکس روی کوئری‌های اقساطی/کارتی/ارگانی اصفهان تا ۲۵ اسفند ۱۴۰۵.",
-    "noteFa": "به‌روز 28 اکتبر 2026 · مانیتور ماهانه ردفوکس 0/15 · ما 15/15",
+    "noteFa": "صف 121 عنوان · منتشرشده 91 · باقی 30 · انتشار مستقیم فعال",
     "stats": [
       {
         "label": "مقالات ردفوکس",
@@ -2031,8 +2032,8 @@ window.BABAEI_SEO = {
       {
         "id": "beat-content-cadence",
         "text": "ریتم ۱ مطلب/روز از صف شکست ردفوکس (انتشار مستقیم)",
-        "why": "فعال: publish · صف 121 · منتشر 76 · باقی 45",
-        "done": false,
+        "why": "فعال: publish · صف 121 · منتشر 91 · باقی 30 · داشبورد contentBeat",
+        "done": true,
         "agent": "seo-competitor",
         "priority": "critical"
       },
@@ -2258,7 +2259,7 @@ window.BABAEI_SEO = {
     ]
   },
   "lastAuditSync": {
-    "at": "2026-10-28T13:32:59+03:30",
+    "at": "2026-11-22T16:34:03+03:30",
     "files": [
       "audit-data.json",
       "FULL-AUDIT-REPORT.md",
@@ -2268,6 +2269,7 @@ window.BABAEI_SEO = {
       "findings/competitor-babaeibike-urls.json",
       "findings/competitor-babaeibike.md",
       "findings/content.md",
+      "findings/gsc-2026-10-28-seo-summary.md",
       "findings/local.md",
       "findings/page.md",
       "findings/performance.md",
@@ -2281,395 +2283,200 @@ window.BABAEI_SEO = {
   },
   "contentBeat": {
     "label": "برنامه شکست ردفوکس — تولید محتوا",
-    "goalFa": "۱ مقاله/روز، انتشار مستقیم، قوی‌تر از ردفوکس، هدف Rank Math ≥ ۹۰",
+    "goalFa": "۱ مقاله/روز، انتشار مستقیم (بدون پیش‌نویس)، قوی‌تر از ردفوکس، هدف Rank Math ≥ ۹۰",
     "generated": "2026-09-28",
     "publishMode": "publish",
     "perDay": 1,
     "rivalPostsApprox": 114,
     "rivalCatsApprox": 109,
     "total": 121,
-    "publishedCount": 76,
-    "pendingCount": 45,
+    "publishedCount": 91,
+    "pendingCount": 30,
     "next14": [
       {
-        "day": "2026-11-01",
-        "priority": "P1",
-        "source": "our_keyword",
-        "sourceFa": "کیورد ما",
-        "keyword": "دوچرخه جاینت ۲۷.۵",
-        "title": "دوچرخه جاینت ۲۷.۵ | راهنمای خرید برادران بابایی اصفهان",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "انتخاب سایز دوچرخه",
-        "queue_id": "82"
-      },
-      {
-        "day": "2026-11-05",
-        "priority": "P1",
-        "source": "our_keyword",
-        "sourceFa": "کیورد ما",
-        "keyword": "موتورسیکلت بنلی ۱۸۰S",
-        "title": "موتورسیکلت بنلی ۱۸۰S | راهنمای خرید برادران بابایی اصفهان",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "",
-        "queue_id": "84"
-      },
-      {
-        "day": "2026-11-07",
-        "priority": "P1",
-        "source": "our_keyword",
-        "sourceFa": "کیورد ما",
-        "keyword": "موتورسیکلت طرح کلیک ۱۵۰",
-        "title": "موتورسیکلت طرح کلیک ۱۵۰ | راهنمای خرید برادران بابایی اصفهان",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "",
-        "queue_id": "85"
-      },
-      {
-        "day": "2026-11-09",
-        "priority": "P1",
-        "source": "our_keyword",
-        "sourceFa": "کیورد ما",
-        "keyword": "موتورسیکلت SYM فیدل ۲۰۰",
-        "title": "موتورسیکلت SYM فیدل ۲۰۰ | راهنمای خرید برادران بابایی اصفهان",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "",
-        "queue_id": "86"
-      },
-      {
-        "day": "2026-10-21",
+        "day": "2026-11-14",
         "priority": "P1",
         "source": "rival_gap",
         "sourceFa": "شکاف ردفوکس",
-        "keyword": "راهنمای خرید موتور و دوچرخه؛ پاسخ سوالات شما قبل از خرید",
-        "title": "راهنمای خرید موتور و دوچرخه؛ پاسخ سوالات شما قبل از خرید | برادران بابایی کهندژ",
+        "keyword": "مدارک لازم برای صدور سند و برگ سبز موتور سیکلت در ۱۴۰۵",
+        "title": "مدارک لازم برای صدور سند و برگ سبز موتور سیکلت در ۱۴۰۵ | برادران بابایی کهندژ",
         "status": "pending",
         "wp_id": "",
         "link": "",
-        "rival_title": "راهنمای خرید موتور و دوچرخه؛ پاسخ سوالات شما قبل از خرید",
+        "rival_title": "مدارک لازم برای صدور سند و برگ سبز موتور سیکلت در ۱۴۰۵",
         "queue_id": ""
       },
       {
-        "day": "2026-10-23",
+        "day": "2026-11-16",
         "priority": "P1",
         "source": "rival_gap",
         "sourceFa": "شکاف ردفوکس",
-        "keyword": "طرح ویژه فروشگاه بابایی به مناسبت روز م",
-        "title": "طرح ویژه فروشگاه بابایی به مناسبت روز م | برادران بابایی کهندژ",
+        "keyword": "دوچرخه‌سواری صحیح؛ تنظیم زین، دنده و فرم بدن",
+        "title": "دوچرخه‌سواری صحیح؛ تنظیم زین، دنده و فرم بدن | برادران بابایی کهندژ",
         "status": "pending",
         "wp_id": "",
         "link": "",
-        "rival_title": "طرح ویژه فروشگاه بابایی به مناسبت روز م",
+        "rival_title": "دوچرخه‌سواری صحیح؛ تنظیم زین، دنده و فرم بدن",
         "queue_id": ""
       },
       {
-        "day": "2026-10-25",
+        "day": "2026-11-17",
         "priority": "P1",
         "source": "rival_gap",
         "sourceFa": "شکاف ردفوکس",
-        "keyword": "لیست قیمت های فروشگاه بابایی شرایط فرو",
-        "title": "لیست قیمت های فروشگاه بابایی شرایط فرو | برادران بابایی کهندژ",
+        "keyword": "انواع دوچرخه و کاربرد هرکدام؛ شهری، کوهستان، جاده و برقی",
+        "title": "انواع دوچرخه و کاربرد هرکدام؛ شهری، کوهستان، جاده و برقی | برادران بابایی کهندژ",
         "status": "pending",
         "wp_id": "",
         "link": "",
-        "rival_title": "لیست قیمت های فروشگاه بابایی شرایط فرو",
+        "rival_title": "انواع دوچرخه و کاربرد هرکدام؛ شهری، کوهستان، جاده و برقی",
         "queue_id": ""
       },
       {
-        "day": "2026-10-27",
+        "day": "2026-11-18",
         "priority": "P1",
         "source": "rival_gap",
         "sourceFa": "شکاف ردفوکس",
-        "keyword": "تفاوت موتور سیکلت و دوچرخه: راهنمای جامع",
-        "title": "تفاوت موتور سیکلت و دوچرخه: راهنمای جامع | برادران بابایی کهندژ",
+        "keyword": "معرفی موتورسیکلت های اتوماتیک",
+        "title": "معرفی موتورسیکلت های اتوماتیک | برادران بابایی کهندژ",
         "status": "pending",
         "wp_id": "",
         "link": "",
-        "rival_title": "تفاوت موتور سیکلت و دوچرخه: راهنمای جامع",
+        "rival_title": "معرفی موتورسیکلت های اتوماتیک",
         "queue_id": ""
       },
       {
-        "day": "2026-10-29",
+        "day": "2026-11-19",
         "priority": "P1",
         "source": "rival_gap",
         "sourceFa": "شکاف ردفوکس",
-        "keyword": "خرید موتورسیکلت از دم قسط",
-        "title": "خرید موتورسیکلت از دم قسط | برادران بابایی کهندژ",
+        "keyword": "مالیات نقل و انتقال موتورسیکلت در ۱۴۰۵؛ محاسبه، استعلام و پرداخت",
+        "title": "مالیات نقل و انتقال موتورسیکلت در ۱۴۰۵؛ محاسبه، استعلام و پرداخت | برادران بابایی کهندژ",
         "status": "pending",
         "wp_id": "",
         "link": "",
-        "rival_title": "خرید موتورسیکلت از دم قسط",
+        "rival_title": "مالیات نقل و انتقال موتورسیکلت در ۱۴۰۵؛ محاسبه، استعلام و پرداخت",
         "queue_id": ""
       },
       {
-        "day": "2026-10-31",
+        "day": "2026-11-20",
         "priority": "P1",
         "source": "rival_gap",
         "sourceFa": "شکاف ردفوکس",
-        "keyword": "استعلام مالیات نقل و انتقال موتور سیکلت",
-        "title": "استعلام مالیات نقل و انتقال موتور سیکلت | برادران بابایی کهندژ",
+        "keyword": "مزایا و معایب انواع دوچرخه: راهنمای انتخاب دوچرخه مناسب",
+        "title": "مزایا و معایب انواع دوچرخه: راهنمای انتخاب دوچرخه مناسب | برادران بابایی کهندژ",
         "status": "pending",
         "wp_id": "",
         "link": "",
-        "rival_title": "استعلام مالیات نقل و انتقال موتور سیکلت",
+        "rival_title": "مزایا و معایب انواع دوچرخه: راهنمای انتخاب دوچرخه مناسب",
         "queue_id": ""
       },
       {
-        "day": "2026-11-02",
+        "day": "2026-11-21",
         "priority": "P1",
         "source": "rival_gap",
         "sourceFa": "شکاف ردفوکس",
-        "keyword": "تفاوت موتور سیکلت بی کلاج و کلاج دار",
-        "title": "تفاوت موتور سیکلت بی کلاج و کلاج دار | برادران بابایی کهندژ",
+        "keyword": "تجهیزات ایمنی برای موتورسواران؛ راهنمای خرید کلاه، دستکش و لباس",
+        "title": "تجهیزات ایمنی برای موتورسواران؛ راهنمای خرید کلاه، دستکش و لباس | برادران بابایی کهندژ",
         "status": "pending",
         "wp_id": "",
         "link": "",
-        "rival_title": "تفاوت موتور سیکلت بی کلاج و کلاج دار",
+        "rival_title": "تجهیزات ایمنی برای موتورسواران؛ راهنمای خرید کلاه، دستکش و لباس",
         "queue_id": ""
       },
       {
-        "day": "2026-11-04",
+        "day": "2026-11-22",
         "priority": "P1",
         "source": "rival_gap",
         "sourceFa": "شکاف ردفوکس",
-        "keyword": "چرا دوچرخه‌ سواری برای سلامتی و تناسب اندام عالی است؟",
-        "title": "چرا دوچرخه‌ سواری برای سلامتی و تناسب اندام عالی است؟ | برادران بابایی کهندژ",
+        "keyword": "قیمت دوچرخه برقی ایرانی",
+        "title": "قیمت دوچرخه برقی ایرانی | برادران بابایی کهندژ",
         "status": "pending",
         "wp_id": "",
         "link": "",
-        "rival_title": "چرا دوچرخه‌ سواری برای سلامتی و تناسب اندام عالی است؟",
+        "rival_title": "قیمت دوچرخه برقی ایرانی",
         "queue_id": ""
       },
       {
-        "day": "2026-11-06",
+        "day": "2026-11-23",
         "priority": "P1",
         "source": "rival_gap",
         "sourceFa": "شکاف ردفوکس",
-        "keyword": "دوچرخه و موتورسیکلت طرف قراراداد با خانه کارگر",
-        "title": "دوچرخه و موتورسیکلت طرف قراراداد با خانه کارگر | برادران بابایی کهندژ",
+        "keyword": "تجهیزات و لوازم جانبی دوچرخه",
+        "title": "تجهیزات و لوازم جانبی دوچرخه | برادران بابایی کهندژ",
         "status": "pending",
         "wp_id": "",
         "link": "",
-        "rival_title": "دوچرخه و موتورسیکلت طرف قراراداد با خانه کارگر",
+        "rival_title": "تجهیزات و لوازم جانبی دوچرخه",
         "queue_id": ""
       },
       {
-        "day": "2026-11-08",
+        "day": "2026-11-24",
         "priority": "P1",
         "source": "rival_gap",
         "sourceFa": "شکاف ردفوکس",
-        "keyword": "مزایای دوچرخه سواری برای سلامتی",
-        "title": "مزایای دوچرخه سواری برای سلامتی | برادران بابایی کهندژ",
+        "keyword": "موتور ارزان چی بخرم که خراب نشه؟",
+        "title": "موتور ارزان چی بخرم که خراب نشه؟ | برادران بابایی کهندژ",
         "status": "pending",
         "wp_id": "",
         "link": "",
-        "rival_title": "مزایای دوچرخه سواری برای سلامتی",
+        "rival_title": "موتور ارزان چی بخرم که خراب نشه؟",
+        "queue_id": ""
+      },
+      {
+        "day": "2026-11-25",
+        "priority": "P1",
+        "source": "rival_gap",
+        "sourceFa": "شکاف ردفوکس",
+        "keyword": "معرفی موتورسیکلت‌های کم‌مصرف و اقتصادی",
+        "title": "معرفی موتورسیکلت‌های کم‌مصرف و اقتصادی | برادران بابایی کهندژ",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "معرفی موتورسیکلت‌های کم‌مصرف و اقتصادی",
+        "queue_id": ""
+      },
+      {
+        "day": "2026-11-26",
+        "priority": "P1",
+        "source": "rival_gap",
+        "sourceFa": "شکاف ردفوکس",
+        "keyword": "معرفی انواع مدل های موتور وسپا",
+        "title": "معرفی انواع مدل های موتور وسپا | برادران بابایی کهندژ",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "معرفی انواع مدل های موتور وسپا",
+        "queue_id": ""
+      },
+      {
+        "day": "2026-11-27",
+        "priority": "P1",
+        "source": "rival_gap",
+        "sourceFa": "شکاف ردفوکس",
+        "keyword": "مهلت پرداخت مالیات نقل و انتقال موتور سیکلت",
+        "title": "مهلت پرداخت مالیات نقل و انتقال موتور سیکلت | برادران بابایی کهندژ",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "مهلت پرداخت مالیات نقل و انتقال موتور سیکلت",
+        "queue_id": ""
+      },
+      {
+        "day": "2026-11-28",
+        "priority": "P1",
+        "source": "rival_gap",
+        "sourceFa": "شکاف ردفوکس",
+        "keyword": "موتورسیکلت برقی یا بنزینی؟ مقایسه کامل هزینه، عملکرد و مزایا و معایب",
+        "title": "موتورسیکلت برقی یا بنزینی؟ مقایسه کامل هزینه، عملکرد و مزایا و معایب | برادران بابایی کهندژ",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "موتورسیکلت برقی یا بنزینی؟ مقایسه کامل هزینه، عملکرد و مزایا و معایب",
         "queue_id": ""
       }
     ],
     "upcoming": [
-      {
-        "day": "2026-11-01",
-        "priority": "P1",
-        "source": "our_keyword",
-        "sourceFa": "کیورد ما",
-        "keyword": "دوچرخه جاینت ۲۷.۵",
-        "title": "دوچرخه جاینت ۲۷.۵ | راهنمای خرید برادران بابایی اصفهان",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "انتخاب سایز دوچرخه",
-        "queue_id": "82"
-      },
-      {
-        "day": "2026-11-05",
-        "priority": "P1",
-        "source": "our_keyword",
-        "sourceFa": "کیورد ما",
-        "keyword": "موتورسیکلت بنلی ۱۸۰S",
-        "title": "موتورسیکلت بنلی ۱۸۰S | راهنمای خرید برادران بابایی اصفهان",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "",
-        "queue_id": "84"
-      },
-      {
-        "day": "2026-11-07",
-        "priority": "P1",
-        "source": "our_keyword",
-        "sourceFa": "کیورد ما",
-        "keyword": "موتورسیکلت طرح کلیک ۱۵۰",
-        "title": "موتورسیکلت طرح کلیک ۱۵۰ | راهنمای خرید برادران بابایی اصفهان",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "",
-        "queue_id": "85"
-      },
-      {
-        "day": "2026-11-09",
-        "priority": "P1",
-        "source": "our_keyword",
-        "sourceFa": "کیورد ما",
-        "keyword": "موتورسیکلت SYM فیدل ۲۰۰",
-        "title": "موتورسیکلت SYM فیدل ۲۰۰ | راهنمای خرید برادران بابایی اصفهان",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "",
-        "queue_id": "86"
-      },
-      {
-        "day": "2026-10-21",
-        "priority": "P1",
-        "source": "rival_gap",
-        "sourceFa": "شکاف ردفوکس",
-        "keyword": "راهنمای خرید موتور و دوچرخه؛ پاسخ سوالات شما قبل از خرید",
-        "title": "راهنمای خرید موتور و دوچرخه؛ پاسخ سوالات شما قبل از خرید | برادران بابایی کهندژ",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "راهنمای خرید موتور و دوچرخه؛ پاسخ سوالات شما قبل از خرید",
-        "queue_id": ""
-      },
-      {
-        "day": "2026-10-23",
-        "priority": "P1",
-        "source": "rival_gap",
-        "sourceFa": "شکاف ردفوکس",
-        "keyword": "طرح ویژه فروشگاه بابایی به مناسبت روز م",
-        "title": "طرح ویژه فروشگاه بابایی به مناسبت روز م | برادران بابایی کهندژ",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "طرح ویژه فروشگاه بابایی به مناسبت روز م",
-        "queue_id": ""
-      },
-      {
-        "day": "2026-10-25",
-        "priority": "P1",
-        "source": "rival_gap",
-        "sourceFa": "شکاف ردفوکس",
-        "keyword": "لیست قیمت های فروشگاه بابایی شرایط فرو",
-        "title": "لیست قیمت های فروشگاه بابایی شرایط فرو | برادران بابایی کهندژ",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "لیست قیمت های فروشگاه بابایی شرایط فرو",
-        "queue_id": ""
-      },
-      {
-        "day": "2026-10-27",
-        "priority": "P1",
-        "source": "rival_gap",
-        "sourceFa": "شکاف ردفوکس",
-        "keyword": "تفاوت موتور سیکلت و دوچرخه: راهنمای جامع",
-        "title": "تفاوت موتور سیکلت و دوچرخه: راهنمای جامع | برادران بابایی کهندژ",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "تفاوت موتور سیکلت و دوچرخه: راهنمای جامع",
-        "queue_id": ""
-      },
-      {
-        "day": "2026-10-29",
-        "priority": "P1",
-        "source": "rival_gap",
-        "sourceFa": "شکاف ردفوکس",
-        "keyword": "خرید موتورسیکلت از دم قسط",
-        "title": "خرید موتورسیکلت از دم قسط | برادران بابایی کهندژ",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "خرید موتورسیکلت از دم قسط",
-        "queue_id": ""
-      },
-      {
-        "day": "2026-10-31",
-        "priority": "P1",
-        "source": "rival_gap",
-        "sourceFa": "شکاف ردفوکس",
-        "keyword": "استعلام مالیات نقل و انتقال موتور سیکلت",
-        "title": "استعلام مالیات نقل و انتقال موتور سیکلت | برادران بابایی کهندژ",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "استعلام مالیات نقل و انتقال موتور سیکلت",
-        "queue_id": ""
-      },
-      {
-        "day": "2026-11-02",
-        "priority": "P1",
-        "source": "rival_gap",
-        "sourceFa": "شکاف ردفوکس",
-        "keyword": "تفاوت موتور سیکلت بی کلاج و کلاج دار",
-        "title": "تفاوت موتور سیکلت بی کلاج و کلاج دار | برادران بابایی کهندژ",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "تفاوت موتور سیکلت بی کلاج و کلاج دار",
-        "queue_id": ""
-      },
-      {
-        "day": "2026-11-04",
-        "priority": "P1",
-        "source": "rival_gap",
-        "sourceFa": "شکاف ردفوکس",
-        "keyword": "چرا دوچرخه‌ سواری برای سلامتی و تناسب اندام عالی است؟",
-        "title": "چرا دوچرخه‌ سواری برای سلامتی و تناسب اندام عالی است؟ | برادران بابایی کهندژ",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "چرا دوچرخه‌ سواری برای سلامتی و تناسب اندام عالی است؟",
-        "queue_id": ""
-      },
-      {
-        "day": "2026-11-06",
-        "priority": "P1",
-        "source": "rival_gap",
-        "sourceFa": "شکاف ردفوکس",
-        "keyword": "دوچرخه و موتورسیکلت طرف قراراداد با خانه کارگر",
-        "title": "دوچرخه و موتورسیکلت طرف قراراداد با خانه کارگر | برادران بابایی کهندژ",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "دوچرخه و موتورسیکلت طرف قراراداد با خانه کارگر",
-        "queue_id": ""
-      },
-      {
-        "day": "2026-11-08",
-        "priority": "P1",
-        "source": "rival_gap",
-        "sourceFa": "شکاف ردفوکس",
-        "keyword": "مزایای دوچرخه سواری برای سلامتی",
-        "title": "مزایای دوچرخه سواری برای سلامتی | برادران بابایی کهندژ",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "مزایای دوچرخه سواری برای سلامتی",
-        "queue_id": ""
-      },
-      {
-        "day": "2026-11-12",
-        "priority": "P1",
-        "source": "rival_gap",
-        "sourceFa": "شکاف ردفوکس",
-        "keyword": "بهترین برند دوچرخه در ایران چیه؟",
-        "title": "بهترین برند دوچرخه در ایران چیه؟ | برادران بابایی کهندژ",
-        "status": "pending",
-        "wp_id": "",
-        "link": "",
-        "rival_title": "بهترین برند دوچرخه در ایران چیه؟",
-        "queue_id": ""
-      },
       {
         "day": "2026-11-14",
         "priority": "P1",
@@ -2864,6 +2671,201 @@ window.BABAEI_SEO = {
         "link": "",
         "rival_title": "بهترین موتور سیکلت برای بانوان در ۱۴۰۵؛ سبک، اتومات و کم‌ارتفاع",
         "queue_id": ""
+      },
+      {
+        "day": "2026-11-30",
+        "priority": "P1",
+        "source": "rival_gap",
+        "sourceFa": "شکاف ردفوکس",
+        "keyword": "خرید موتورسیکلت دست دوم",
+        "title": "خرید موتورسیکلت دست دوم | برادران بابایی کهندژ",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "خرید موتورسیکلت دست دوم",
+        "queue_id": ""
+      },
+      {
+        "day": "2026-10-18",
+        "priority": "P2",
+        "source": "our_keyword",
+        "sourceFa": "کیورد ما",
+        "keyword": "لوازم یدکی دوچرخه اصفهان",
+        "title": "لوازم یدکی دوچرخه اصفهان | راهنمای خرید برادران بابایی اصفهان",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "بهترین فروشگاه دوچرخه در اصفهان",
+        "queue_id": "9"
+      },
+      {
+        "day": "2026-10-19",
+        "priority": "P2",
+        "source": "our_keyword",
+        "sourceFa": "کیورد ما",
+        "keyword": "کلاه ایمنی موتورسیکلت اصفهان",
+        "title": "کلاه ایمنی موتورسیکلت اصفهان | راهنمای خرید برادران بابایی اصفهان",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "مقایسه ایمنی موتورسیکلت و دوچرخه",
+        "queue_id": "10"
+      },
+      {
+        "day": "2026-11-13",
+        "priority": "P2",
+        "source": "our_keyword",
+        "sourceFa": "کیورد ما",
+        "keyword": "دوچرخه سایز ۲۶ اصفهان",
+        "title": "دوچرخه سایز ۲۶ اصفهان | راهنمای خرید برادران بابایی اصفهان",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "سایز دوچرخه مناسب بزرگسالان",
+        "queue_id": "88"
+      },
+      {
+        "day": "2026-11-15",
+        "priority": "P2",
+        "source": "our_keyword",
+        "sourceFa": "کیورد ما",
+        "keyword": "تایر دوچرخه اصفهان",
+        "title": "تایر دوچرخه اصفهان | راهنمای خرید برادران بابایی اصفهان",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "بهترین فروشگاه دوچرخه در اصفهان",
+        "queue_id": "89"
+      },
+      {
+        "day": "2027-01-04",
+        "priority": "P2",
+        "source": "our_keyword",
+        "sourceFa": "کیورد ما",
+        "keyword": "دوچرخه اقساطی اداره دخانیات",
+        "title": "دوچرخه اقساطی اداره دخانیات | برادران بابایی اصفهان",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "فروش اقساطی انواع دوچرخه در اصفهان",
+        "queue_id": "22"
+      },
+      {
+        "day": "2027-01-05",
+        "priority": "P2",
+        "source": "our_keyword",
+        "sourceFa": "کیورد ما",
+        "keyword": "دوچرخه اقساطی اداره ثبت احوال",
+        "title": "دوچرخه اقساطی اداره ثبت احوال | برادران بابایی اصفهان",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "فروش اقساطی انواع دوچرخه در اصفهان",
+        "queue_id": "27"
+      },
+      {
+        "day": "2027-01-06",
+        "priority": "P2",
+        "source": "our_keyword",
+        "sourceFa": "کیورد ما",
+        "keyword": "دوچرخه اقساطی شرکت گاز رشت",
+        "title": "دوچرخه اقساطی شرکت گاز رشت | برادران بابایی اصفهان",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "فروش اقساطی انواع دوچرخه در اصفهان",
+        "queue_id": "28"
+      },
+      {
+        "day": "2027-01-07",
+        "priority": "P2",
+        "source": "our_keyword",
+        "sourceFa": "کیورد ما",
+        "keyword": "دوچرخه اقساطی پشتیبانی و عمران دادگستری",
+        "title": "دوچرخه اقساطی پشتیبانی و عمران دادگستری | برادران بابایی اصفهان",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "فروش اقساطی انواع دوچرخه در اصفهان",
+        "queue_id": "30"
+      },
+      {
+        "day": "2027-01-08",
+        "priority": "P2",
+        "source": "our_keyword",
+        "sourceFa": "کیورد ما",
+        "keyword": "دوچرخه اقساطی اداره کل ارتباطات و فناوری اطلاعات",
+        "title": "دوچرخه اقساطی اداره کل ارتباطات و فناوری اطلاعات | برادران بابایی اصفهان",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "",
+        "queue_id": "36"
+      },
+      {
+        "day": "2027-01-09",
+        "priority": "P2",
+        "source": "our_keyword",
+        "sourceFa": "کیورد ما",
+        "keyword": "دوچرخه اقساطی شرکت علمی و تحقیقاتی",
+        "title": "دوچرخه اقساطی شرکت علمی و تحقیقاتی | برادران بابایی اصفهان",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "فروش اقساطی انواع دوچرخه در اصفهان",
+        "queue_id": "39"
+      },
+      {
+        "day": "2027-01-10",
+        "priority": "P2",
+        "source": "our_keyword",
+        "sourceFa": "کیورد ما",
+        "keyword": "دوچرخه اقساطی اداره دارایی",
+        "title": "دوچرخه اقساطی اداره دارایی | برادران بابایی اصفهان",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "فروش اقساطی انواع دوچرخه در اصفهان",
+        "queue_id": "40"
+      },
+      {
+        "day": "2027-01-11",
+        "priority": "P2",
+        "source": "our_keyword",
+        "sourceFa": "کیورد ما",
+        "keyword": "دوچرخه اقساطی شرکت تعاونی دخانیات",
+        "title": "دوچرخه اقساطی شرکت تعاونی دخانیات | برادران بابایی اصفهان",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "فروش اقساطی انواع دوچرخه در اصفهان",
+        "queue_id": "46"
+      },
+      {
+        "day": "2027-01-12",
+        "priority": "P2",
+        "source": "our_keyword",
+        "sourceFa": "کیورد ما",
+        "keyword": "دوچرخه اقساطی پزشکی قانونی",
+        "title": "دوچرخه اقساطی پزشکی قانونی | برادران بابایی اصفهان",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "فروش اقساطی انواع دوچرخه در اصفهان",
+        "queue_id": "59"
+      },
+      {
+        "day": "2027-01-13",
+        "priority": "P2",
+        "source": "our_keyword",
+        "sourceFa": "کیورد ما",
+        "keyword": "دوچرخه اقساطی اداره کل هواشناسی",
+        "title": "دوچرخه اقساطی اداره کل هواشناسی | برادران بابایی اصفهان",
+        "status": "pending",
+        "wp_id": "",
+        "link": "",
+        "rival_title": "فروش اقساطی انواع دوچرخه در اصفهان",
+        "queue_id": "60"
       }
     ],
     "qualityBar": [
@@ -2872,31 +2874,36 @@ window.BABAEI_SEO = {
       "FAQ · NAP کهندژ · لینک داخلی",
       "Rank Math ≥ ۹۰"
     ],
-    "updatedAt": "2026-10-17T13:03:33+03:30",
-    "noteFa": "آخرین همگام‌سازی پلی‌بوک 2026-10-17T13:09:13+03:30 · باقی 45"
+    "updatedAt": "2026-11-22T16:48:55+03:30",
+    "noteFa": "صف 121 عنوان · منتشرشده 91 · باقی 30 · انتشار مستقیم فعال"
   },
   "gscWow": {
-    "exportedAt": "2026-10-28",
+    "exportedAt": "2026-11-22",
     "scopeNote": "مقایسه ۷ روز آخر Chart در برابر ۷ روز قبل (همان export)",
-    "currentRange": "2026-10-20 → 2026-10-26",
-    "previousRange": "2026-10-13 → 2026-10-19",
-    "exportedAtFa": "2026/10/28",
+    "currentRange": "2026-11-14 → 2026-11-20",
+    "previousRange": "2026-11-07 → 2026-11-13",
+    "exportedAtFa": "2026/11/22",
     "totals": {
-      "clicksCur": 767,
-      "clicksPrev": 844,
-      "clicksDelta": -77,
-      "clicksPct": -9.1,
-      "impsCur": 13013,
-      "impsPrev": 12740,
-      "impsDelta": 273,
-      "impsPct": 2.1
+      "clicksCur": 693,
+      "clicksPrev": 503,
+      "clicksDelta": 190,
+      "clicksPct": 37.8,
+      "impsCur": 15118,
+      "impsPrev": 11523,
+      "impsDelta": 3595,
+      "impsPct": 31.2
     },
     "pageLosers": [],
     "queryLosers": [],
     "insights": [
-      "کلیک ۷روز: 767 در برابر 844 (-9.1%)",
-      "نمایش ۷روز: 13013 در برابر 12740 (2.1%)"
-    ]
+      "کلیک ۷روز: 693 در برابر 503 (37.8%)",
+      "نمایش ۷روز: 15118 در برابر 11523 (31.2%)",
+      "افت صفحه (۱۰-۲۸→۱۱-۲۲): 0 مورد با افت ≥۵ کلیک",
+      "افت کیورد: 0 مورد با افت ≥۳ کلیک",
+      "بیشترین رشد صفحه: / (921→1303, +382)",
+      "فرصت CTR/رتبه فعال: 15 مورد در پنل فرصت‌ها"
+    ],
+    "compareNote": "افت صفحه/کیورد: مقایسه Top Pages/Queries اکسپورت 2026-10-28 در برابر 2026-11-22 (بازه Last 3 months هر دو)"
   },
   "agentPlaybook": [
     {
@@ -3007,11 +3014,11 @@ window.BABAEI_SEO = {
       "label": "ووکامرس / محصول / شاپینگ",
       "status": "active",
       "done": [
-        "تقویت Rank Math شوکا/لیفان"
+        "تقویت Rank Math شوکا/لیفان",
+        "خوشه پرواز/هدی/برمودا/فلات + شوکا (اسنیپت+لینک)"
       ],
       "todo": [
-        "Product schema کامل + تصویر محصول",
-        "خوشه پرواز ۲۰۰ / هدی / برمودا"
+        "Product schema کامل + تصویر محصول"
       ]
     },
     {
@@ -3223,11 +3230,11 @@ window.BABAEI_SEO = {
   },
   "seoSummary": {
     "title": "خلاصه SEO",
-    "updatedAt": "2026-10-28",
-    "updatedAtFa": "۲۰۲۶/۱۰/۲۸",
+    "updatedAt": "2026-11-25",
+    "updatedAtFa": "۲۰۲۶/۱۱/۲۵",
     "gscExport": "2026-10-28",
     "range": "Last 3 months · Web · کل دامنه",
-    "verdict": "سالم و در حال رشد نمایش/کلیک ۳ماهه؛ ضعف اصلی CTR روی کوئری‌های محصول و دم‌قسط + افت WoW کلیک ۷روز.",
+    "verdict": "GSC live ۲۵/۱۱: ۶٫۹۹K کلیک · ۱۲۰K نمایش · CTR ۵٫۸٪ · پوز ۷٫۸ · Indexed ۱۶۷ / Not ۸۶. فرصت CTR: دم‌قسط و شوکا.",
     "healthScore": 76,
     "status": "خوب · قابل بهینه‌سازی",
     "gsc": {
@@ -3345,7 +3352,17 @@ window.BABAEI_SEO = {
         "canAuto": false,
         "agent": "seo-google"
       }
-    ]
+    ],
+    "wow7d": {
+      "clicksCur": 693,
+      "clicksPrev": 503,
+      "clicksDelta": 190,
+      "clicksPct": 37.8,
+      "impsCur": 15118,
+      "impsPrev": 11523,
+      "impsDelta": 3595,
+      "impsPct": 31.2
+    }
   },
   "allKeywords": [
     {
@@ -7076,5 +7093,76 @@ window.BABAEI_SEO = {
         "where": "رصد هفتگی GSC"
       }
     ]
+  },
+  "serpGap": {
+    "exportedAt": "2026-11-22",
+    "source": "GSC",
+    "moneyGaps": [
+      {
+        "kw": "خرید موتور از دم قسط با سفته بدون پیش پرداخت",
+        "clicks": 97,
+        "impressions": 3132,
+        "ctr": 0.031,
+        "position": 8.66,
+        "note": "CTR پایین"
+      },
+      {
+        "kw": "فلات",
+        "clicks": 1,
+        "impressions": 2086,
+        "ctr": 0.0005,
+        "position": 5.36,
+        "note": "CTR پایین"
+      },
+      {
+        "kw": "شوکا ۱۳۰",
+        "clicks": 42,
+        "impressions": 1307,
+        "ctr": 0.0321,
+        "position": 6.01,
+        "note": "CTR پایین"
+      },
+      {
+        "kw": "موتور شوکا",
+        "clicks": 20,
+        "impressions": 1287,
+        "ctr": 0.0155,
+        "position": 4.02,
+        "note": "CTR پایین"
+      },
+      {
+        "kw": "وام خرید موتور",
+        "clicks": 25,
+        "impressions": 1257,
+        "ctr": 0.0199,
+        "position": 11.04,
+        "note": "CTR پایین"
+      },
+      {
+        "kw": "فروش اقساطی موتور سیکلت به بازنشستگان",
+        "clicks": 32,
+        "impressions": 933,
+        "ctr": 0.034300000000000004,
+        "position": 13.8,
+        "note": "CTR پایین"
+      },
+      {
+        "kw": "موتور فلات",
+        "clicks": 6,
+        "impressions": 782,
+        "ctr": 0.0077,
+        "position": 1.59,
+        "note": "CTR پایین"
+      },
+      {
+        "kw": "موتور لیفان ۲۵۰",
+        "clicks": 8,
+        "impressions": 722,
+        "ctr": 0.0111,
+        "position": 4.31,
+        "note": "CTR پایین"
+      }
+    ],
+    "note": "جایگزین موقت DataForSEO تا فعال‌سازی MCP/اعتبار"
   }
 };
